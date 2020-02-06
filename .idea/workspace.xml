@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="" />
+    <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/MatrixOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/MatrixOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/BinaryGap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/CountingValley.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/FrogJump.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/MatrixOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/MinimumBribes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/OddOccurrencesInArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/RandomPractice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/RotateArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/SmallestInteger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/SockMerchant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/search/BreadthFirstSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/search/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cmuhatia/playground/search/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cmuhatia.playground.CountingValleyTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cmuhatia.playground.MatrixOperationsTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cmuhatia.playground.OddOccurrencesInArrayTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cmuhatia.playground.search.BreadthFirstSearchTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.cmuhatia.playground.CountingValleyTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.cmuhatia.playground.MatrixOperationsTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.cmuhatia.playground.OddOccurrencesInArrayTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.cmuhatia.playground.search.BreadthFirstSearchTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cmuhatia/playground/CountingValleyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cmuhatia/playground/MatrixOperationsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cmuhatia/playground/OddOccurrencesInArrayTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cmuhatia/playground/search/BreadthFirstSearchTest.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,12 +61,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -154,10 +191,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.SockMerchant" />
+      <item itemvalue="Application.MatrixOperations" />
       <item itemvalue="JUnit.MatrixOperationsTest" />
       <item itemvalue="JUnit.MatrixOperationsTest.diagonalDifference" />
       <item itemvalue="Maven.mvn test" />
-      <item itemvalue="Application.MatrixOperations" />
     </list>
     <recent_temporary>
       <list>
@@ -190,8 +227,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574493131825</updated>
+      <workItem from="1580961216761" duration="357000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="142" y="0" width="1081" height="750" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580922776210">
@@ -242,10 +283,11 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state width="1320" height="220" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1580949734944" />
-    <state x="167" y="0" width="1032" height="750" key="SettingsEditor" timestamp="1580922803451">
-      <screen x="0" y="0" width="1366" height="746" />
+    <state x="2155" y="0" width="1451" height="1060" key="SettingsEditor" timestamp="1580961298532">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="167" y="0" width="1032" height="750" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1580922803451" />
+    <state x="2155" y="0" width="1451" height="1060" key="SettingsEditor/0.0.1920.1048/1920.0.1920.1080@1920.0.1920.1080" timestamp="1580961298532" />
     <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1580921012633">
       <screen x="0" y="0" width="1366" height="746" />
     </state>

@@ -22,11 +22,14 @@ public class MatrixOperations {
     }
 
     public static int diagonalDifference(List<List<Integer>> arr){
-        int middleIndex = arr.size() % 2 == 0 ? (arr.size() / 2) - 1 : arr.size() / 2;
-        System.out.println("==========================> Middle Index: " + middleIndex);
-        int result = (arr.get(0).get(0) + arr.get(middleIndex).get(middleIndex) + arr.get(arr.size() - 1).get(arr.size() - 1)) -
-                (arr.get(arr.size() - 1).get(0) + arr.get(middleIndex).get(middleIndex) + arr.get(0).get(arr.size() - 1));
-        return Math.abs(result);
+        int c1 = 0;
+        int c2 = 0;
+        for(int i = 0; i < arr.size(); i++ ){
+            c1 += arr.get(i).get(i);
+            int j = arr.size() - i - 1;
+            c2 += arr.get(i).get(j);
+        }
+        return Math.abs(c1 - c2);
     }
 
 }
