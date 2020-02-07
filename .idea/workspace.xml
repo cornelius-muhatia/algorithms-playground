@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="" />
+    <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1U0UiIcot7FiH8C5PWrz6o7kyua" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -154,10 +157,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.SockMerchant" />
+      <item itemvalue="Application.MatrixOperations" />
       <item itemvalue="JUnit.MatrixOperationsTest" />
       <item itemvalue="JUnit.MatrixOperationsTest.diagonalDifference" />
       <item itemvalue="Maven.mvn test" />
-      <item itemvalue="Application.MatrixOperations" />
     </list>
     <recent_temporary>
       <list>
@@ -246,6 +249,10 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="167" y="0" width="1032" height="750" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1580922803451" />
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1581038333162">
+      <screen x="0" y="0" width="1366" height="746" />
+    </state>
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1581038333162" />
     <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1580921012633">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
