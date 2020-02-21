@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/LoopsRoutine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/LoopsRoutineTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/DynamicProgramming.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/DynamicProgrammingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +14,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -34,7 +35,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Clients Project/tulaa/tulaa-notification" />
     <property name="project.structure.last.edited" value="Project" />
@@ -50,8 +52,21 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoopsRoutineTest.isNumericPalindrome2">
-    <configuration name="LoopsRoutineTest.digitSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp">
+    <configuration name="DynamicProgramming" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgramming" />
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicProgrammingTest.fibonacciSeq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
@@ -60,14 +75,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.LoopsRoutineTest" />
-      <option name="METHOD_NAME" value="digitSum" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
+      <option name="METHOD_NAME" value="fibonacciSeq" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoopsRoutineTest.isNumericPalindrome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DynamicProgrammingTest.fibonacciSeqBottomUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
@@ -76,8 +91,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.LoopsRoutineTest" />
-      <option name="METHOD_NAME" value="isNumericPalindrome" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
+      <option name="METHOD_NAME" value="fibonacciSeqBottomUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicProgrammingTest.fibonacciSeqMemoization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
+      <option name="METHOD_NAME" value="fibonacciSeqMemoization" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,38 +125,6 @@
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.LoopsRoutineTest" />
       <option name="METHOD_NAME" value="isNumericPalindrome2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoopsRoutineTest.isNumericPalindrome3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.LoopsRoutineTest" />
-      <option name="METHOD_NAME" value="isNumericPalindrome3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoopsRoutineTest.reverseString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.LoopsRoutineTest" />
-      <option name="METHOD_NAME" value="reverseString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -184,20 +183,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.LoopsRoutineTest.digitSum" />
-      <item itemvalue="JUnit.LoopsRoutineTest.reverseString" />
-      <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome" />
-      <item itemvalue="Maven.mvn test" />
       <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome2" />
-      <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome3" />
+      <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeq" />
+      <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqMemoization" />
+      <item itemvalue="Maven.mvn test" />
+      <item itemvalue="Application.DynamicProgramming" />
+      <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp" />
+        <item itemvalue="Application.DynamicProgramming" />
+        <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqMemoization" />
+        <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeq" />
         <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome2" />
-        <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome" />
-        <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome3" />
-        <item itemvalue="JUnit.LoopsRoutineTest.reverseString" />
-        <item itemvalue="JUnit.LoopsRoutineTest.digitSum" />
       </list>
     </recent_temporary>
   </component>
@@ -247,50 +246,50 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1581146462369" />
-    <state width="1320" height="196" key="GridCell.Tab.0.bottom" timestamp="1581835851479">
+    <state width="1320" height="196" key="GridCell.Tab.0.bottom" timestamp="1582246627334">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1581835851479" />
-    <state width="1320" height="196" key="GridCell.Tab.0.center" timestamp="1581835851478">
+    <state width="1320" height="196" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1582246627334" />
+    <state width="1320" height="196" key="GridCell.Tab.0.center" timestamp="1582246627333">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1581835851478" />
-    <state width="1320" height="196" key="GridCell.Tab.0.left" timestamp="1581835851475">
+    <state width="1320" height="196" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1582246627333" />
+    <state width="1320" height="196" key="GridCell.Tab.0.left" timestamp="1582246627330">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1581835851475" />
-    <state width="1320" height="196" key="GridCell.Tab.0.right" timestamp="1581835851479">
+    <state width="1320" height="196" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1582246627330" />
+    <state width="1320" height="196" key="GridCell.Tab.0.right" timestamp="1582246627333">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1581835851479" />
-    <state width="1320" height="220" key="GridCell.Tab.1.bottom" timestamp="1580949734944">
+    <state width="1320" height="196" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1582246627333" />
+    <state width="1320" height="18" key="GridCell.Tab.1.bottom" timestamp="1582246547627">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1580949734944" />
-    <state width="1320" height="220" key="GridCell.Tab.1.center" timestamp="1580949734943">
+    <state width="1320" height="18" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
+    <state width="1320" height="18" key="GridCell.Tab.1.center" timestamp="1582246547627">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1580949734943" />
-    <state width="1320" height="220" key="GridCell.Tab.1.left" timestamp="1580949734943">
+    <state width="1320" height="18" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
+    <state width="1320" height="18" key="GridCell.Tab.1.left" timestamp="1582246547627">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1580949734943" />
-    <state width="1320" height="220" key="GridCell.Tab.1.right" timestamp="1580949734944">
+    <state width="1320" height="18" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
+    <state width="1320" height="18" key="GridCell.Tab.1.right" timestamp="1582246547627">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1580949734944" />
+    <state width="1320" height="18" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
     <state x="167" y="0" width="1032" height="746" key="SettingsEditor" timestamp="1581772903477">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="167" y="0" width="1032" height="746" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1581772903477" />
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1581772948526">
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1582244433019">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1581772948526" />
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1581770008600">
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1582244433019" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1582160214550">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1581770008600" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1582160214550" />
     <state x="346" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1581768087104">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
