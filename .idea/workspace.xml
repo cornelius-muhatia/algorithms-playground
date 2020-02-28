@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/DynamicProgramming.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/DynamicProgrammingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/BinarySearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/DynamicProgramming.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/DynamicProgramming.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/DynamicProgrammingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/DynamicProgrammingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +48,27 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cmuhatia.playground.search" />
       <recent name="com.cmuhatia.playground" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp">
+  <component name="RunManager" selected="JUnit.BinarySearchTest.contains">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.BinarySearch" />
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DynamicProgramming" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgramming" />
       <module name="algorithms-playground" />
@@ -66,17 +82,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicProgrammingTest.fibonacciSeq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinarySearchTest.contains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
-      <option name="METHOD_NAME" value="fibonacciSeq" />
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.search" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.BinarySearchTest" />
+      <option name="METHOD_NAME" value="contains" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,7 +114,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicProgrammingTest.fibonacciSeqMemoization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DynamicProgrammingTest.longestIncreasingSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
@@ -108,23 +124,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
-      <option name="METHOD_NAME" value="fibonacciSeqMemoization" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoopsRoutineTest.isNumericPalindrome2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.LoopsRoutineTest" />
-      <option name="METHOD_NAME" value="isNumericPalindrome2" />
+      <option name="METHOD_NAME" value="longestIncreasingSequence" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,20 +183,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome2" />
-      <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeq" />
-      <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqMemoization" />
-      <item itemvalue="Maven.mvn test" />
       <item itemvalue="Application.DynamicProgramming" />
+      <item itemvalue="Application.BinarySearch" />
       <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp" />
+      <item itemvalue="JUnit.DynamicProgrammingTest.longestIncreasingSequence" />
+      <item itemvalue="Maven.mvn test" />
+      <item itemvalue="JUnit.BinarySearchTest.contains" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinarySearchTest.contains" />
+        <item itemvalue="Application.BinarySearch" />
+        <item itemvalue="JUnit.DynamicProgrammingTest.longestIncreasingSequence" />
         <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp" />
         <item itemvalue="Application.DynamicProgramming" />
-        <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqMemoization" />
-        <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeq" />
-        <item itemvalue="JUnit.LoopsRoutineTest.isNumericPalindrome2" />
       </list>
     </recent_temporary>
   </component>
@@ -234,6 +234,10 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="142" y="0" width="1081" height="750" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.746@0.0.1366.746" timestamp="1580922776210" />
+    <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1582353992924">
+      <screen x="0" y="0" width="1366" height="746" />
+    </state>
+    <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.746@0.0.1366.746" timestamp="1582353992924" />
     <state x="532" y="263" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580920946407">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
@@ -246,50 +250,50 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1581146462369" />
-    <state width="1320" height="196" key="GridCell.Tab.0.bottom" timestamp="1582246627334">
+    <state width="1320" height="196" key="GridCell.Tab.0.bottom" timestamp="1582853132260">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1582246627334" />
-    <state width="1320" height="196" key="GridCell.Tab.0.center" timestamp="1582246627333">
+    <state width="1320" height="196" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1582853132260" />
+    <state width="1320" height="196" key="GridCell.Tab.0.center" timestamp="1582853132259">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1582246627333" />
-    <state width="1320" height="196" key="GridCell.Tab.0.left" timestamp="1582246627330">
+    <state width="1320" height="196" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1582853132259" />
+    <state width="1320" height="196" key="GridCell.Tab.0.left" timestamp="1582853132259">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1582246627330" />
-    <state width="1320" height="196" key="GridCell.Tab.0.right" timestamp="1582246627333">
+    <state width="1320" height="196" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1582853132259" />
+    <state width="1320" height="196" key="GridCell.Tab.0.right" timestamp="1582853132260">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1582246627333" />
-    <state width="1320" height="18" key="GridCell.Tab.1.bottom" timestamp="1582246547627">
+    <state width="1320" height="196" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1582853132260" />
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1582852114068">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="18" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
-    <state width="1320" height="18" key="GridCell.Tab.1.center" timestamp="1582246547627">
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1582852114068" />
+    <state width="1320" height="195" key="GridCell.Tab.1.center" timestamp="1582852114067">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="18" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
-    <state width="1320" height="18" key="GridCell.Tab.1.left" timestamp="1582246547627">
+    <state width="1320" height="195" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1582852114067" />
+    <state width="1320" height="195" key="GridCell.Tab.1.left" timestamp="1582852114067">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="18" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
-    <state width="1320" height="18" key="GridCell.Tab.1.right" timestamp="1582246547627">
+    <state width="1320" height="195" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1582852114067" />
+    <state width="1320" height="195" key="GridCell.Tab.1.right" timestamp="1582852114068">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="18" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1582246547627" />
+    <state width="1320" height="195" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1582852114068" />
     <state x="167" y="0" width="1032" height="746" key="SettingsEditor" timestamp="1581772903477">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="167" y="0" width="1032" height="746" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1581772903477" />
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1582244433019">
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1582849842451">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1582244433019" />
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1582160214550">
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1582849842451" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1582852863314">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1582160214550" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1582852863314" />
     <state x="346" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1581768087104">
       <screen x="0" y="0" width="1366" height="746" />
     </state>

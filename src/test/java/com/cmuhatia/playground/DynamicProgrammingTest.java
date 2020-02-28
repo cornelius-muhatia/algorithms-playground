@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DynamicProgrammingTest {
 
@@ -23,5 +24,10 @@ public class DynamicProgrammingTest {
     public void fibonacciSeqBottomUp(){
         Assert.assertEquals(1, DynamicProgramming.fibonacciSeqBottomUp(2));
         Assert.assertEquals(8, DynamicProgramming.fibonacciSeqBottomUp(6));
+    }
+
+    @Test
+    public void longestIncreasingSequence(){
+        Assert.assertEquals(List.of(3, 5, 10, 12, 15), DynamicProgramming.longestIncreasingSequence(List.of(16, 3, 5, 19, 10, 14, 12, 0, 15)));
     }
 }

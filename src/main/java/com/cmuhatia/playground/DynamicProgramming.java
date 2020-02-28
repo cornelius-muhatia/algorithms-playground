@@ -1,5 +1,8 @@
 package com.cmuhatia.playground;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DynamicProgramming {
 
     /**
@@ -56,6 +59,29 @@ public class DynamicProgramming {
             seq[i] = seq[i - 1] + seq[i - 2];
         }
         return seq[n - 1];
+    }
+
+    /**
+     * Gets the longest increasing sequence in a list. For example:
+     * [16, 3, 5, 19, 10, 14, 12, 0, 15] will return [3, 5, 10, 12, 15]
+     *
+     * @param sequence {@link List}
+     * @return longest sub sequence of the given list
+     */
+    public static List<Integer> longestIncreasingSequence(List<Integer> sequence) {
+        if(sequence.isEmpty()){
+            return sequence;
+        }
+        List<Integer> subSeq = new ArrayList<>();
+        subSeq.add(sequence.get(0));
+        for(int i = 1; i < sequence.size(); i++){
+            if(subSeq.get(subSeq.size() - 1) > sequence.get(i)) {
+                subSeq.set(subSeq.size() - 1, sequence.get(i));
+            } else {
+                subSeq.add(sequence.get(i));
+            }
+        }
+        return subSeq;
     }
 
     public static void main(String[] args) {
