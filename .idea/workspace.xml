@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/BinarySearchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/sort/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/sort/QuickSortTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/DynamicProgramming.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/DynamicProgramming.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/DynamicProgrammingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/DynamicProgrammingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +42,11 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cmuhatia.playground.sort" />
       <recent name="com.cmuhatia.playground.search" />
       <recent name="com.cmuhatia.playground" />
     </key>
@@ -55,7 +54,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinarySearchTest.contains">
+  <component name="RunManager" selected="JUnit.QuickSortTest.sarajQuickSort">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.BinarySearch" />
       <module name="algorithms-playground" />
@@ -69,12 +68,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicProgramming" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgramming" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.sort.QuickSort" />
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,33 +97,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicProgrammingTest.fibonacciSeqBottomUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
-      <option name="METHOD_NAME" value="fibonacciSeqBottomUp" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DynamicProgrammingTest.longestIncreasingSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
       <option name="METHOD_NAME" value="longestIncreasingSequence" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuickSortTest.sarajQuickSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.sort" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.sort.QuickSortTest" />
+      <option name="METHOD_NAME" value="sarajQuickSort" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,20 +182,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.DynamicProgramming" />
       <item itemvalue="Application.BinarySearch" />
-      <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp" />
       <item itemvalue="JUnit.DynamicProgrammingTest.longestIncreasingSequence" />
-      <item itemvalue="Maven.mvn test" />
       <item itemvalue="JUnit.BinarySearchTest.contains" />
+      <item itemvalue="Maven.mvn test" />
+      <item itemvalue="Application.QuickSorting" />
+      <item itemvalue="JUnit.QuickSortTest.sarajQuickSort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QuickSortTest.sarajQuickSort" />
+        <item itemvalue="Application.QuickSorting" />
         <item itemvalue="JUnit.BinarySearchTest.contains" />
         <item itemvalue="Application.BinarySearch" />
         <item itemvalue="JUnit.DynamicProgrammingTest.longestIncreasingSequence" />
-        <item itemvalue="JUnit.DynamicProgrammingTest.fibonacciSeqBottomUp" />
-        <item itemvalue="Application.DynamicProgramming" />
       </list>
     </recent_temporary>
   </component>
@@ -234,10 +233,10 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="142" y="0" width="1081" height="750" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.746@0.0.1366.746" timestamp="1580922776210" />
-    <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1582353992924">
+    <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1583332972537">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.746@0.0.1366.746" timestamp="1582353992924" />
+    <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.746@0.0.1366.746" timestamp="1583332972536" />
     <state x="532" y="263" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580920946407">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
@@ -246,26 +245,30 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="267" y="29" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1366.746@0.0.1366.746" timestamp="1580920938630" />
+    <state x="441" y="0" width="484" height="750" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583330863320">
+      <screen x="0" y="0" width="1366" height="746" />
+    </state>
+    <state x="441" y="0" width="484" height="750" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.746@0.0.1366.746" timestamp="1583330863320" />
     <state x="467" y="129" key="FileChooserDialogImpl" timestamp="1581146462369">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1581146462369" />
-    <state width="1320" height="196" key="GridCell.Tab.0.bottom" timestamp="1582853132260">
+    <state width="1320" height="218" key="GridCell.Tab.0.bottom" timestamp="1583333323616">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1582853132260" />
-    <state width="1320" height="196" key="GridCell.Tab.0.center" timestamp="1582853132259">
+    <state width="1320" height="218" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1583333323616" />
+    <state width="1320" height="218" key="GridCell.Tab.0.center" timestamp="1583333323615">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1582853132259" />
-    <state width="1320" height="196" key="GridCell.Tab.0.left" timestamp="1582853132259">
+    <state width="1320" height="218" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1583333323615" />
+    <state width="1320" height="218" key="GridCell.Tab.0.left" timestamp="1583333323615">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1582853132259" />
-    <state width="1320" height="196" key="GridCell.Tab.0.right" timestamp="1582853132260">
+    <state width="1320" height="218" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1583333323615" />
+    <state width="1320" height="218" key="GridCell.Tab.0.right" timestamp="1583333323616">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="196" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1582853132260" />
+    <state width="1320" height="218" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1583333323616" />
     <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1582852114068">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
@@ -282,21 +285,32 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state width="1320" height="195" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1582852114068" />
-    <state x="167" y="0" width="1032" height="746" key="SettingsEditor" timestamp="1581772903477">
+    <state x="167" y="0" width="1032" height="746" key="SettingsEditor" timestamp="1583330960497">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="167" y="0" width="1032" height="746" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1581772903477" />
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1582849842451">
+    <state x="167" y="0" width="1032" height="746" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1583330960497" />
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1582899871677">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1582849842451" />
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1582852863314">
+    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1582899871677" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583330647735">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1582852863314" />
-    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1581768087104">
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1583330647735" />
+    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1583330980182">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup/0.0.1366.746@0.0.1366.746" timestamp="1581768087104" />
+    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup/0.0.1366.746@0.0.1366.746" timestamp="1583330980182" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/BinarySearchTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
