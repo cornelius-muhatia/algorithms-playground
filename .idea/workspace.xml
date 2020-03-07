@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/sort/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/StringRepeatingWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/StringRepeatingWordsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +15,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -45,28 +46,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cmuhatia.playground" />
       <recent name="com.cmuhatia.playground.sort" />
       <recent name="com.cmuhatia.playground.search" />
-      <recent name="com.cmuhatia.playground" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MergeSort">
-    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.BinarySearch" />
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.StringRepeatingWordsTest.getRepeatedWords">
     <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.sort.MergeSort" />
       <module name="algorithms-playground" />
@@ -96,22 +84,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DynamicProgrammingTest.longestIncreasingSequence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.DynamicProgrammingTest" />
-      <option name="METHOD_NAME" value="longestIncreasingSequence" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="QuickSortTest.sarajQuickSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
@@ -123,6 +95,38 @@
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground.sort" />
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.sort.QuickSortTest" />
       <option name="METHOD_NAME" value="sarajQuickSort" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringRepeatingWordsTest.getRepeatedWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.StringRepeatingWordsTest" />
+      <option name="METHOD_NAME" value="getRepeatedWords" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringRepeatingWordsTest.testSplitString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.StringRepeatingWordsTest" />
+      <option name="METHOD_NAME" value="testSplitString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,20 +185,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.BinarySearch" />
       <item itemvalue="Application.MergeSort" />
-      <item itemvalue="JUnit.DynamicProgrammingTest.longestIncreasingSequence" />
       <item itemvalue="JUnit.BinarySearchTest.contains" />
       <item itemvalue="JUnit.QuickSortTest.sarajQuickSort" />
       <item itemvalue="Maven.mvn test" />
+      <item itemvalue="JUnit.StringRepeatingWordsTest.testSplitString" />
+      <item itemvalue="JUnit.StringRepeatingWordsTest.getRepeatedWords" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringRepeatingWordsTest.getRepeatedWords" />
+        <item itemvalue="JUnit.StringRepeatingWordsTest.testSplitString" />
         <item itemvalue="Application.MergeSort" />
         <item itemvalue="JUnit.QuickSortTest.sarajQuickSort" />
         <item itemvalue="JUnit.BinarySearchTest.contains" />
-        <item itemvalue="Application.BinarySearch" />
-        <item itemvalue="JUnit.DynamicProgrammingTest.longestIncreasingSequence" />
       </list>
     </recent_temporary>
   </component>
@@ -228,10 +232,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="142" y="0" width="1081" height="750" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580922776210">
+    <state x="142" y="0" width="1081" height="746" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583584131114">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="142" y="0" width="1081" height="750" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.746@0.0.1366.746" timestamp="1580922776210" />
+    <state x="142" y="0" width="1081" height="746" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.746@0.0.1366.746" timestamp="1583584131114" />
     <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1583332972537">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
@@ -252,22 +256,22 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1583468187276" />
-    <state width="1320" height="197" key="GridCell.Tab.0.bottom" timestamp="1583500890254">
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom" timestamp="1583584684512">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="197" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1583500890254" />
-    <state width="1320" height="197" key="GridCell.Tab.0.center" timestamp="1583500890253">
+    <state width="1320" height="168" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1583584684512" />
+    <state width="1320" height="168" key="GridCell.Tab.0.center" timestamp="1583584684511">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="197" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1583500890253" />
-    <state width="1320" height="197" key="GridCell.Tab.0.left" timestamp="1583500890253">
+    <state width="1320" height="168" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1583584684511" />
+    <state width="1320" height="168" key="GridCell.Tab.0.left" timestamp="1583584684511">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="197" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1583500890253" />
-    <state width="1320" height="197" key="GridCell.Tab.0.right" timestamp="1583500890254">
+    <state width="1320" height="168" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1583584684511" />
+    <state width="1320" height="168" key="GridCell.Tab.0.right" timestamp="1583584684511">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state width="1320" height="197" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1583500890254" />
+    <state width="1320" height="168" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1583584684511" />
     <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1583483898412">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
@@ -292,10 +296,10 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1583487789945" />
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583330647735">
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583584152937">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1583330647735" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1583584152937" />
     <state x="346" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1583330980182">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
