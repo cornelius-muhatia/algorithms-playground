@@ -6,6 +6,8 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.fail;
+
 public class DynamicProgrammingTest {
 
     @Test
@@ -29,5 +31,12 @@ public class DynamicProgrammingTest {
     @Test
     public void longestIncreasingSequence(){
         Assert.assertEquals(List.of(3, 5, 10, 12, 15), DynamicProgramming.longestIncreasingSequence(List.of(16, 3, 5, 19, 10, 14, 12, 0, 15)));
+    }
+
+    @Test
+    public void longestIncreasingSequence2() {
+        List<Integer> list = List.of(10, 3, 5, 19, 10, 14, 12, 0, 5);
+        Assert.assertFalse(DynamicProgramming.longestIncreasingSequence2(list).isEmpty());
+        fail(DynamicProgramming.longestIncreasingSequence2(list).toString());
     }
 }
