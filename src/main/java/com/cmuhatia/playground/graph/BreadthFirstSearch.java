@@ -30,14 +30,14 @@ public class BreadthFirstSearch {
      * @param root root vertex
      * @param <T> generic reference
      */
-    public static <T> void traverseGraph(Graph<T> graph, Graph.Vertex<T> root){
-        Set<Graph.Vertex<T>> visited = new LinkedHashSet<>();
-        Queue<Graph.Vertex<T>> frontier = new LinkedList<>();
+    public static <T> void traverseGraph(Graph<T> graph, Vertex<T> root){
+        Set<Vertex<T>> visited = new LinkedHashSet<>();
+        Queue<Vertex<T>> frontier = new LinkedList<>();
         frontier.add(root);
         while(!frontier.isEmpty()){
             if(!visited.contains(frontier.peek())){
                 visited.add(frontier.peek());
-                System.out.println(frontier.peek().label);
+                System.out.println(frontier.peek().getLabel());
                 if(graph.getGraph().containsKey(frontier.peek())) {
                     frontier.addAll(graph.getGraph().get(frontier.peek()));
                 }
@@ -48,7 +48,7 @@ public class BreadthFirstSearch {
     }
 
     public static void main(String[] args){
-        Graph.Vertex<String> uthiru = new Graph.Vertex<>("Uthiru");
+        Vertex<String> uthiru = new Vertex<>("Uthiru");
         Graph<String> nairobi = generateGraph(true, uthiru);
         System.out.println("Nairobi graph: \n" + nairobi);
         System.out.println("========== Traversing the tree ============");
@@ -61,27 +61,27 @@ public class BreadthFirstSearch {
      * @param isDirected is a directed graph
      * @return {@link Graph}
      */
-    public static Graph<String> generateGraph(boolean isDirected, Graph.Vertex<String> uthiru){
+    public static Graph<String> generateGraph(boolean isDirected, Vertex<String> uthiru){
         Graph<String> nairobi = new Graph<>(6, isDirected);
         nairobi.addVertex(uthiru);
 
-        Graph.Vertex<String> kawagware = new Graph.Vertex<>("Kawagware");
+        Vertex<String> kawagware = new Vertex<>("Kawagware");
         nairobi.addEdge(uthiru, kawagware);
 
-        Graph.Vertex<String> kangemi = new Graph.Vertex<>("Kangemi");
+        Vertex<String> kangemi = new Vertex<>("Kangemi");
         nairobi.addEdge(uthiru, kangemi);
 
-        Graph.Vertex<String> westland = new Graph.Vertex<>("Westland");
+        Vertex<String> westland = new Vertex<>("Westland");
         nairobi.addEdge(kangemi, westland);
 
         nairobi.addEdge(kawagware, kangemi);
 
-        Graph.Vertex<String> yaya = new Graph.Vertex<>("Yaya");
+        Vertex<String> yaya = new Vertex<>("Yaya");
         nairobi.addEdge(kawagware, yaya);
 
         nairobi.addEdge(yaya, westland);
 
-        Graph.Vertex<String> cbd = new Graph.Vertex<>("CBD");
+        Vertex<String> cbd = new Vertex<>("CBD");
         nairobi.addEdge(westland, cbd);
         nairobi.addEdge(yaya, cbd);
 
