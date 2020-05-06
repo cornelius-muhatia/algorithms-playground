@@ -1,6 +1,6 @@
 package com.cmuhatia.playground.graph;
 
-import org.junit.Assert;
+
 import org.junit.Test;
 
 import java.util.LinkedList;
@@ -36,9 +36,9 @@ public class DijkstraAlgorithmTest {
         LinkedList<WeightedVertex<String, Double>> shortestPath = new LinkedList<>();
         shortestPath.add(a);
         shortestPath.add(b);
-        shortestPath.add(d);
 
 //        Assert.assertTrue(d.getWeight().equals(Double.valueOf(5.0)));
-        Assert.assertEquals(Double.valueOf(5.0), d.getWeight());
+//        assertEquals(Double.valueOf(5.0), d.getWeight());
+        assertEquals(shortestPath, d.getShortestPath());
     }
 }

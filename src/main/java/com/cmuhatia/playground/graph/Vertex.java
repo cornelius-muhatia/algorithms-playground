@@ -59,8 +59,13 @@ public class Vertex<T> {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return label.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Vertex<?> vertex = (Vertex<?>) o;
+
+        return label.equals(vertex.label);
     }
 
     @Override

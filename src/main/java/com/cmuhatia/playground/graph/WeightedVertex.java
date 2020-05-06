@@ -15,6 +15,7 @@
  */
 package com.cmuhatia.playground.graph;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ import java.util.Objects;
  * @author Cornelius Muhatia.
  * @version 1.0.0 4/23/20
  */
-public class WeightedVertex<T, W extends Number> extends Vertex<T> implements Comparable<WeightedVertex<T, Number> >{
+public class WeightedVertex<T, W extends Number> extends Vertex<T> /*implements Comparable<WeightedVertex<T, Number> >*/{
 
     /**
      * Shortest path traversed from the root node
@@ -32,11 +33,11 @@ public class WeightedVertex<T, W extends Number> extends Vertex<T> implements Co
     /**
      * Path distance
      */
-    private W weight;
+    private W weight = null;
     /**
      * Adjacent vertex to current vertex
      */
-    private Map<WeightedVertex<T, W>, W> adjacentVertex;
+    private Map<WeightedVertex<T, W>, W> adjacentVertex = new HashMap<>();
 
     /**
      * Default constructor
@@ -74,16 +75,25 @@ public class WeightedVertex<T, W extends Number> extends Vertex<T> implements Co
     }
 
     @Override
-    public int compareTo(WeightedVertex<T, Number>  o) {
-        return -1;
-//        if(o.getLabel().equals(this.getLabel())){
-//            if(Objects.equals(o.getWeight(), getWeight())){
-//                return 0;
-//            } else {
-//                return 1;
-//            }
-//        } else{
-//            return -1;
-//        }
+    public boolean equals(Object o) {
+        return super.equals(o);
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+//    @Override
+//    public int compareTo(WeightedVertex<T, Number>  o) {
+//        return -1;
+////        if(o.getLabel().equals(this.getLabel())){
+////            if(Objects.equals(o.getWeight(), getWeight())){
+////                return 0;
+////            } else {
+////                return 1;
+////            }
+////        } else{
+////            return -1;
+////        }
+//    }
 }

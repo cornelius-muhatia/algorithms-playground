@@ -47,24 +47,33 @@ public class DijkstraAlgorithm<T>{
         while(!unsettledNodes.isEmpty()){
             WeightedVertex<T, Double>  frontier = unsettledNodes.poll();
             frontier.getAdjacentVertex().forEach((vertex, value) -> {
-                if(!Objects.isNull(vertex.getAdjacentVertex())){
-                    unsettledNodes.add(vertex);
-                }
                 if(Objects.isNull(vertex.getWeight())){
                     if(Objects.isNull(frontier.getWeight())){
                         vertex.setWeight(value);
                     } else {
                         vertex.setWeight(value + frontier.getWeight());
                     }
+                    if(Objects.isNull(vertex.getShortestPath())){
+                        vertex.setShortestPath(new LinkedList<>());
+                    }
+                    if(frontier.equals(root)) {
+                        vertex.setShortestPath(new LinkedList<>(List.of(frontier)));
+                    } else{
+                        vertex.setShortestPath(frontier.getShortestPath());
+                    }
+                    unsettledNodes.add(vertex);
                 } else {
                     Double totalWeight = vertex.getWeight() + value;
                     if (totalWeight < vertex.getWeight()) {
                         vertex.setWeight(totalWeight);
+                        //Weight changed loosen vertex for updating neighbouring nodes
+                        unsettledNodes.add(vertex);
+                        vertex.setShortestPath(frontier.getShortestPath());
+                        vertex.getShortestPath().add(frontier);
                     }
                 }
                 System.out.println("Explored vertex " + vertex.getLabel() + " assigned weight " + vertex.getWeight());
             });
-            unsettledNodes.poll();
         }
     }
 
@@ -89,5 +98,6 @@ public class DijkstraAlgorithm<T>{
         shortestPath.add(a);
         shortestPath.add(b);
         shortestPath.add(d);
+        System.out.println("Total weight of d " + d.getWeight());
     }
 }
