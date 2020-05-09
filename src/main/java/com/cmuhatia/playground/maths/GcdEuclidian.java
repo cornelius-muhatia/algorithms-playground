@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cmuhatia.playground;
+package com.cmuhatia.playground.maths;
 
 /**
  * Examples related to greatest common divisor using Eclidian algorithm

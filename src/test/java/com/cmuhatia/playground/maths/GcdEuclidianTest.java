@@ -1,9 +1,8 @@
-package com.cmuhatia.playground;
+package com.cmuhatia.playground.maths;
 
+import com.cmuhatia.playground.maths.GcdEuclidian;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Cornelius M.
