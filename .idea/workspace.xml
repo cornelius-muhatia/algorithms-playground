@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/maths/Divisors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/maths/DivisorsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/maths/PrimeNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/maths/PrimeNumbersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/GcdEuclidian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/maths/GcdEuclidian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/GcdEuclidianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/maths/GcdEuclidianTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,20 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Divisors">
-    <configuration name="DijkstraAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.graph.DijkstraAlgorithm" />
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PrimeNumbersTest.countPrimeNumbersTests">
     <configuration name="Divisors" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.maths.Divisors" />
       <module name="algorithms-playground" />
@@ -100,21 +85,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DijkstraAlgorithmTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.graph" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.graph.DijkstraAlgorithmTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GcdEuclidianTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimeNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
@@ -142,9 +112,41 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.GcdEuclidianTest" />
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.maths" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.maths.PrimeNumbersTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrimeNumbersTest.countPrimeNoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.maths.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.maths" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.maths.PrimeNumbersTest" />
+      <option name="METHOD_NAME" value="countPrimeNoTests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrimeNumbersTest.countPrimeNumbersTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.maths.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.maths" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.maths.PrimeNumbersTest" />
+      <option name="METHOD_NAME" value="countPrimeNumbersTests" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -202,20 +204,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.DijkstraAlgorithm" />
-      <item itemvalue="JUnit.DijkstraAlgorithmTest" />
-      <item itemvalue="JUnit.GcdEuclidianTest" />
-      <item itemvalue="Maven.mvn test" />
-      <item itemvalue="JUnit.DivisorsTest" />
       <item itemvalue="Application.Divisors" />
+      <item itemvalue="JUnit.DivisorsTest" />
+      <item itemvalue="JUnit.PrimeNumbersTest" />
+      <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNoTests" />
+      <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNumbersTests" />
+      <item itemvalue="Maven.mvn test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNumbersTests" />
+        <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNoTests" />
+        <item itemvalue="JUnit.PrimeNumbersTest" />
         <item itemvalue="Application.Divisors" />
         <item itemvalue="JUnit.DivisorsTest" />
-        <item itemvalue="JUnit.GcdEuclidianTest" />
-        <item itemvalue="JUnit.DijkstraAlgorithmTest" />
-        <item itemvalue="Application.DijkstraAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -278,25 +280,25 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1587666037194" />
-    <state width="1320" height="176" key="GridCell.Tab.0.bottom" timestamp="1588992815874">
+    <state width="1320" height="176" key="GridCell.Tab.0.bottom" timestamp="1589539320529">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1588992815874" />
+    <state width="1320" height="176" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1589539320529" />
     <state width="1320" height="250" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="176" key="GridCell.Tab.0.center" timestamp="1588992815873">
+    <state width="1320" height="176" key="GridCell.Tab.0.center" timestamp="1589539320528">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1588992815873" />
+    <state width="1320" height="176" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1589539320528" />
     <state width="1320" height="250" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="176" key="GridCell.Tab.0.left" timestamp="1588992815873">
+    <state width="1320" height="176" key="GridCell.Tab.0.left" timestamp="1589539320528">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1588992815873" />
+    <state width="1320" height="176" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1589539320528" />
     <state width="1320" height="250" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="176" key="GridCell.Tab.0.right" timestamp="1588992815873">
+    <state width="1320" height="176" key="GridCell.Tab.0.right" timestamp="1589539320529">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1588992815873" />
+    <state width="1320" height="176" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1589539320529" />
     <state width="1320" height="250" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
     <state width="1320" height="218" key="GridCell.Tab.1.bottom" timestamp="1585149453278">
       <screen x="0" y="0" width="1366" height="746" />
@@ -326,10 +328,10 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1586518302698" />
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1588990798840">
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589524537336">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1588990798840" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1589524537336" />
     <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1587609534943" />
     <state x="232" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583745281304">
       <screen x="0" y="0" width="1366" height="746" />
