@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KnuthMorrisPrattAlgorithmTest">
+  <component name="RunManager" selected="Application.KnuthMorrisPrattAlgorithm">
+    <configuration name="KnuthMorrisPrattAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.KnuthMorrisPrattAlgorithm" />
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KnuthMorrisPrattAlgorithmTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
@@ -107,32 +120,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimeNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KnuthMorrisPrattAlgorithmTest.countStringOccurrence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.maths.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.maths" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.maths.PrimeNumbersTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PrimeNumbersTest.countPrimeNoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.maths.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.maths" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.maths.PrimeNumbersTest" />
-      <option name="METHOD_NAME" value="countPrimeNoTests" />
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.search" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.KnuthMorrisPrattAlgorithmTest" />
+      <option name="METHOD_NAME" value="countStringOccurrence" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,20 +205,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.PrimeNumbersTest" />
-      <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNoTests" />
       <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNumbersTests" />
-      <item itemvalue="Maven.mvn test" />
       <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest" />
       <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.computeSuffixPrefix" />
+      <item itemvalue="Maven.mvn test" />
+      <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.countStringOccurrence" />
+      <item itemvalue="Application.KnuthMorrisPrattAlgorithm" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest" />
+        <item itemvalue="Application.KnuthMorrisPrattAlgorithm" />
+        <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.countStringOccurrence" />
         <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.computeSuffixPrefix" />
+        <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest" />
         <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNumbersTests" />
-        <item itemvalue="JUnit.PrimeNumbersTest.countPrimeNoTests" />
-        <item itemvalue="JUnit.PrimeNumbersTest" />
       </list>
     </recent_temporary>
   </component>
@@ -263,9 +261,10 @@
     </state>
     <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1589776666539" />
     <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.746@0.0.1366.746" timestamp="1583332972536" />
-    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1587611795622">
-      <screen x="0" y="0" width="1366" height="746" />
+    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1589853552291">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.744@0.0.1366.744" timestamp="1589853552291" />
     <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.746@0.0.1366.746" timestamp="1587611795622" />
     <state x="441" y="0" width="925" height="746" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585727824754">
       <screen x="0" y="0" width="1366" height="746" />
@@ -275,45 +274,45 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1587666037194" />
-    <state width="1320" height="176" key="GridCell.Tab.0.bottom" timestamp="1589781142463">
+    <state width="1320" height="220" key="GridCell.Tab.0.bottom" timestamp="1589854445357">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1589781142463" />
+    <state width="1320" height="220" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1589854445357" />
     <state width="1320" height="250" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="176" key="GridCell.Tab.0.center" timestamp="1589781142463">
+    <state width="1320" height="220" key="GridCell.Tab.0.center" timestamp="1589854445356">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1589781142463" />
+    <state width="1320" height="220" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1589854445356" />
     <state width="1320" height="250" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="176" key="GridCell.Tab.0.left" timestamp="1589781142463">
+    <state width="1320" height="220" key="GridCell.Tab.0.left" timestamp="1589854445354">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1589781142463" />
+    <state width="1320" height="220" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1589854445354" />
     <state width="1320" height="250" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="176" key="GridCell.Tab.0.right" timestamp="1589781142463">
+    <state width="1320" height="220" key="GridCell.Tab.0.right" timestamp="1589854445356">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="176" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1589781142463" />
+    <state width="1320" height="220" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1589854445356" />
     <state width="1320" height="250" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="220" key="GridCell.Tab.1.bottom" timestamp="1589777473559">
+    <state width="1320" height="220" key="GridCell.Tab.1.bottom" timestamp="1589854445358">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1589777473559" />
+    <state width="1320" height="220" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1589854445358" />
     <state width="1320" height="218" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1585149453278" />
-    <state width="1320" height="220" key="GridCell.Tab.1.center" timestamp="1589777473558">
+    <state width="1320" height="220" key="GridCell.Tab.1.center" timestamp="1589854445357">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1589777473558" />
+    <state width="1320" height="220" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1589854445357" />
     <state width="1320" height="218" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="220" key="GridCell.Tab.1.left" timestamp="1589777473558">
+    <state width="1320" height="220" key="GridCell.Tab.1.left" timestamp="1589854445357">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1589777473558" />
+    <state width="1320" height="220" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1589854445357" />
     <state width="1320" height="218" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="220" key="GridCell.Tab.1.right" timestamp="1589777473558">
+    <state width="1320" height="220" key="GridCell.Tab.1.right" timestamp="1589854445358">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="220" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1589777473558" />
+    <state width="1320" height="220" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1589854445358" />
     <state width="1320" height="218" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
     <state x="167" y="0" width="1032" height="750" key="SettingsEditor" timestamp="1583468192563">
       <screen x="0" y="0" width="1366" height="746" />
@@ -327,10 +326,10 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1586518302698" />
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589779604152">
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589853563701">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1589779604152" />
+    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1589853563701" />
     <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1587609534943" />
     <state x="232" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583745281304">
       <screen x="0" y="0" width="1366" height="746" />

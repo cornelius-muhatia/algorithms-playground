@@ -15,6 +15,8 @@
  */
 package com.cmuhatia.playground.search;
 
+import java.util.Scanner;
+
 /**
  * Implements Knuth Morris Pratt pattern matching Algorithm. More details on the algorithm can be found at:
  * <a href="https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm">Wikipedia</a>
@@ -77,5 +79,61 @@ public class KnuthMorrisPrattAlgorithm<T> {
             }
         }
         return false;
+    }
+
+    /**
+     * Used to find the prefix and suffix of a String. Time complexity is O(n)
+     *
+     * @param pattern pattern sequence
+     * @return array mapping suffix and prefix for example given: acddac,
+     * will return {0, 0, 0, 0, 1, 2}
+     */
+    public static int[] computeSuffixPrefix(String pattern) {
+        int[] temp = new int[pattern.length()];
+        int i = 0;
+        int j = 1;
+        while (j < pattern.length()) {
+            if (pattern.charAt(i) == pattern.charAt(j)) {
+                temp[j] = i + 1;
+                j++;
+                i++;
+            } else if(i > 0){
+                i = temp[i - 1];
+            } else {
+                temp[j] = 0;
+                j++;
+            }
+        }
+        return temp;
+    }
+
+    /**
+     * Counts pattern occurrence within a text. Occurrences can overlap.
+     *
+     * @param text String sentence/paragraph
+     * @param pattern String pattern
+     * @return number of occurrence
+     */
+    public static int countStringOccurrence(String text, String pattern){
+        int[] prefixSuffix = computeSuffixPrefix(pattern);
+        int count = 0;
+        int i = 0;//text index
+        int j = 0;//pattern index
+        while(i < text.length()){
+            if(text.charAt(i) == pattern.charAt(j)){
+                i++;
+                j++;
+            } else if(j > 0){
+                j = prefixSuffix[j - 1];
+            } else{
+                i++;
+            }
+            if(j == pattern.length()){
+                count++;
+                i = i - (pattern.length() - 1);
+                j = 0;
+            }
+        }
+        return count;
     }
 }

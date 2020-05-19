@@ -23,6 +23,9 @@ public class KnuthMorrisPrattAlgorithmTest {
         assertArrayEquals(new int[]{0, 0, 0, 0, 1, 2, 3, 1}, KnuthMorrisPrattAlgorithm.computeSuffixPrefix(testChars));
         testChars = new Character[]{'a', 'a', 'b', 'a', 'a', 'b', 'a', 'a', 'a'};
         assertArrayEquals(new int[]{0, 1, 0, 1, 2, 3, 4, 5, 2}, KnuthMorrisPrattAlgorithm.computeSuffixPrefix(testChars));
+        //String patterns tests
+        assertArrayEquals(new int[]{0, 1, 0, 1, 2, 3, 4, 5, 2}, KnuthMorrisPrattAlgorithm.computeSuffixPrefix("aabaabaaa"));
+
     }
 
     @Test
@@ -36,5 +39,12 @@ public class KnuthMorrisPrattAlgorithmTest {
                 "searches for occurrences of a \"word\" W";
         assertTrue(KnuthMorrisPrattAlgorithm.contains(ArrayUtils.toObject(sentence.toCharArray()),
                 ArrayUtils.toObject("\"word\"".toCharArray())));
+    }
+
+    @Test
+    public void countStringOccurrence() {
+        String text = "babalabalabalatheend";
+        String pattern = "alabala";
+        assertEquals(2, KnuthMorrisPrattAlgorithm.countStringOccurrence(text, pattern));
     }
 }
