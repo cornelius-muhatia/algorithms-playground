@@ -15,7 +15,7 @@
  */
 package com.cmuhatia.playground.search;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Implements Knuth Morris Pratt pattern matching Algorithm. More details on the algorithm can be found at:
@@ -93,7 +93,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
         int i = 0;
         int j = 1;
         while (j < pattern.length()) {
-            if (pattern.charAt(i) == pattern.charAt(j)) {
+            if (Character.toLowerCase(pattern.charAt(i)) == Character.toLowerCase(pattern.charAt(j))) {
                 temp[j] = i + 1;
                 j++;
                 i++;
@@ -120,7 +120,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
         int i = 0;//text index
         int j = 0;//pattern index
         while(i < text.length()){
-            if(text.charAt(i) == pattern.charAt(j)){
+            if(Character.toLowerCase(text.charAt(i)) == Character.toLowerCase(pattern.charAt(j))){
                 i++;
                 j++;
             } else if(j > 0){
@@ -135,5 +135,50 @@ public class KnuthMorrisPrattAlgorithm<T> {
             }
         }
         return count;
+    }
+
+    public static String getRelatedWords(String text, String pattern, int nearWordsCount){
+        int trailNearIdx = 0;
+        Map<String, Integer> nearWords = new HashMap<>();
+        int[] prefixSuffix = computeSuffixPrefix(pattern);
+        int i = 0;//text index
+        int j = 0;//pattern index
+        while(i < text.length()){
+            if(Character.isSpaceChar(text.charAt(i)) && (i % nearWordsCount == 0)){
+                trailNearIdx = i;
+            }
+            if(Character.toLowerCase(text.charAt(i)) == Character.toLowerCase(pattern.charAt(j))){
+                i++;
+                j++;
+            } else if(j > 0){
+                j = prefixSuffix[j - 1];
+            } else{
+                i++;
+            }
+            if(j == pattern.length()){
+                String word = text.substring(trailNearIdx, i);
+//                i = i - (pattern.length() - 1);
+                j = 0;
+            }
+        }
+        return "";
+    }
+
+    public static List<String> getPrecedenceStr(String text, int currentIdx, int noWords){
+        ArrayList<String> strings = new ArrayList<>(noWords);
+        int lastIdx = currentIdx;
+        for(int i = currentIdx; i >= 0; i--){
+            if(Character.isSpaceChar(text.charAt(i))){
+                strings.add(text.substring((i+1), lastIdx));
+                lastIdx = i-1;
+            } else if(i == 0){
+                strings.add(text.substring(0, lastIdx));
+            }
+            if(strings.size() == noWords){
+                break;
+            }
+        }
+        System.out.println(strings.toString());
+        return strings;
     }
 }

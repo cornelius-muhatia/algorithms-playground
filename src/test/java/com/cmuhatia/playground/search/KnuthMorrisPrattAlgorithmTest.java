@@ -47,4 +47,20 @@ public class KnuthMorrisPrattAlgorithmTest {
         String pattern = "alabala";
         assertEquals(2, KnuthMorrisPrattAlgorithm.countStringOccurrence(text, pattern));
     }
+
+    @Test
+    public void getRelatedWords() {
+        String text = "It is a nice day today, the sun is shining. However, the weather is expected to get worse the " +
+                "following few days. Nice day by day weather forecasts can be found literally everywhere on the “Internet”. " +
+                "So, it is quite easy to know what to expect tomorrow.";
+        assertEquals("nice", KnuthMorrisPrattAlgorithm.getRelatedWords(text, "day", 3));
+//        assertEquals("N/A", KnuthMorrisPrattAlgorithm.getRelatedWords(text, "CMUHATIA", 3));
+
+    }
+
+    @Test
+    public void getPrecedenceStr() {
+        String text = "It is a nice day today, the sun is shining";
+        assertArrayEquals(new String[]{"a", "is", "It"}, KnuthMorrisPrattAlgorithm.getPrecedenceStr(text, 6, 3).toArray());
+    }
 }
