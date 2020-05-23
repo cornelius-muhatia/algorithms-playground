@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/PalindromeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Palindrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/BinarySearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +73,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PalindromeTest.isPalindrome">
-    <configuration name="KnuthMorrisPrattAlgorithm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.KnuthMorrisPrattAlgorithm" />
+  <component name="RunManager" selected="JUnit.BinarySearchTest">
+    <configuration name="BinarySearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
@@ -87,6 +82,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.search" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.BinarySearchTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,20 +205,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.KnuthMorrisPrattAlgorithm" />
       <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest" />
       <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.getRelatedWords" />
       <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.getPrecedenceStr" />
       <item itemvalue="Maven.mvn test" />
       <item itemvalue="JUnit.PalindromeTest.isPalindrome" />
+      <item itemvalue="JUnit.BinarySearchTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinarySearchTest" />
         <item itemvalue="JUnit.PalindromeTest.isPalindrome" />
         <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.getPrecedenceStr" />
         <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.getRelatedWords" />
         <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest" />
-        <item itemvalue="Application.KnuthMorrisPrattAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -276,25 +274,25 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1587666037194" />
-    <state width="1320" height="199" key="GridCell.Tab.0.bottom" timestamp="1590221306100">
+    <state width="1320" height="199" key="GridCell.Tab.0.bottom" timestamp="1590221650701">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1590221306100" />
+    <state width="1320" height="199" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1590221650701" />
     <state width="1320" height="250" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="199" key="GridCell.Tab.0.center" timestamp="1590221306099">
+    <state width="1320" height="199" key="GridCell.Tab.0.center" timestamp="1590221650700">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1590221306099" />
+    <state width="1320" height="199" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1590221650700" />
     <state width="1320" height="250" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="199" key="GridCell.Tab.0.left" timestamp="1590221306099">
+    <state width="1320" height="199" key="GridCell.Tab.0.left" timestamp="1590221650699">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1590221306099" />
+    <state width="1320" height="199" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1590221650699" />
     <state width="1320" height="250" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="199" key="GridCell.Tab.0.right" timestamp="1590221306099">
+    <state width="1320" height="199" key="GridCell.Tab.0.right" timestamp="1590221650700">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1590221306099" />
+    <state width="1320" height="199" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1590221650700" />
     <state width="1320" height="250" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
     <state width="1320" height="171" key="GridCell.Tab.1.bottom" timestamp="1590221232116">
       <screen x="0" y="0" width="1366" height="744" />
@@ -341,16 +339,5 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="346" y="67" width="672" height="678" key="search.everywhere.popup/0.0.1366.746@0.0.1366.746" timestamp="1585644846931" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/BinarySearchTest.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

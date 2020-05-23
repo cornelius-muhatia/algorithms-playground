@@ -9,7 +9,7 @@ public class BinarySearch {
      * @param needle search key
      * @return true if exists false otherwise
      */
-    public static boolean contains(Character[] sortedArray, Character needle) {
+    public static <T extends Comparable<T>> boolean contains(T[] sortedArray, T needle) {
         int mid = (sortedArray.length/2);
         int length = sortedArray.length;
         int start = 0;
