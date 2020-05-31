@@ -15,9 +15,9 @@
  */
 package com.cmuhatia.playground.graph;
 
-import java.math.BigDecimal;
+import com.cmuhatia.playground.search.Node;
+
 import java.util.*;
-import java.lang.Number;
 
 /**
  * @author Cornelius Muhatia.
@@ -25,16 +25,51 @@ import java.lang.Number;
  */
 public class DijkstraAlgorithm<T>{
 
-    private final WeightedGraph<T, Double> graph;
+    private final WeightedGraph_<T, Double> graph;
 
     /**
      * Default constructor
      *
      * @param graph weighted graph
      */
-    public DijkstraAlgorithm(WeightedGraph<T, Double> graph){
+    public DijkstraAlgorithm(WeightedGraph_<T, Double> graph){
         this.graph = graph;
     }
+
+    public static void calculateShortestPath(WeightedGraph<String> graph, WeightedGraph.Node<String> root){
+        List<WeightedGraph.Node<String>> visited = new LinkedList<>();
+        Queue<WeightedGraph.Node<String>> frontier = new LinkedList<>();
+        frontier.add(root);
+        while(!frontier.isEmpty()){
+            if(!frontier.peek().getNeighbours().isEmpty()) {
+                WeightedGraph.Node<String> lowestNode = frontier.peek().getNeighbours().firstKey();
+                if (Objects.isNull(lowestNode.getWeight())) {
+                    lowestNode.setWeight(frontier.peek().getNeighbours().get(lowestNode));
+                } else if (lowestNode.getWeight().compareTo(
+                        frontier.peek().getNeighbours().get(lowestNode) + frontier.peek().getWeight()) > 0) {
+                    lowestNode.setWeight(frontier.peek().getNeighbours().get(lowestNode) + frontier.peek().getWeight());
+                }
+                for (Map.Entry<WeightedGraph.Node<String>, Double> entry : frontier.peek().getNeighbours().entrySet()) {
+                    if (!entry.equals(lowestNode)) {
+                        frontier.add(entry.getKey());
+                    }
+                }
+            }
+            frontier.poll();
+        }
+    }
+
+//    private WeightedGraph.Node<String> getSmallest(Map<WeightedGraph.Node<String>, Double> nodes){
+//        WeightedGraph.Node<String> lowestNode = null;
+//        for(Map.Entry<WeightedGraph.Node<String>, Double> entry: nodes.entrySet()){
+//            if(lowestNode == null){
+//                lowestNode = entry.getKey();
+//            } else if(lowestNode.getWeight().compareTo(entry.getKey().getWeight()) > 0){
+//                lowestNode = entry.getKey();
+//            }
+//        }
+//        return lowestNode;
+//    }
 
     /**
      * Determines shortest path for each node from root
@@ -78,7 +113,7 @@ public class DijkstraAlgorithm<T>{
     }
 
     public static void main(String[] args){
-        WeightedGraph<String, Double> graph = new WeightedGraph<>();
+        WeightedGraph_<String, Double> graph = new WeightedGraph_<>();
 
         WeightedVertex<String, Double> a = new WeightedVertex<>("A");
         WeightedVertex<String, Double> b = new WeightedVertex<>("B");

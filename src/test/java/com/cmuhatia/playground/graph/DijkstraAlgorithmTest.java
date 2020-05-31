@@ -3,9 +3,7 @@ package com.cmuhatia.playground.graph;
 
 import org.junit.Test;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -17,7 +15,7 @@ public class DijkstraAlgorithmTest {
 
     @Test
     public void calculateShortestPath() {
-        WeightedGraph<String, Double> graph = new WeightedGraph<>();
+        WeightedGraph_<String, Double> graph = new WeightedGraph_<>();
 
         WeightedVertex<String, Double> a = new WeightedVertex<>("A");
         WeightedVertex<String, Double> b = new WeightedVertex<>("B");
@@ -40,5 +38,22 @@ public class DijkstraAlgorithmTest {
 //        Assert.assertTrue(d.getWeight().equals(Double.valueOf(5.0)));
 //        assertEquals(Double.valueOf(5.0), d.getWeight());
         assertEquals(shortestPath, d.getShortestPath());
+    }
+
+    @Test
+    public void testCalculateShortestPath() {
+        WeightedGraph<String> graph = new WeightedGraph<>();
+        WeightedGraph.Node<String> a = new WeightedGraph.Node<>("A");
+        WeightedGraph.Node<String> b = new WeightedGraph.Node<>("B");
+        WeightedGraph.Node<String> c = new WeightedGraph.Node<>("C");
+        WeightedGraph.Node<String> d = new WeightedGraph.Node<>("D");
+        TreeMap<WeightedGraph.Node<String>, Double> aNeighbours = new TreeMap<>();
+        aNeighbours.put(b, 30.0);
+        aNeighbours.put(c, 30.0);
+        a.setNeighbours(aNeighbours);
+        b.setNeighbours(new TreeMap<>(Map.of(d, 11.0)));
+        c.setNeighbours(new TreeMap<>(Map.of(d, 15.0)));
+        DijkstraAlgorithm.calculateShortestPath(graph, a);
+//        assertEquals(Double.valueOf(20.0), a.getWeight());
     }
 }

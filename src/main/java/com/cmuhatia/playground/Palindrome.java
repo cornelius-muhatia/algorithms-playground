@@ -35,6 +35,32 @@ public class Palindrome {
         return false;
     }
 
+    public static String createPalindrome(String str) {
+        // code goes here
+        String remChars = "";
+        int i = 0;
+        int j = str.length() - 1;
+        boolean isMismatch = false;
+        while(i < j){
+            if(str.charAt(i) != str.charAt(j)){
+                remChars += str.charAt(i);
+                if(isMismatch){
+                    remChars = remChars.substring(0, remChars.length() - 1);
+                    i--;
+                    j--;
+                } else{
+                    isMismatch = true;
+                    i++;
+                }
+            } else{
+                isMismatch = false;
+                i++;
+                j--;
+            }
+        }
+        return remChars;
+    }
+
 
     public static void main(String[] args){
         System.out.println("Longest String " + longestEvenWord("Time to write great code"));
