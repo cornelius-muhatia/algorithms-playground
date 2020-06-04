@@ -15,33 +15,43 @@
  */
 package com.cmuhatia.playground.graph;
 
-import com.cmuhatia.playground.search.Node;
-import com.cmuhatia.playground.search.Tree;
-
 import java.util.*;
 
 /**
  * @author Cornelius M.
  * @version 1.0.0, 23/05/2020
  */
-public class WeightedGraph<T> extends HashSet<Node<T>> {
+public class WeightedGraph<T> extends HashSet<WeightedGraph.Node<T>> {
 
 
-    public static class Node<T> implements Comparable<Node<T>>{
-        private T name;
-        private Double weight = null;
-        private SortedMap<Node<T>, Double> neighbours = new TreeMap<>();
+    public static class Node<T>{
+        /**
+         * Node label/name
+         */
+        private T label;
+        /**
+         * Node weight
+         */
+        private Double weight;
+        /**
+         * Neighbour nodes with their weights
+         */
+        private Map<Node<T>, Double> neighbours = new HashMap<>();
+        /**
+         * Parent with the shortest path
+         */
+        private Node<T> parent;
 
-        public Node(T name) {
-            this.name = name;
+        public Node(T label) {
+            this.label = label;
         }
 
-        public T getName() {
-            return name;
+        public T getLabel() {
+            return label;
         }
 
-        public void setName(T name) {
-            this.name = name;
+        public void setLabel(T label) {
+            this.label = label;
         }
 
         public Double getWeight() {
@@ -52,12 +62,36 @@ public class WeightedGraph<T> extends HashSet<Node<T>> {
             this.weight = weight;
         }
 
-        public SortedMap<Node<T>, Double> getNeighbours() {
+        public Map<Node<T>, Double> getNeighbours() {
             return neighbours;
         }
 
-        public void setNeighbours(SortedMap<Node<T>, Double> neighbours) {
+        public void setNeighbours(Map<Node<T>, Double> neighbours) {
             this.neighbours = neighbours;
+        }
+
+        public Node<T> getParent() {
+            return parent;
+        }
+
+        public void setParent(Node<T> parent) {
+            this.parent = parent;
+        }
+
+        /**
+         * Returns shortest path in a reversed order starting with the current node
+         *
+         * @return shortest path nodes
+         */
+        public LinkedList<Node<T>> getShortestPath(){
+            LinkedList<Node<T>> shortestPath = new LinkedList<>();
+            shortestPath.add(this);
+            Node<T> currentParent = parent;
+            while(currentParent != null){
+                shortestPath.add(currentParent);
+                currentParent = currentParent.getParent();
+            }
+            return shortestPath;
         }
 
         @Override
@@ -67,31 +101,18 @@ public class WeightedGraph<T> extends HashSet<Node<T>> {
 
             Node<?> node = (Node<?>) o;
 
-            return getName().equals(node.getName());
+            return getLabel().equals(node.getLabel());
         }
 
         @Override
         public int hashCode() {
-            return getName().hashCode();
-        }
-
-        @Override
-        public int compareTo(Node<T> o) {
-            if(Objects.isNull(o.getWeight()) && Objects.isNull(this.getWeight())){
-                return 0;
-            } else if(Objects.isNull(this.getWeight())){
-                return -1;
-            } else if(Objects.isNull(o.getWeight())){
-                return 1;
-            } else {
-                return Double.compare(this.weight, o.getWeight());
-            }
+            return label.hashCode();
         }
 
         @Override
         public String toString() {
             return "Node{" +
-                    "name=" + name +
+                    "name=" + label +
                     ", weight=" + weight +
                     '}';
         }
