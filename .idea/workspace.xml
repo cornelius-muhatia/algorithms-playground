@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/heap/MaxHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/heap/MaxHeapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/tree/BinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/tree/BinarySearchTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +66,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cmuhatia.playground" />
       <recent name="com.cmuhatia.playground.heap" />
       <recent name="com.cmuhatia.playground.graph" />
-      <recent name="com.cmuhatia.playground" />
       <recent name="com.cmuhatia.playground.search" />
       <recent name="com.cmuhatia.playground.maths" />
     </key>
@@ -75,16 +76,18 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MaxHeapTest">
-    <configuration name="MaxHeap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.heap.MaxHeap" />
+  <component name="RunManager" selected="JUnit.BinarySearchTreeTest">
+    <configuration name="BinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.heap.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.tree" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.tree.BinarySearchTreeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,20 +208,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.MaxHeap" />
       <item itemvalue="JUnit.MaxHeapTest" />
       <item itemvalue="JUnit.MaxHeapTest.display" />
       <item itemvalue="JUnit.MaxHeapTest.removeRoot" />
-      <item itemvalue="Maven.mvn test" />
       <item itemvalue="JUnit.MaxHeapTest.remove" />
+      <item itemvalue="JUnit.BinarySearchTreeTest" />
+      <item itemvalue="Maven.mvn test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinarySearchTreeTest" />
         <item itemvalue="JUnit.MaxHeapTest" />
         <item itemvalue="JUnit.MaxHeapTest.remove" />
         <item itemvalue="JUnit.MaxHeapTest.removeRoot" />
         <item itemvalue="JUnit.MaxHeapTest.display" />
-        <item itemvalue="Application.MaxHeap" />
       </list>
     </recent_temporary>
   </component>
@@ -260,11 +263,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1591695817315" />
-    <state x="100" y="100" width="1166" height="546" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.746@0.0.1366.746" timestamp="1583332972536" />
-    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1591851501646">
+    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1592016484181">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.744@0.0.1366.744" timestamp="1591851501646" />
+    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.744@0.0.1366.744" timestamp="1592016484181" />
     <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.746@0.0.1366.746" timestamp="1587611795622" />
     <state x="441" y="0" width="925" height="746" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591240651521">
       <screen x="0" y="0" width="1366" height="744" />
@@ -276,63 +278,63 @@
     </state>
     <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1591878414215" />
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1587666037194" />
-    <state width="1320" height="226" key="GridCell.Tab.0.bottom" timestamp="1591936772200">
+    <state width="1320" height="195" key="GridCell.Tab.0.bottom" timestamp="1592063110788">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="226" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1591936772200" />
+    <state width="1320" height="195" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
     <state width="1320" height="250" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="226" key="GridCell.Tab.0.center" timestamp="1591936772200">
+    <state width="1320" height="195" key="GridCell.Tab.0.center" timestamp="1592063110787">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="226" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1591936772200" />
+    <state width="1320" height="195" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1592063110787" />
     <state width="1320" height="250" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="226" key="GridCell.Tab.0.left" timestamp="1591936772200">
+    <state width="1320" height="195" key="GridCell.Tab.0.left" timestamp="1592063110787">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="226" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1591936772200" />
+    <state width="1320" height="195" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1592063110787" />
     <state width="1320" height="250" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="226" key="GridCell.Tab.0.right" timestamp="1591936772200">
+    <state width="1320" height="195" key="GridCell.Tab.0.right" timestamp="1592063110788">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="226" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1591936772200" />
+    <state width="1320" height="195" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
     <state width="1320" height="250" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="260" key="GridCell.Tab.1.bottom" timestamp="1591785672408">
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1592063110788">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="260" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1591785672408" />
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
     <state width="1320" height="218" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1585149453278" />
-    <state width="1320" height="260" key="GridCell.Tab.1.center" timestamp="1591785672408">
+    <state width="1320" height="195" key="GridCell.Tab.1.center" timestamp="1592063110788">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="260" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1591785672408" />
+    <state width="1320" height="195" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
     <state width="1320" height="218" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="260" key="GridCell.Tab.1.left" timestamp="1591785672408">
+    <state width="1320" height="195" key="GridCell.Tab.1.left" timestamp="1592063110788">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="260" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1591785672408" />
+    <state width="1320" height="195" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
     <state width="1320" height="218" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="260" key="GridCell.Tab.1.right" timestamp="1591785672408">
+    <state width="1320" height="195" key="GridCell.Tab.1.right" timestamp="1592063110788">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="260" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1591785672408" />
+    <state width="1320" height="195" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
     <state width="1320" height="218" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
     <state x="167" y="0" width="1032" height="744" key="SettingsEditor" timestamp="1591826535991">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="167" y="0" width="1032" height="744" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1591826535991" />
     <state x="167" y="0" width="1032" height="750" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1583468192563" />
-    <state x="485" y="152" key="chooseDestDirectoryDialog" timestamp="1588990504249">
+    <state x="485" y="152" key="chooseDestDirectoryDialog" timestamp="1592015231277">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="485" y="152" key="chooseDestDirectoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1588990504249" />
+    <state x="485" y="152" key="chooseDestDirectoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1592015231277" />
     <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586518302698">
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1586518302698" />
-    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1591848502565">
+    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592015103055">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1591848502565" />
+    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1592015103055" />
     <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1587609534943" />
     <state x="232" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583745281304">
       <screen x="0" y="0" width="1366" height="746" />
