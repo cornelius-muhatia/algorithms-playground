@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/tree/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/tree/BinarySearchTreeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/FrequencyQueries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/knapsack/Knapsack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/FrequencyQueriesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/knapsack/KnapsackTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/MainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,21 +63,22 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cmuhatia.playground.knapsack" />
       <recent name="com.cmuhatia.playground" />
       <recent name="com.cmuhatia.playground.heap" />
       <recent name="com.cmuhatia.playground.graph" />
       <recent name="com.cmuhatia.playground.search" />
-      <recent name="com.cmuhatia.playground.maths" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinarySearchTreeTest">
+  <component name="RunManager" selected="JUnit.KnapsackTest.getMaxWeight01Test">
     <configuration name="BinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
@@ -92,6 +94,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FrequencyQueriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.FrequencyQueriesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KnapsackTest.getMaxWeight01Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.knapsack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.knapsack" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.knapsack.KnapsackTest" />
+      <option name="METHOD_NAME" value="getMaxWeight01Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KnapsackTest.knapSack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.knapsack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.knapsack" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.knapsack.KnapsackTest" />
+      <option name="METHOD_NAME" value="knapSack" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MaxHeapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
@@ -103,54 +152,6 @@
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground.heap" />
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.heap.MaxHeapTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaxHeapTest.display" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.heap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.heap" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.heap.MaxHeapTest" />
-      <option name="METHOD_NAME" value="display" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaxHeapTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.heap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.heap" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.heap.MaxHeapTest" />
-      <option name="METHOD_NAME" value="remove" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaxHeapTest.removeRoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.heap.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.heap" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.heap.MaxHeapTest" />
-      <option name="METHOD_NAME" value="removeRoot" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -209,19 +210,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.MaxHeapTest" />
-      <item itemvalue="JUnit.MaxHeapTest.display" />
-      <item itemvalue="JUnit.MaxHeapTest.removeRoot" />
-      <item itemvalue="JUnit.MaxHeapTest.remove" />
       <item itemvalue="JUnit.BinarySearchTreeTest" />
+      <item itemvalue="JUnit.FrequencyQueriesTest" />
       <item itemvalue="Maven.mvn test" />
+      <item itemvalue="JUnit.KnapsackTest.knapSack" />
+      <item itemvalue="JUnit.KnapsackTest.getMaxWeight01Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.KnapsackTest.getMaxWeight01Test" />
+        <item itemvalue="JUnit.KnapsackTest.knapSack" />
+        <item itemvalue="JUnit.FrequencyQueriesTest" />
         <item itemvalue="JUnit.BinarySearchTreeTest" />
         <item itemvalue="JUnit.MaxHeapTest" />
-        <item itemvalue="JUnit.MaxHeapTest.remove" />
-        <item itemvalue="JUnit.MaxHeapTest.removeRoot" />
-        <item itemvalue="JUnit.MaxHeapTest.display" />
       </list>
     </recent_temporary>
   </component>
@@ -255,14 +256,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="142" y="0" width="1081" height="746" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583584131114">
-      <screen x="0" y="0" width="1366" height="746" />
-    </state>
-    <state x="142" y="0" width="1081" height="746" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.746@0.0.1366.746" timestamp="1583584131114" />
-    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1591695817315">
+    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1592205076061">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1591695817315" />
+    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1592205076061" />
     <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1592016484181">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -273,56 +270,59 @@
     </state>
     <state x="441" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1591240651521" />
     <state x="441" y="0" width="925" height="746" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.746@0.0.1366.746" timestamp="1585727824754" />
-    <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl" timestamp="1591878414215">
+    <state x="444" y="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592197301620">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1591878414215" />
+    <state x="444" y="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.744@0.0.1366.744" timestamp="1592197301620" />
+    <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl" timestamp="1592194023284">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1592194023284" />
     <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1587666037194" />
-    <state width="1320" height="195" key="GridCell.Tab.0.bottom" timestamp="1592063110788">
+    <state width="1320" height="199" key="GridCell.Tab.0.bottom" timestamp="1592720309907">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
+    <state width="1320" height="199" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592720309907" />
     <state width="1320" height="250" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="195" key="GridCell.Tab.0.center" timestamp="1592063110787">
+    <state width="1320" height="199" key="GridCell.Tab.0.center" timestamp="1592720309905">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1592063110787" />
+    <state width="1320" height="199" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1592720309905" />
     <state width="1320" height="250" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="195" key="GridCell.Tab.0.left" timestamp="1592063110787">
+    <state width="1320" height="199" key="GridCell.Tab.0.left" timestamp="1592720309904">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1592063110787" />
+    <state width="1320" height="199" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1592720309904" />
     <state width="1320" height="250" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="195" key="GridCell.Tab.0.right" timestamp="1592063110788">
+    <state width="1320" height="199" key="GridCell.Tab.0.right" timestamp="1592720309906">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
+    <state width="1320" height="199" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1592720309906" />
     <state width="1320" height="250" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1592063110788">
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1592714738244">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592714738244" />
     <state width="1320" height="218" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1585149453278" />
-    <state width="1320" height="195" key="GridCell.Tab.1.center" timestamp="1592063110788">
+    <state width="1320" height="195" key="GridCell.Tab.1.center" timestamp="1592714738243">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
+    <state width="1320" height="195" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1592714738243" />
     <state width="1320" height="218" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="195" key="GridCell.Tab.1.left" timestamp="1592063110788">
+    <state width="1320" height="195" key="GridCell.Tab.1.left" timestamp="1592714738243">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
+    <state width="1320" height="195" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1592714738243" />
     <state width="1320" height="218" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="195" key="GridCell.Tab.1.right" timestamp="1592063110788">
+    <state width="1320" height="195" key="GridCell.Tab.1.right" timestamp="1592714738244">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1592063110788" />
+    <state width="1320" height="195" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1592714738244" />
     <state width="1320" height="218" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
     <state x="167" y="0" width="1032" height="744" key="SettingsEditor" timestamp="1591826535991">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="167" y="0" width="1032" height="744" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1591826535991" />
-    <state x="167" y="0" width="1032" height="750" key="SettingsEditor/0.0.1366.746@0.0.1366.746" timestamp="1583468192563" />
     <state x="485" y="152" key="chooseDestDirectoryDialog" timestamp="1592015231277">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -331,22 +331,19 @@
       <screen x="0" y="0" width="1366" height="746" />
     </state>
     <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1586518302698" />
-    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592015103055">
+    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592711404459">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1592015103055" />
+    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1592711404459" />
     <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1587609534943" />
-    <state x="232" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1583745281304">
-      <screen x="0" y="0" width="1366" height="746" />
-    </state>
-    <state x="232" y="100" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.746@0.0.1366.746" timestamp="1583745281304" />
     <state x="347" y="163" key="run.anything.popup" timestamp="1590234002049">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="347" y="163" key="run.anything.popup/0.0.1366.744@0.0.1366.744" timestamp="1590234002049" />
-    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup" timestamp="1585644846931">
-      <screen x="0" y="0" width="1366" height="746" />
+    <state x="346" y="65" width="672" height="677" key="search.everywhere.popup" timestamp="1592712620590">
+      <screen x="0" y="0" width="1366" height="744" />
     </state>
+    <state x="346" y="65" width="672" height="677" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1592712620590" />
     <state x="346" y="67" width="672" height="678" key="search.everywhere.popup/0.0.1366.746@0.0.1366.746" timestamp="1585644846931" />
   </component>
 </project>
