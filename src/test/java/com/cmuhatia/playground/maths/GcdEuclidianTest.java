@@ -14,6 +14,7 @@ public class GcdEuclidianTest {
     public void getGcd() {
         Assert.assertEquals(8, GcdEuclidian.getGcd(24, 8));
         Assert.assertEquals(11, GcdEuclidian.getGcd(77, 22));
+        Assert.assertEquals(1, GcdEuclidian.getGcd(17, 13));
     }
 
     @Test
