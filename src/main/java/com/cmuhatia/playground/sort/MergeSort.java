@@ -1,36 +1,50 @@
 package com.cmuhatia.playground.sort;
 
-import java.util.Arrays;
-
+/**
+ * Implements merge sort algorithm using integers
+ */
 public class MergeSort {
 
+    /**
+     * Sorts an array using merge sort
+     * @param arr array to be sorted
+     */
     public static void sort(int[] arr) {
         MergeSort.sort(arr, 0, arr.length - 1);
     }
 
+    /**
+     * Partitions the array inorder to sort individual partitions separately
+     * @param arr array to be partitioned
+     * @param low array start index
+     * @param high array end index
+     */
     public static void sort(int[] arr, int low, int high) {
         if (low < high) {
             int midPoint = (high + low) / 2;
-            System.out.println("Left partition low " + low + ", high " + midPoint);
             sort(arr, low, midPoint);
-            System.out.println("Right partition low " + midPoint + ", high " + high);
             sort(arr, midPoint + 1, high);
             sort(arr, low, midPoint, high);
         }
     }
 
+    /**
+     * Merges the partitions back to the original array
+     * @param array original array
+     * @param low start index
+     * @param midPoint midpoint between low and high
+     * @param high end index
+     */
     private static void sort(int[] array, int low, int midPoint, int high) {
         int[] lArray = new int[midPoint - low + 1];
         int[] rArray = new int[high - midPoint];
         //Copy elements into an array
-        for(int i = 0; i < lArray.length; i++){
-            lArray[i] = array[low + i];
+        if (lArray.length >= 0){
+            System.arraycopy(array, low, lArray, 0, lArray.length);
         }
-        for(int i = 0; i < rArray.length; i++){
-            rArray[i] = array[midPoint + i + 1];
+        if(rArray.length >= 0){
+            System.arraycopy(array, midPoint + 1, rArray, 0, rArray.length);
         }
-        System.out.println("Left Array " + Arrays.toString(lArray));
-        System.out.println("Right array " + Arrays.toString(rArray));
         int leftIdx = 0;
         int rightIdx = 0;
         for(int i = low; i < high + 1; i++){
@@ -50,13 +64,5 @@ public class MergeSort {
                 rightIdx++;
             }
         }
-        System.out.println("Sorted partition " + Arrays.toString(array));
-
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {2, 4, 1, 6, 8, 5, 3, 7};
-        MergeSort.sort(arr);
-        System.out.printf("Final sorted array %s \n", Arrays.toString(arr));
     }
 }
