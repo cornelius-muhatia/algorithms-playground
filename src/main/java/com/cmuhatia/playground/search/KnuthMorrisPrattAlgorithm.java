@@ -15,7 +15,10 @@
  */
 package com.cmuhatia.playground.search;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Implements Knuth Morris Pratt pattern matching Algorithm. More details on the algorithm can be found at:
@@ -30,7 +33,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
      * Used to find the prefix and suffix of the pattern sequence. Time complexity is O(n)
      *
      * @param pattern pattern sequence
-     * @param <T> Pattern sequence generic reference
+     * @param <T>     Pattern sequence generic reference
      * @return array mapping suffix and prefix for example given {'a', 'c', 'd', 'd' 'a', 'c'},
      * will return {0, 0, 0, 0, 1, 2}
      */
@@ -43,7 +46,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
                 temp[j] = i + 1;
                 j++;
                 i++;
-            } else if(i > 0){
+            } else if (i > 0) {
                 i = temp[i - 1];
             } else {
                 temp[j] = 0;
@@ -57,24 +60,24 @@ public class KnuthMorrisPrattAlgorithm<T> {
      * Used to search for a pattern inside a sequence using KMP Algorithm.
      *
      * @param sequence sequence of objects
-     * @param pattern pattern to be searched
-     * @param <T> Object generic reference
+     * @param pattern  pattern to be searched
+     * @param <T>      Object generic reference
      * @return true if pattern exists otherwise false
      */
-    public static <T> boolean contains(T[] sequence, T[] pattern){
+    public static <T> boolean contains(T[] sequence, T[] pattern) {
         int s = 0;
         int p = 0;
         int[] prefixSuffix = computeSuffixPrefix(pattern);
-        while(s < sequence.length){
-            if(sequence[s].equals(pattern[p])){
+        while (s < sequence.length) {
+            if (sequence[s].equals(pattern[p])) {
                 s++;
                 p++;
-            } else if(p > 0){
+            } else if (p > 0) {
                 p = prefixSuffix[p - 1];
-            } else{
+            } else {
                 s++;
             }
-            if(p == pattern.length){
+            if (p == pattern.length) {
                 return true;
             }
         }
@@ -97,7 +100,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
                 temp[j] = i + 1;
                 j++;
                 i++;
-            } else if(i > 0){
+            } else if (i > 0) {
                 i = temp[i - 1];
             } else {
                 temp[j] = 0;
@@ -110,25 +113,25 @@ public class KnuthMorrisPrattAlgorithm<T> {
     /**
      * Counts pattern occurrence within a text. Occurrences can overlap.
      *
-     * @param text String sentence/paragraph
+     * @param text    String sentence/paragraph
      * @param pattern String pattern
      * @return number of occurrence
      */
-    public static int countStringOccurrence(String text, String pattern){
+    public static int countStringOccurrence(String text, String pattern) {
         int[] prefixSuffix = computeSuffixPrefix(pattern);
         int count = 0;
         int i = 0;//text index
         int j = 0;//pattern index
-        while(i < text.length()){
-            if(Character.toLowerCase(text.charAt(i)) == Character.toLowerCase(pattern.charAt(j))){
+        while (i < text.length()) {
+            if (Character.toLowerCase(text.charAt(i)) == Character.toLowerCase(pattern.charAt(j))) {
                 i++;
                 j++;
-            } else if(j > 0){
+            } else if (j > 0) {
                 j = prefixSuffix[j - 1];
-            } else{
+            } else {
                 i++;
             }
-            if(j == pattern.length()){
+            if (j == pattern.length()) {
                 count++;
                 i = i - (pattern.length() - 1);
                 j = 0;
@@ -137,25 +140,25 @@ public class KnuthMorrisPrattAlgorithm<T> {
         return count;
     }
 
-    public static String getRelatedWords(String text, String pattern, int nearWordsCount){
+    public static String getRelatedWords(String text, String pattern, int nearWordsCount) {
         int trailNearIdx = 0;
         Map<String, Integer> nearWords = new HashMap<>();
         int[] prefixSuffix = computeSuffixPrefix(pattern);
         int i = 0;//text index
         int j = 0;//pattern index
-        while(i < text.length()){
-            if(Character.isSpaceChar(text.charAt(i)) && (i % nearWordsCount == 0)){
+        while (i < text.length()) {
+            if (Character.isSpaceChar(text.charAt(i)) && (i % nearWordsCount == 0)) {
                 trailNearIdx = i;
             }
-            if(Character.toLowerCase(text.charAt(i)) == Character.toLowerCase(pattern.charAt(j))){
+            if (Character.toLowerCase(text.charAt(i)) == Character.toLowerCase(pattern.charAt(j))) {
                 i++;
                 j++;
-            } else if(j > 0){
+            } else if (j > 0) {
                 j = prefixSuffix[j - 1];
-            } else{
+            } else {
                 i++;
             }
-            if(j == pattern.length()){
+            if (j == pattern.length()) {
                 String word = text.substring(trailNearIdx, i);
 //                i = i - (pattern.length() - 1);
                 j = 0;
@@ -164,17 +167,17 @@ public class KnuthMorrisPrattAlgorithm<T> {
         return "";
     }
 
-    public static List<String> getPrecedenceStr(String text, int currentIdx, int noWords){
+    public static List<String> getPrecedenceStr(String text, int currentIdx, int noWords) {
         ArrayList<String> strings = new ArrayList<>(noWords);
         int lastIdx = currentIdx;
-        for(int i = currentIdx; i >= 0; i--){
-            if(Character.isSpaceChar(text.charAt(i))){
-                strings.add(text.substring((i+1), lastIdx));
-                lastIdx = i-1;
-            } else if(i == 0){
+        for (int i = currentIdx; i >= 0; i--) {
+            if (Character.isSpaceChar(text.charAt(i))) {
+                strings.add(text.substring((i + 1), lastIdx));
+                lastIdx = i - 1;
+            } else if (i == 0) {
                 strings.add(text.substring(0, lastIdx));
             }
-            if(strings.size() == noWords){
+            if (strings.size() == noWords) {
                 break;
             }
         }

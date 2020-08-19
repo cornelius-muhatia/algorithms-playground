@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,10 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="">
+    <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="Code cleanup">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/graph/AStarAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/StringsPractice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/RandomPracticeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/StringsPracticeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/knapsack/Knapsack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/knapsack/Knapsack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/knapsack/KnapsackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/knapsack/KnapsackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms-playground.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/RandomPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/RandomPractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +50,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1U0UiIcot7FiH8C5PWrz6o7kyua" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,7 +74,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Spring Journey/playground-saml-security" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -66,33 +82,49 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.cmuhatia.playground.knapsack" />
-      <recent name="com.cmuhatia.playground" />
-      <recent name="com.cmuhatia.playground.heap" />
-      <recent name="com.cmuhatia.playground.graph" />
       <recent name="com.cmuhatia.playground.search" />
+      <recent name="com.cmuhatia.playground" />
+      <recent name="com.cmuhatia.playground.sort" />
+      <recent name="com.cmuhatia.playground.knapsack" />
+      <recent name="com.cmuhatia.playground.heap" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KnapsackTest.getMaxWeightFractional">
-    <configuration name="BinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.StringsPracticeTest">
+    <configuration name="KnuthMorrisPrattAlgorithmTest.dnaMinMaxHealth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.tree.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.tree" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.tree.BinarySearchTreeTest" />
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.search" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.KnuthMorrisPrattAlgorithmTest" />
+      <option name="METHOD_NAME" value="dnaMinMaxHealth" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.sort.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.sort" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.sort.MergeSortTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FrequencyQueriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RandomPracticeTest.canCreateEqualPairs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
@@ -101,56 +133,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.FrequencyQueriesTest" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.RandomPracticeTest" />
+      <option name="METHOD_NAME" value="canCreateEqualPairs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RandomPracticeTest.findDestination" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.RandomPracticeTest" />
+      <option name="METHOD_NAME" value="findDestination" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringsPracticeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="algorithms-playground" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.search" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.StringsPracticeTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KnapsackTest.getMaxWeight01Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.knapsack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.knapsack" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.knapsack.KnapsackTest" />
-      <option name="METHOD_NAME" value="getMaxWeight01Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KnapsackTest.getMaxWeightFractional" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.knapsack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.knapsack" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.knapsack.KnapsackTest" />
-      <option name="METHOD_NAME" value="getMaxWeightFractional" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KnapsackTest.knapSack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="algorithms-playground" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.knapsack.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.knapsack" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.knapsack.KnapsackTest" />
-      <option name="METHOD_NAME" value="knapSack" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -208,23 +224,24 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.BinarySearchTreeTest" />
-      <item itemvalue="JUnit.FrequencyQueriesTest" />
-      <item itemvalue="JUnit.KnapsackTest.knapSack" />
-      <item itemvalue="JUnit.KnapsackTest.getMaxWeight01Test" />
+      <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.dnaMinMaxHealth" />
+      <item itemvalue="JUnit.MergeSortTest" />
+      <item itemvalue="JUnit.RandomPracticeTest.canCreateEqualPairs" />
+      <item itemvalue="JUnit.RandomPracticeTest.findDestination" />
+      <item itemvalue="JUnit.StringsPracticeTest" />
       <item itemvalue="Maven.mvn test" />
-      <item itemvalue="JUnit.KnapsackTest.getMaxWeightFractional" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.KnapsackTest.getMaxWeightFractional" />
-        <item itemvalue="JUnit.KnapsackTest.getMaxWeight01Test" />
-        <item itemvalue="JUnit.KnapsackTest.knapSack" />
-        <item itemvalue="JUnit.FrequencyQueriesTest" />
-        <item itemvalue="JUnit.BinarySearchTreeTest" />
+        <item itemvalue="JUnit.StringsPracticeTest" />
+        <item itemvalue="JUnit.RandomPracticeTest.findDestination" />
+        <item itemvalue="JUnit.RandomPracticeTest.canCreateEqualPairs" />
+        <item itemvalue="JUnit.MergeSortTest" />
+        <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.dnaMinMaxHealth" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -237,6 +254,28 @@
       <updated>1574493131825</updated>
       <workItem from="1580961216761" duration="357000" />
     </task>
+    <task id="LOCAL-00001" summary="Added more unit tests">
+      <created>1592986564635</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592986564635</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added merge sort unit tests">
+      <created>1594964576522</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594964576522</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Code cleanup">
+      <created>1594966748923</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594966748923</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,87 +293,89 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added more unit tests" />
+    <MESSAGE value="Added merge sort unit tests" />
+    <MESSAGE value="Code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code cleanup" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1592205076061">
+    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1595909338424">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1592205076061" />
+    <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1595909338424" />
     <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1592016484181">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.744@0.0.1366.744" timestamp="1592016484181" />
-    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.746@0.0.1366.746" timestamp="1587611795622" />
     <state x="441" y="0" width="925" height="746" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591240651521">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="441" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1591240651521" />
-    <state x="441" y="0" width="925" height="746" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.746@0.0.1366.746" timestamp="1585727824754" />
     <state x="444" y="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592197301620">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="444" y="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.744@0.0.1366.744" timestamp="1592197301620" />
+    <state x="100" y="100" width="1166" height="544" key="DiffContextDialog" timestamp="1592987404950">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="100" y="100" width="1166" height="544" key="DiffContextDialog/0.0.1366.744@0.0.1366.744" timestamp="1592987404950" />
     <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl" timestamp="1592787334145">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1592787334145" />
-    <state x="467" y="129" key="FileChooserDialogImpl/0.0.1366.746@0.0.1366.746" timestamp="1587666037194" />
-    <state width="1320" height="199" key="GridCell.Tab.0.bottom" timestamp="1592812722609">
+    <state width="660" height="173" key="GridCell.Tab.0.bottom" timestamp="1596338287249">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592812722609" />
+    <state width="660" height="173" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1596338287249" />
     <state width="1320" height="250" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="199" key="GridCell.Tab.0.center" timestamp="1592812722608">
+    <state width="660" height="173" key="GridCell.Tab.0.center" timestamp="1596338287248">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1592812722608" />
+    <state width="660" height="173" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1596338287248" />
     <state width="1320" height="250" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="199" key="GridCell.Tab.0.left" timestamp="1592812722608">
+    <state width="660" height="173" key="GridCell.Tab.0.left" timestamp="1596338287248">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1592812722608" />
+    <state width="660" height="173" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1596338287248" />
     <state width="1320" height="250" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="1320" height="199" key="GridCell.Tab.0.right" timestamp="1592812722608">
+    <state width="660" height="173" key="GridCell.Tab.0.right" timestamp="1596338287249">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="199" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1592812722608" />
+    <state width="660" height="173" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1596338287249" />
     <state width="1320" height="250" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1592787336217">
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1595910710534">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1592787336217" />
-    <state width="1320" height="218" key="GridCell.Tab.1.bottom/0.0.1366.746@0.0.1366.746" timestamp="1585149453278" />
-    <state width="1320" height="195" key="GridCell.Tab.1.center" timestamp="1592787336217">
+    <state width="1320" height="195" key="GridCell.Tab.1.bottom/0.0.1366.744@0.0.1366.744" timestamp="1595910710534" />
+    <state width="1320" height="195" key="GridCell.Tab.1.center" timestamp="1595910710533">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1592787336217" />
-    <state width="1320" height="218" key="GridCell.Tab.1.center/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="195" key="GridCell.Tab.1.left" timestamp="1592787336217">
+    <state width="1320" height="195" key="GridCell.Tab.1.center/0.0.1366.744@0.0.1366.744" timestamp="1595910710533" />
+    <state width="1320" height="195" key="GridCell.Tab.1.left" timestamp="1595910710533">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1592787336217" />
-    <state width="1320" height="218" key="GridCell.Tab.1.left/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state width="1320" height="195" key="GridCell.Tab.1.right" timestamp="1592787336217">
+    <state width="1320" height="195" key="GridCell.Tab.1.left/0.0.1366.744@0.0.1366.744" timestamp="1595910710533" />
+    <state width="1320" height="195" key="GridCell.Tab.1.right" timestamp="1595910710533">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state width="1320" height="195" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1592787336217" />
-    <state width="1320" height="218" key="GridCell.Tab.1.right/0.0.1366.746@0.0.1366.746" timestamp="1585149453277" />
-    <state x="167" y="0" width="1032" height="744" key="SettingsEditor" timestamp="1591826535991">
+    <state width="1320" height="195" key="GridCell.Tab.1.right/0.0.1366.744@0.0.1366.744" timestamp="1595910710533" />
+    <state x="167" y="0" width="1032" height="744" key="SettingsEditor" timestamp="1596335135529">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="167" y="0" width="1032" height="744" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1591826535991" />
+    <state x="167" y="0" width="1032" height="744" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1596335135529" />
     <state x="485" y="152" key="chooseDestDirectoryDialog" timestamp="1592015231277">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="485" y="152" key="chooseDestDirectoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1592015231277" />
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586518302698">
-      <screen x="0" y="0" width="1366" height="746" />
-    </state>
-    <state x="362" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.746@0.0.1366.746" timestamp="1586518302698" />
-    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592809417355">
+    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1596333330509">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
-    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1592809417355" />
-    <state x="448" y="76" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.746@0.0.1366.746" timestamp="1587609534943" />
+    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1596333330509" />
+    <state x="387" y="111" width="592" height="522" key="find.popup" timestamp="1593062797487">
+      <screen x="0" y="0" width="1366" height="744" />
+    </state>
+    <state x="387" y="111" width="592" height="522" key="find.popup/0.0.1366.744@0.0.1366.744" timestamp="1593062797487" />
     <state x="347" y="163" key="run.anything.popup" timestamp="1590234002049">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -343,6 +384,5 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="346" y="65" width="672" height="677" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1592712620590" />
-    <state x="346" y="67" width="672" height="678" key="search.everywhere.popup/0.0.1366.746@0.0.1366.746" timestamp="1585644846931" />
   </component>
 </project>

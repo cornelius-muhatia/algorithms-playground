@@ -3,6 +3,8 @@ package com.cmuhatia.playground.search;
 import org.apache.commons.lang.ArrayUtils;
 import org.junit.Test;
 
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 /**
