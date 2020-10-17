@@ -23,15 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="Code cleanup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/graph/AStarAlgorithm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/StringsPractice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/RandomPracticeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/StringsPracticeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms-playground.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/RandomPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/RandomPractice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/search/KnuthMorrisPrattAlgorithmTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Anagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Anagram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/graph/AStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/graph/AStarAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/AnagramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/AnagramTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +78,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.cmuhatia.playground.search" />
       <recent name="com.cmuhatia.playground" />
+      <recent name="com.cmuhatia.playground.search" />
       <recent name="com.cmuhatia.playground.sort" />
       <recent name="com.cmuhatia.playground.knapsack" />
       <recent name="com.cmuhatia.playground.heap" />
@@ -92,18 +88,18 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StringsPracticeTest">
-    <configuration name="KnuthMorrisPrattAlgorithmTest.dnaMinMaxHealth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AnagramTest.isAnagram">
+    <configuration name="AnagramTest.isAnagram" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.search.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.search" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.search.KnuthMorrisPrattAlgorithmTest" />
-      <option name="METHOD_NAME" value="dnaMinMaxHealth" />
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.AnagramTest" />
+      <option name="METHOD_NAME" value="isAnagram" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,20 +220,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.dnaMinMaxHealth" />
       <item itemvalue="JUnit.MergeSortTest" />
       <item itemvalue="JUnit.RandomPracticeTest.canCreateEqualPairs" />
       <item itemvalue="JUnit.RandomPracticeTest.findDestination" />
       <item itemvalue="JUnit.StringsPracticeTest" />
       <item itemvalue="Maven.mvn test" />
+      <item itemvalue="JUnit.AnagramTest.isAnagram" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnagramTest.isAnagram" />
         <item itemvalue="JUnit.StringsPracticeTest" />
         <item itemvalue="JUnit.RandomPracticeTest.findDestination" />
         <item itemvalue="JUnit.RandomPracticeTest.canCreateEqualPairs" />
         <item itemvalue="JUnit.MergeSortTest" />
-        <item itemvalue="JUnit.KnuthMorrisPrattAlgorithmTest.dnaMinMaxHealth" />
       </list>
     </recent_temporary>
   </component>
@@ -304,46 +300,26 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1595909338424" />
-    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser" timestamp="1592016484181">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="492" y="90" key="#com.intellij.ide.util.MemberChooser/0.0.1366.744@0.0.1366.744" timestamp="1592016484181" />
-    <state x="441" y="0" width="925" height="746" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591240651521">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="441" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.744@0.0.1366.744" timestamp="1591240651521" />
-    <state x="444" y="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1592197301620">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="444" y="229" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.744@0.0.1366.744" timestamp="1592197301620" />
-    <state x="100" y="100" width="1166" height="544" key="DiffContextDialog" timestamp="1592987404950">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="100" y="100" width="1166" height="544" key="DiffContextDialog/0.0.1366.744@0.0.1366.744" timestamp="1592987404950" />
-    <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl" timestamp="1592787334145">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="467" y="129" width="424" height="483" key="FileChooserDialogImpl/0.0.1366.744@0.0.1366.744" timestamp="1592787334145" />
-    <state width="660" height="173" key="GridCell.Tab.0.bottom" timestamp="1596338287249">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1874" height="273" key="GridCell.Tab.0.bottom" timestamp="1602911637051">
+      <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1596338287249" />
-    <state width="1320" height="250" key="GridCell.Tab.0.bottom/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
-    <state width="660" height="173" key="GridCell.Tab.0.center" timestamp="1596338287248">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1874" height="273" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
+    <state width="1874" height="273" key="GridCell.Tab.0.center" timestamp="1602911637051">
+      <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1596338287248" />
-    <state width="1320" height="250" key="GridCell.Tab.0.center/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="660" height="173" key="GridCell.Tab.0.left" timestamp="1596338287248">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1874" height="273" key="GridCell.Tab.0.center/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
+    <state width="1874" height="273" key="GridCell.Tab.0.left" timestamp="1602911637051">
+      <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1596338287248" />
-    <state width="1320" height="250" key="GridCell.Tab.0.left/0.0.1366.746@0.0.1366.746" timestamp="1587728567884" />
-    <state width="660" height="173" key="GridCell.Tab.0.right" timestamp="1596338287249">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state width="1874" height="273" key="GridCell.Tab.0.left/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
+    <state width="1874" height="273" key="GridCell.Tab.0.right" timestamp="1602911637051">
+      <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1596338287249" />
-    <state width="1320" height="250" key="GridCell.Tab.0.right/0.0.1366.746@0.0.1366.746" timestamp="1587728567885" />
+    <state width="1874" height="273" key="GridCell.Tab.0.right/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
     <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1595910710534">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -364,25 +340,10 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="167" y="0" width="1032" height="744" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1596335135529" />
-    <state x="485" y="152" key="chooseDestDirectoryDialog" timestamp="1592015231277">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="485" y="152" key="chooseDestDirectoryDialog/0.0.1366.744@0.0.1366.744" timestamp="1592015231277" />
-    <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1596333330509">
-      <screen x="0" y="0" width="1366" height="744" />
+    <state x="630" y="108" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1602809904130">
+      <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1596333330509" />
-    <state x="387" y="111" width="592" height="522" key="find.popup" timestamp="1593062797487">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="387" y="111" width="592" height="522" key="find.popup/0.0.1366.744@0.0.1366.744" timestamp="1593062797487" />
-    <state x="347" y="163" key="run.anything.popup" timestamp="1590234002049">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="347" y="163" key="run.anything.popup/0.0.1366.744@0.0.1366.744" timestamp="1590234002049" />
-    <state x="346" y="65" width="672" height="677" key="search.everywhere.popup" timestamp="1592712620590">
-      <screen x="0" y="0" width="1366" height="744" />
-    </state>
-    <state x="346" y="65" width="672" height="677" key="search.everywhere.popup/0.0.1366.744@0.0.1366.744" timestamp="1592712620590" />
+    <state x="630" y="108" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602809904130" />
   </component>
 </project>

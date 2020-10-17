@@ -13,4 +13,9 @@ public class AnagramTest {
         Assert.assertEquals(4, Anagram.makeAnagram("cdee", "abce"));
         Assert.assertEquals(30, Anagram.makeAnagram("fcrxzwscanmligyxyvym", "jxwtrhvujlmrpdoqbisbwhmgpmeoke"));
     }
+
+    @Test
+    public void isAnagram() {
+        Assert.assertTrue("Anagram true test1", Anagram.isAnagram("aab", "aba"));
+    }
 }
