@@ -35,6 +35,20 @@ public class Palindrome {
         return false;
     }
 
+    /**
+     * Checks if a string is palindrome using for loop
+     * @param str raw string
+     * @return true if the string is palindrome otherwise false
+     */
+    public static boolean isPalindrome(String str){
+        for(int i=0; i < str.length(); i++){
+            if(str.charAt(i) != str.charAt(str.length() - (i+1))){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static String createPalindrome(String str) {
         // code goes here
         String remChars = "";

@@ -24,10 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="Code cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Anagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Anagram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/graph/AStarAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/graph/AStarAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/AnagramTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/AnagramTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/Palindrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/PalindromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/PalindromeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AnagramTest.isAnagram">
+  <component name="RunManager" selected="JUnit.PalindromeTest.testIsPalindrome">
     <configuration name="AnagramTest.isAnagram" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
@@ -105,17 +103,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeSortTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PalindromeTest.testIsPalindrome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.sort.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.sort" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.sort.MergeSortTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.PalindromeTest" />
+      <option name="METHOD_NAME" value="testIsPalindrome" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,20 +219,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.MergeSortTest" />
       <item itemvalue="JUnit.RandomPracticeTest.canCreateEqualPairs" />
       <item itemvalue="JUnit.RandomPracticeTest.findDestination" />
       <item itemvalue="JUnit.StringsPracticeTest" />
-      <item itemvalue="Maven.mvn test" />
       <item itemvalue="JUnit.AnagramTest.isAnagram" />
+      <item itemvalue="Maven.mvn test" />
+      <item itemvalue="JUnit.PalindromeTest.testIsPalindrome" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PalindromeTest.testIsPalindrome" />
         <item itemvalue="JUnit.AnagramTest.isAnagram" />
         <item itemvalue="JUnit.StringsPracticeTest" />
         <item itemvalue="JUnit.RandomPracticeTest.findDestination" />
         <item itemvalue="JUnit.RandomPracticeTest.canCreateEqualPairs" />
-        <item itemvalue="JUnit.MergeSortTest" />
       </list>
     </recent_temporary>
   </component>
@@ -300,26 +299,26 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="100" y="100" width="1166" height="545" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.744@0.0.1366.744" timestamp="1595909338424" />
-    <state width="1874" height="273" key="GridCell.Tab.0.bottom" timestamp="1602911637051">
+    <state width="1874" height="273" key="GridCell.Tab.0.bottom" timestamp="1603067407063">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.bottom/0.0.1366.744@0.0.1366.744" timestamp="1596338287249" />
-    <state width="1874" height="273" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
-    <state width="1874" height="273" key="GridCell.Tab.0.center" timestamp="1602911637051">
+    <state width="1874" height="273" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1603067407063" />
+    <state width="1874" height="273" key="GridCell.Tab.0.center" timestamp="1603067407063">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.center/0.0.1366.744@0.0.1366.744" timestamp="1596338287248" />
-    <state width="1874" height="273" key="GridCell.Tab.0.center/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
-    <state width="1874" height="273" key="GridCell.Tab.0.left" timestamp="1602911637051">
+    <state width="1874" height="273" key="GridCell.Tab.0.center/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1603067407063" />
+    <state width="1874" height="273" key="GridCell.Tab.0.left" timestamp="1603067407063">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.left/0.0.1366.744@0.0.1366.744" timestamp="1596338287248" />
-    <state width="1874" height="273" key="GridCell.Tab.0.left/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
-    <state width="1874" height="273" key="GridCell.Tab.0.right" timestamp="1602911637051">
+    <state width="1874" height="273" key="GridCell.Tab.0.left/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1603067407063" />
+    <state width="1874" height="273" key="GridCell.Tab.0.right" timestamp="1603067407063">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state width="660" height="173" key="GridCell.Tab.0.right/0.0.1366.744@0.0.1366.744" timestamp="1596338287249" />
-    <state width="1874" height="273" key="GridCell.Tab.0.right/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602911637051" />
+    <state width="1874" height="273" key="GridCell.Tab.0.right/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1603067407063" />
     <state width="1320" height="195" key="GridCell.Tab.1.bottom" timestamp="1595910710534">
       <screen x="0" y="0" width="1366" height="744" />
     </state>
@@ -340,10 +339,14 @@
       <screen x="0" y="0" width="1366" height="744" />
     </state>
     <state x="167" y="0" width="1032" height="744" key="SettingsEditor/0.0.1366.744@0.0.1366.744" timestamp="1596335135529" />
-    <state x="630" y="108" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1602809904130">
+    <state x="630" y="108" width="454" height="463" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603067166268">
       <screen x="0" y="0" width="1920" height="1054" />
     </state>
     <state x="448" y="76" width="523" height="417" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.744@0.0.1366.744" timestamp="1596333330509" />
-    <state x="630" y="108" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1602809904130" />
+    <state x="630" y="108" width="454" height="463" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1603067166268" />
+    <state x="623" y="232" width="672" height="678" key="search.everywhere.popup" timestamp="1603067313429">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="623" y="232" width="672" height="678" key="search.everywhere.popup/1920.0.1366.768/0.0.1920.1054@0.0.1920.1054" timestamp="1603067313429" />
   </component>
 </project>

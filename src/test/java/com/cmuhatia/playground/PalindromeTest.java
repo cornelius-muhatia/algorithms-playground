@@ -44,4 +44,15 @@ public class PalindromeTest {
         string = "jjjhjjjk";
         assertEquals("k", Palindrome.createPalindrome(string));
     }
+
+    @Test
+    public void testIsPalindrome() {
+        String string1 = "teet";
+        assertTrue(string1 + " is palindrome", Palindrome.isPalindrome(string1));
+        string1 = "racecar";
+        assertTrue(string1 + " is palindrome", Palindrome.isPalindrome(string1));
+        string1 = "palindrome";
+        assertFalse(string1 + " is not a palindrome", Palindrome.isPalindrome(string1));
+
+    }
 }
