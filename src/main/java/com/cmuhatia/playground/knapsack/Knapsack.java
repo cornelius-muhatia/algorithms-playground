@@ -16,6 +16,7 @@
 package com.cmuhatia.playground.knapsack;
 
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -51,6 +52,45 @@ public class Knapsack {
             }
         }
         return table[items.size() - 1][capacity];
+    }
+
+    public static List<Map.Entry<Integer, Integer>> getMaxWeightItems01(List<Map.Entry<Integer, Integer>> items, int capacity){
+        List<Map.Entry<Integer, Integer>> selectedItems = new LinkedList<>();
+        int[][] table = new int[items.size()][capacity + 1];
+        for(int k = 1; k <= capacity; k++){
+            for(int i = 0; i < items.size(); i++){
+                if (i == 0){
+                    table[i][k] = items.get(i).getKey() > k ? 0 : items.get(i).getValue();
+                }
+                else{
+                    int prevJ = k - items.get(i).getKey();
+                    if(prevJ >= 0) {
+                        int currentWeight = table[i - 1][prevJ] + items.get(i).getValue();
+                        table[i][k] = Math.max(table[i - 1][k], currentWeight);
+                    } else {
+                        table[i][k] = table[i-1][k];
+                    }
+                }
+            }
+        }
+        int remainder = table[items.size()-1][capacity];
+        while(remainder > 0){
+            for(int i = items.size() - 1; i >= 0; i--){
+                for(int j = capacity; j >= 0; j--){
+                    if(j > 0 && table[i][j - 1] != remainder){
+                        if(i > 0 && table[i - 1][j] != remainder){
+                            remainder = remainder - items.get(i).getValue();
+                            selectedItems.add(items.get(i));
+                        }
+                        break;
+                    }
+                }
+                if(remainder <= 0){
+                    break;
+                }
+            }
+        }
+        return selectedItems;
     }
 
     /**
