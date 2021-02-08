@@ -13,14 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cmuhatia.playground.java.changes.text;
+package com.cmuhatia.playground.java.changes;
+
+
+import org.junit.jupiter.api.Test;
 
 /**
  * @author Cornelius M.
  * @version 1.0.0, 08/02/2021
  */
-public class TextBlocks {
-    public String description = """
-                                  Well last week happened!!! 
-                                  Unfortunately couldn't get one thing done""";
+public class TestReleaseChanges {
+
+    @Test
+    public void testSwitchExpression(){
+
+    }
 }

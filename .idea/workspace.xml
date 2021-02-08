@@ -23,15 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88864f3e-169a-4ea2-85a4-fd40029c971d" name="Default Changelist" comment="Code cleanup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/java/changes/sealed/clazzes/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/java/changes/sealed/clazzes/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/java/changes/sealed/clazzes/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/java/changes/SwitchExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/knapsack/Knapsack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/knapsack/Knapsack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/StringsPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/search/StringsPractice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/knapsack/KnapsackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/knapsack/KnapsackTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/java/changes/text/TextBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/java/changes/text/TextBlocks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="JUnit4 Test Class" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -62,10 +56,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/cmuhatia/playground/java/changes" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/com/cmuhatia/playground/java/changes" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Python Projects/clients projects/mesozi/kafka-staging-service" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -74,18 +68,18 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.cmuhatia.playground.java.changes.text" />
       <recent name="com.cmuhatia.playground.knapsack" />
       <recent name="com.cmuhatia.playground.maths" />
       <recent name="com.cmuhatia.playground" />
       <recent name="com.cmuhatia.playground.search" />
-      <recent name="com.cmuhatia.playground.sort" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TextBlocksTest.testTextBlock">
+  <component name="RunManager" selected="JUnit.SwitchExpressionTest.weekDay">
     <configuration name="MatrixOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.MatrixOperations" />
       <module name="algorithms-playground" />
@@ -128,17 +122,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PermutationCombinationTest.getCombination" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SwitchExpressionTest.weekDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="algorithms-playground" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cmuhatia.playground.maths.*" />
+          <option name="PATTERN" value="com.cmuhatia.playground.java.changes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.maths" />
-      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.maths.PermutationCombinationTest" />
-      <option name="METHOD_NAME" value="getCombination" />
+      <option name="PACKAGE_NAME" value="com.cmuhatia.playground.java.changes" />
+      <option name="MAIN_CLASS_NAME" value="com.cmuhatia.playground.java.changes.SwitchExpressionTest" />
+      <option name="METHOD_NAME" value="weekDay" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -241,19 +235,19 @@
     <list>
       <item itemvalue="Application.StringsPractice" />
       <item itemvalue="Application.MatrixOperations" />
-      <item itemvalue="JUnit.PermutationCombinationTest.getCombination" />
       <item itemvalue="JUnit.KnapsackTest.getMaxWeightItems01" />
       <item itemvalue="Maven.mvn test" />
       <item itemvalue="Maven.mvn package" />
       <item itemvalue="JUnit.TextBlocksTest.testTextBlock" />
+      <item itemvalue="JUnit.SwitchExpressionTest.weekDay" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SwitchExpressionTest.weekDay" />
         <item itemvalue="JUnit.TextBlocksTest.testTextBlock" />
         <item itemvalue="JUnit.KnapsackTest.getMaxWeightItems01" />
         <item itemvalue="Application.MatrixOperations" />
         <item itemvalue="Application.StringsPractice" />
-        <item itemvalue="JUnit.PermutationCombinationTest.getCombination" />
       </list>
     </recent_temporary>
   </component>

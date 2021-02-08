@@ -13,14 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cmuhatia.playground.java.changes.text;
+package com.cmuhatia.playground.java.changes;
 
 /**
  * @author Cornelius M.
  * @version 1.0.0, 08/02/2021
  */
-public class TextBlocks {
-    public String description = """
-                                  Well last week happened!!! 
-                                  Unfortunately couldn't get one thing done""";
+public class SwitchExpression {
+
+    /**
+     * Cast number to day of the week
+     * @param day week day number
+     * @return a string of week day
+     */
+    public String weekDay(int day){
+        return switch(day) {
+            case 1 -> "Sunday";
+            case 2 -> "Monday";
+            default -> throw new IllegalArgumentException("Couldn't cast " + day + " day of the week");
+        };
+    }
 }
