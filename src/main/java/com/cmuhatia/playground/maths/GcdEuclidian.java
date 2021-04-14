@@ -56,4 +56,19 @@ public class GcdEuclidian {
         result[0] = numerator / gcd;
         result[1] = denominator / gcd;
     }
+
+    /**
+     * Get gcd of more than 2 numbers
+     *
+     * @param firstNumber first number
+     * @param others other numbers
+     * @return gcd of all the numbers
+     */
+    public static int getGcd(int firstNumber, int... others){
+        int gcd = firstNumber;
+        for(int next: others){
+            gcd = getGcd(gcd, next);
+        }
+        return gcd;
+    }
 }

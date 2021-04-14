@@ -17,6 +17,9 @@ package com.cmuhatia.playground.java.changes;
 
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
 
 /**
  * @author Cornelius M.
@@ -25,7 +28,13 @@ import org.junit.jupiter.api.Test;
 public class TestReleaseChanges {
 
     @Test
-    public void testSwitchExpression(){
+    public void testVarTypeInfer(){
+        var list = new ArrayList<String>(0);
+        assertEquals(ArrayList.class, list.getClass());
 
+        list.add("Home");
+        for(var item: list){
+            System.out.println(item);
+        }
     }
 }
