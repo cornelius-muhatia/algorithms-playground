@@ -142,9 +142,58 @@ public class DynamicProgramming {
         return seq1.size() > seq2.size() ? seq1 : seq2;
     }
 
+    /**
+     * Get longest common subsequence list between 2 strings. For example:
+     * <p>
+     *     Given:
+     *     <ul>
+     *         <li>abcdef</li>
+     *         <li>acbcf</li>
+     *     </ul>
+     *     The common subsequence will be: <b>abcf</b>
+     * </p>
+     *
+     * @param str1 First string
+     * @param str2 Second string
+     * @return a subsequence string
+     */
+    public static String getLongestCommonSubsequence(String str1, String str2) {
+        StringBuilder subsequence = new StringBuilder();
+
+        int rowLength = str1.length() + 1;
+        int colLength = str2.length() + 1;
+        int[][] temp = new int[rowLength][colLength];
+
+        for(int row = 1; row < rowLength; row++) {
+            for(int col = 1; col < colLength; col++) {
+                if(str1.charAt(row - 1) == str2.charAt(col - 1)) {
+                    temp[row][col] = temp[row - 1][col - 1] + 1;
+                } else {
+                    temp[row][col] = Math.max(temp[row][col - 1], temp[row - 1][col]);
+                }
+            }
+        }
+
+        int row = rowLength - 1;
+        int col = colLength - 1;
+        while(row > 0 && col > 0) {
+            if(temp[row][col] == temp[row][col - 1]) {
+                col--;
+            } else if(temp[row][col] == temp[row - 1][col]) {
+                row--;
+            } else {
+                subsequence.insert(0, str1.charAt(row - 1));
+                row--;
+                col--;
+            }
+        }
+
+        return subsequence.toString();
+    }
+
     public static void main(String[] args) {
         List<Integer> list = List.of(10, 3, 5, 19, 10, 14, 12, 0, 15);
-        System.out.println("List " + DynamicProgramming.longestIncreasingSequence2(list).toString());
+        System.out.println("List " + DynamicProgramming.longestIncreasingSequence2(list));
     }
 
 }

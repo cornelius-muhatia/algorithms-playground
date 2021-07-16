@@ -1,42 +1,47 @@
 package com.cmuhatia.playground;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DynamicProgrammingTest {
 
     @Test
     public void fibonacciSeq() {
-        Assert.assertEquals(1, DynamicProgramming.fibonacciSeqRecursion(2));
-        Assert.assertEquals(8, DynamicProgramming.fibonacciSeqRecursion(6));
+        assertEquals(1, DynamicProgramming.fibonacciSeqRecursion(2));
+        assertEquals(8, DynamicProgramming.fibonacciSeqRecursion(6));
     }
 
     @Test
     public void fibonacciSeqMemoization(){
-        Assert.assertEquals(1, DynamicProgramming.fibonacciSeqMemoization(2, new Integer[2]));
-        Assert.assertEquals(8, DynamicProgramming.fibonacciSeqMemoization(6, new Integer[6]));
+        assertEquals(1, DynamicProgramming.fibonacciSeqMemoization(2, new Integer[2]));
+        assertEquals(8, DynamicProgramming.fibonacciSeqMemoization(6, new Integer[6]));
     }
 
     @Test
     public void fibonacciSeqBottomUp(){
-        Assert.assertEquals(1, DynamicProgramming.fibonacciSeqBottomUp(2));
-        Assert.assertEquals(8, DynamicProgramming.fibonacciSeqBottomUp(6));
+        assertEquals(1, DynamicProgramming.fibonacciSeqBottomUp(2));
+        assertEquals(8, DynamicProgramming.fibonacciSeqBottomUp(6));
     }
 
     @Test
     public void longestIncreasingSequence(){
-        Assert.assertEquals(List.of(3, 5, 10, 12, 15), DynamicProgramming.longestIncreasingSequence(List.of(16, 3, 5, 19, 10, 14, 12, 0, 15)));
+        assertEquals(List.of(3, 5, 10, 12, 15), DynamicProgramming.longestIncreasingSequence(List.of(16, 3, 5, 19, 10, 14, 12, 0, 15)));
     }
 
     @Test
     public void longestIncreasingSequence2() {
         List<Integer> list = List.of(10, 3, 5, 19, 10, 14, 12, 0, 5);
-        Assert.assertFalse(DynamicProgramming.longestIncreasingSequence2(list).isEmpty());
+        assertFalse(DynamicProgramming.longestIncreasingSequence2(list).isEmpty());
         fail(DynamicProgramming.longestIncreasingSequence2(list).toString());
+    }
+
+    @Test
+    void getLongestCommonSubsequence() {
+        assertEquals("abcf", DynamicProgramming.getLongestCommonSubsequence("abcdef", "acbcf"));
+        assertEquals("abcf", DynamicProgramming.getLongestCommonSubsequence("acbcf", "abcdef"));
+        assertEquals("GTAB", DynamicProgramming.getLongestCommonSubsequence("AGGTAB", "GXTXAYB"));
     }
 }
