@@ -31,4 +31,9 @@ public class RandomPracticeTest {
         assertEquals(0, RandomPractice.findDestination(new int[]{1, 2, 3, 0}, new int[]{0, 0, 0, 0}));
     }
 
+    @Test
+    public void objectSize() {
+        Object obj;
+    }
+
 }
