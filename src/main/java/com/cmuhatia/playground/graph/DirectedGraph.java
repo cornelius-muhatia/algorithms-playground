@@ -15,25 +15,28 @@
  */
 package com.cmuhatia.playground.graph;
 
-import java.util.ArrayList;
+import lombok.Getter;
+
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 /**
  * @author Cornelius M.
  * @version 1.0.0, 10/08/2021
  */
-public class AdjacentWeightedGraph<T> {
+public class DirectedGraph<T> {
 
-    private ArrayList<LinkedList<T>> graph;
+    @Getter
+    private final Map<T, LinkedList<T>> graph;
 
-    public AdjacentWeightedGraph(int capacity) {
-        graph = new ArrayList<>(capacity);
-        for (int i = 0; i < capacity; i++) {
-            graph.add(new LinkedList<>());
-        }
+    public DirectedGraph() {
+        graph = new HashMap<>();
     }
 
-    public void addEdge(int u, T v) {
-        graph.get(u).add(v);
+    public void addEdge(T u, T v) {
+        graph
+                .computeIfAbsent(u, k -> new LinkedList<>())
+                .add(v);
     }
 }
