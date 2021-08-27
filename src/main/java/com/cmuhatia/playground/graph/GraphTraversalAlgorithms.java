@@ -49,4 +49,31 @@ public class GraphTraversalAlgorithms {
 
         return path;
     }
+
+    public static <T> List<T> depthFirstSearch(DirectedGraph<T> graph, T rootNode) {
+        LinkedList<T> path = new LinkedList<>();
+        path.add(rootNode);
+
+        HashSet<T> visited = new HashSet<>();
+        visited.add(rootNode);
+
+        for (T branchNode : graph.getGraph().get(rootNode)) {
+            if (!visited.contains(branchNode)) {
+                depthFirstSearch(graph, path, visited, branchNode);
+            }
+        }
+
+        return path;
+    }
+
+    private static <T> void depthFirstSearch(DirectedGraph<T> graph, LinkedList<T> path, HashSet<T> visited, T rootNode) {
+        path.add(rootNode);
+        visited.add(rootNode);
+
+        for (T branchNode : graph.getGraph().get(rootNode)) {
+            if (!visited.contains(branchNode)) {
+                depthFirstSearch(graph, path, visited, branchNode);
+            }
+        }
+    }
 }

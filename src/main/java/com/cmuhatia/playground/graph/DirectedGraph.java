@@ -34,9 +34,11 @@ public class DirectedGraph<T> {
         graph = new HashMap<>();
     }
 
-    public void addEdge(T u, T v) {
+    public DirectedGraph<T> addEdge(T u, T v) {
         graph
                 .computeIfAbsent(u, k -> new LinkedList<>())
                 .add(v);
+
+        return this;
     }
 }
