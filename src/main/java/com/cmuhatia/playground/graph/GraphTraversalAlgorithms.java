@@ -15,10 +15,7 @@
  */
 package com.cmuhatia.playground.graph;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * @author Cornelius M.
@@ -39,7 +36,7 @@ public class GraphTraversalAlgorithms {
         while (!relaxedNodes.isEmpty()) {
             visited.add(relaxedNodes.peek());
 
-            for(T node : graph.getGraph().get(relaxedNodes.poll())) {
+            for (T node : graph.getGraph().get(relaxedNodes.poll())) {
                 if (!visited.contains(node)) {
                     path.add(node);
                     relaxedNodes.add(node);
@@ -70,10 +67,48 @@ public class GraphTraversalAlgorithms {
         path.add(rootNode);
         visited.add(rootNode);
 
-        for (T branchNode : graph.getGraph().get(rootNode)) {
-            if (!visited.contains(branchNode)) {
-                depthFirstSearch(graph, path, visited, branchNode);
+        if (Objects.nonNull(graph.getGraph().get(rootNode))) {
+            for (T branchNode : graph.getGraph().get(rootNode)) {
+                if (!visited.contains(branchNode)) {
+                    depthFirstSearch(graph, path, visited, branchNode);
+                }
             }
         }
+    }
+
+    public static <T> boolean hasCycle(DirectedGraph<T> graph) {
+        HashSet<T> relaxedNodes = new HashSet<>();
+        HashSet<T> visitedNodes = new HashSet<>();
+
+        return graph
+                .getGraph()
+                .keySet()
+                .stream()
+                .anyMatch(node -> hasCycle(node, graph, visitedNodes, relaxedNodes));
+    }
+
+    private static <T> boolean hasCycle(T rootNode, DirectedGraph<T> graph, HashSet<T> visitedNodes, HashSet<T> relaxedNodes) {
+        relaxedNodes.add(rootNode);
+
+        if (Objects.nonNull(graph.getGraph().get(rootNode))) {
+            for (T currentNode : graph.getGraph().get(rootNode)) {
+                if (visitedNodes.contains(currentNode)) {
+                    continue;
+                }
+
+                if (relaxedNodes.contains(currentNode)) {
+                    return true;
+                }
+
+                if (hasCycle(currentNode, graph, visitedNodes, relaxedNodes)) {
+                    return true;
+                }
+            }
+        }
+
+        visitedNodes.add(rootNode);
+        relaxedNodes.remove(rootNode);
+
+        return false;
     }
 }

@@ -80,4 +80,25 @@ public class GraphTraversalAlgorithmsTest {
                 GraphTraversalAlgorithms.depthFirstSearch(directedGraph1, 2)
         );
     }
+
+    @Test
+    public void testCycleDetection() {
+        DirectedGraph<Number> circularGraph = new DirectedGraph<>();
+        circularGraph
+                .addEdge(1, 2)
+                .addEdge(1, 3)
+                .addEdge(2, 3)
+                .addEdge(4, 1)
+                .addEdge(4, 5)
+                .addEdge(5, 6)
+                .addEdge(6, 4);
+
+        DirectedGraph<Number> nonCircularGraph = new DirectedGraph<>();
+        nonCircularGraph.addEdge(1, 2);
+        nonCircularGraph.addEdge(2, 3);
+
+        Assertions.assertFalse(GraphTraversalAlgorithms.hasCycle(nonCircularGraph));
+        Assertions.assertTrue(GraphTraversalAlgorithms.hasCycle(circularGraph));
+        Assertions.assertTrue(GraphTraversalAlgorithms.hasCycle(directedGraph1));
+    }
 }
