@@ -9,46 +9,25 @@ public class Anagram {
      * @return number of characters
      */
     public static int makeAnagram(String a, String b) {
-        return countMismatchChar(a, b) + countMismatchChar(b, a);
-    }
+        int[] charCounts = new int[255];
 
-    /**
-     * Return number characters not occurring in string b from string a
-     * @param a string
-     * @param b string
-     * @return number of characters
-     */
-    public static int countMismatchChar(String a, String b){
-        int count = 0;
-        for(int i = 0; i < a.length(); i++){
-            char currentChar = a.charAt(i);
-            if(b.indexOf(currentChar) == -1){
-                count++;
-            } else if(a.indexOf(currentChar) == i){
-                int countA = countCharOccur(a, currentChar);
-                int countB = countCharOccur(b, currentChar);
-                if(countA > countB){
-                    count += (countA - countB);
-                }
+        for (int i = 0; i < a.length(); i++) {
+            charCounts[a.charAt(i)]++;
+        }
+
+        for (int i = 0; i < b.length(); i++) {
+            charCounts[b.charAt(i)]--;
+        }
+
+        int charDeletionCount = 0;
+
+        for (int charCount : charCounts) {
+            if (charCount != 0) {
+                charDeletionCount += Math.abs(charCount);
             }
         }
-        return count;
-    }
 
-    /**
-     * count number of times the character occurs in a string
-     * @param a string
-     * @param c target character
-     * @return number of occurrence
-     */
-    public static int countCharOccur(String a, char c){
-        int count = 0;
-        for(int i = 0; i < a.length(); i++){
-            if(a.charAt(i) == c){
-                count++;
-            }
-        }
-        return count;
+        return charDeletionCount;
     }
 
     /**
