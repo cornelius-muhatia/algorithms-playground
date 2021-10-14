@@ -37,18 +37,17 @@ public class MergeSort {
      */
     private static void sort(int[] array, int low, int midPoint, int high) {
         int[] lArray = new int[midPoint - low + 1];
+
         int[] rArray = new int[high - midPoint];
+
         //Copy elements into an array
-        if (lArray.length >= 0){
-            System.arraycopy(array, low, lArray, 0, lArray.length);
-        }
-        if(rArray.length >= 0){
-            System.arraycopy(array, midPoint + 1, rArray, 0, rArray.length);
-        }
+        System.arraycopy(array, low, lArray, 0, lArray.length);
+        System.arraycopy(array, midPoint + 1, rArray, 0, rArray.length);
+
         int leftIdx = 0;
         int rightIdx = 0;
-        for(int i = low; i < high + 1; i++){
-            if(leftIdx < lArray.length && rightIdx < rArray.length){
+        for(int i = low; i < high + 1; i++) {
+            if(leftIdx < lArray.length && rightIdx < rArray.length) {
                 if(lArray[leftIdx] < rArray[rightIdx]){
                     array[i] = lArray[leftIdx];
                     leftIdx++;
