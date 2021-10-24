@@ -18,37 +18,43 @@ public class QuickSort {
     /**
      * The pivot is select as median value and all the elements less than median
      * moved to the left and greater than median moved to right.
-     *
+     * <p>
      * Refer to Saraj's tutorial <a href="https://youtu.be/pmEgsd1_nVg">Saraj Bahadur Youtube Video</a>
      *
+     * <p>Their is a possibility this implemention will consume a lot of memory because of the pivot</p>
      *
-     * @param arr array to be sorted
-     * @param low low index of the partition to be sorted
+     * @param arr  array to be sorted
+     * @param low  low index of the partition to be sorted
      * @param high high index of the partition to be sorted
      */
-    public static void quickSort(int[] arr, int low, int high){
-        int mid = (low + high)/2;
-        int i = low;
-        int j = high;
+    public static void quickSort(int[] arr, int low, int high) {
+        int mid = (low + high) / 2;
+        int l = low;
+        int h = high;
         int pivot = arr[mid];
-        while(i <= j){
-            while(arr[i] < pivot){
-                i++;
+
+        while (l <= h) {
+            while (arr[l] < pivot) {
+                l++;
             }
-            while(arr[j] > pivot){
-                j--;
+
+            while (arr[h] > pivot) {
+                h--;
             }
-            if(i<=j){
-                swapIndexValues(arr, i, j);
-                i++;
-                j--;
+
+            if (l <= h) {
+                swapIndexValues(arr, l, h);
+                l++;
+                h--;
             }
         }
-        if(low < j){//sorting left side of the pivot
-            QuickSort.quickSort(arr, low, j);
+
+        if (low < h) {//sorting left side of the pivot
+            QuickSort.quickSort(arr, low, h);
         }
-        if(high > i){//sorting right side of the pivot
-            QuickSort.quickSort(arr, i, high);
+
+        if (high > l) {//sorting right side of the pivot
+            QuickSort.quickSort(arr, l, high);
         }
     }
 

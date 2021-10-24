@@ -34,4 +34,44 @@ public class BinarySearchTreeTest {
 
     }
 
+    @Test
+    public void delete() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+
+        Node<Integer> ten = new Node<>(10);
+        tree.add(ten);
+
+        tree.add(new Node<>(3));
+
+        Node<Integer> five = new Node<>(5);
+        tree.add(five);
+
+        Node<Integer> six = new Node<>(6);
+        tree.add(new Node<>(6));
+
+        Node<Integer> two = new Node<>(2);
+        tree.add(two);
+
+        Node<Integer> twenty = new Node<>(20);
+        tree.add(twenty);
+
+        Node<Integer> thirty = new Node<>(30);
+        tree.add(thirty);
+
+        Node<Integer> fifteen = new Node<>(15);
+        tree.add(fifteen);
+
+        // Delete a node without children
+        tree.delete(two);
+        assertFalse(tree.contains(two));
+
+        // Delete a node with one child
+        tree.delete(five);
+        assertFalse(tree.contains(five));
+
+        // Delete a node with 2 children
+        tree.delete(twenty);
+        assertEquals(thirty.getValue(), tree.getRootNode().getRightChild().getValue());
+    }
+
 }

@@ -50,6 +50,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return size;
     }
 
+    public Node<T> getRootNode() {
+        return root;
+    }
+
     /**
      * Adds a node to the tree. Time complexity is O(h) where h is the height of the tree
      *
@@ -61,16 +65,18 @@ public class BinarySearchTree<T extends Comparable<T>> {
             size++;
             return;
         }
+
         Node<T> current = root;
+
         while (true) {
-            if (current.value.compareTo(node.value) > -1) {
+            if (current.value.compareTo(node.value) > 0) {
                 if (Objects.isNull(current.leftChild)) {
                     current.leftChild = node;
                     size++;
                     break;
                 }
                 current = current.leftChild;
-            } else {
+            } else if (current.value.compareTo(node.value) < 0) {
                 if (Objects.isNull(current.rightChild)) {
                     current.rightChild = node;
                     size++;
@@ -78,6 +84,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 } else {
                     current = current.rightChild;
                 }
+            } else {
+                break;
             }
         }
     }
@@ -101,9 +109,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
     private boolean contains(Node<T> root, Node<T> item){
         if(Objects.equals(root, item)){
             return true;
-        } else if(Objects.isNull(root)){
+        }
+
+        if(Objects.isNull(root)){
             return false;
         }
+
         if(item.value.compareTo(root.value) < 0){
             return contains(root.leftChild, item);
         } else{
@@ -112,27 +123,59 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     public void delete(Node<T> item){
-        Node<T> current = root;
-        while(Objects.nonNull(current)){
-            if(item.equals(current)){
+        delete(root, item);
+    }
 
-            }
-            if(Objects.nonNull(root.leftChild)
-                    && root.leftChild.value.compareTo(item.value) < 0){
-
-            }
+    private Node<T> delete(Node<T> current, Node<T> item) {
+        if (current == null) {
+            return null;
         }
+
+        if (Objects.equals(current, item)) {
+            if (Objects.isNull(item.leftChild) && Objects.isNull(item.rightChild)) {
+                return null;
+            }
+
+            if(Objects.isNull(item.leftChild)) {
+                return item.rightChild;
+            }
+
+            if (Objects.isNull(item.rightChild)) {
+                return item.leftChild;
+            }
+
+            Node<T> replacementNode = findSmallestNode(item.rightChild);
+
+            current.value = replacementNode.value;
+            current.rightChild = delete(current.rightChild, replacementNode);
+
+            return current;
+        }
+
+        if (item.value.compareTo(current.value) < 0) {
+            current.leftChild = delete(current.leftChild, item);
+
+            return current;
+        }
+
+        current.rightChild = delete(current.rightChild, item);
+
+        return current;
     }
 
-    @Override
-    public String toString() {
-        String str = "";
-        Node<T> current = root;
-//        while(Objects.nonNull(current)){
-//
-//        }
-        return str;
+    private Node<T> findSmallestNode(Node<T> node) {
+        return Objects.isNull(node.leftChild) ? node : findSmallestNode(node.leftChild);
     }
+
+//    @Override
+//    public String toString() {
+//        String str = "";
+//        Node<T> current = root;
+////        while(Objects.nonNull(current)){
+////
+////        }
+//        return str;
+//    }
 
     /**
      * Used represent the node of the the tree. Properties include:
