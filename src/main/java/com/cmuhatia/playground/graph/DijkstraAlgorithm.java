@@ -15,32 +15,38 @@
  */
 package com.cmuhatia.playground.graph;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * @author Cornelius Muhatia.
  * @version 1.0.0 4/10/20
  */
-public class DijkstraAlgorithm{
+public class DijkstraAlgorithm {
 
     /**
      * Calculates weights of Nodes in a graph linked to the root node
      *
      * @param root Start node
      */
-    public static <T> void calculateShortestPath(WeightedGraph.Node<T> root){
+    public static <T> void calculateShortestPath(WeightedGraph.Node<T> root) {
         List<WeightedGraph.Node<T>> frontier = new LinkedList<>();
-        root.setWeight(0.0);
         frontier.add(root);
-        while(!frontier.isEmpty()){
+
+        root.setWeight(0.0);
+
+        while (!frontier.isEmpty()) {
             WeightedGraph.Node<T> smallNode = getSmallest(frontier);
+
             frontier.remove(smallNode);
+
             smallNode.getNeighbours().forEach((key, val) -> {
-                if(key.getWeight() == null){
+                if (key.getWeight() == null) {
                     key.setWeight(smallNode.getWeight() + val);
-                    frontier.add(key);
                     key.setParent(smallNode);
-                } else if(key.getWeight() > (smallNode.getWeight() + val)){
+
+                    frontier.add(key);
+                } else if (key.getWeight() > (smallNode.getWeight() + val)) {
                     key.setWeight(smallNode.getWeight() + val);
                     key.setParent(smallNode);
                 }
@@ -54,13 +60,15 @@ public class DijkstraAlgorithm{
      * @param nodes a {@link List} of {@link com.cmuhatia.playground.graph.WeightedGraph.Node}
      * @return Smallest node
      */
-    public static <T>  WeightedGraph.Node<T> getSmallest(List<WeightedGraph.Node<T>> nodes){
+    public static <T> WeightedGraph.Node<T> getSmallest(List<WeightedGraph.Node<T>> nodes) {
         WeightedGraph.Node<T> smallestNode = null;
-        for(WeightedGraph.Node<T> node: nodes){
-            if(smallestNode == null || smallestNode.getWeight() > node.getWeight()){
+
+        for (WeightedGraph.Node<T> node : nodes) {
+            if (smallestNode == null || smallestNode.getWeight() > node.getWeight()) {
                 smallestNode = node;
             }
         }
+
         return smallestNode;
     }
 }

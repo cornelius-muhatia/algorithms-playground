@@ -15,6 +15,8 @@
  */
 package com.cmuhatia.playground.graph;
 
+import lombok.Data;
+
 import java.util.*;
 
 /**
@@ -23,7 +25,7 @@ import java.util.*;
  */
 public class WeightedGraph<T> extends HashSet<WeightedGraph.Node<T>> {
 
-
+    @Data
     public static class Node<T>{
         /**
          * Node label/name
@@ -44,38 +46,6 @@ public class WeightedGraph<T> extends HashSet<WeightedGraph.Node<T>> {
 
         public Node(T label) {
             this.label = label;
-        }
-
-        public T getLabel() {
-            return label;
-        }
-
-        public void setLabel(T label) {
-            this.label = label;
-        }
-
-        public Double getWeight() {
-            return weight;
-        }
-
-        public void setWeight(Double weight) {
-            this.weight = weight;
-        }
-
-        public Map<Node<T>, Double> getNeighbours() {
-            return neighbours;
-        }
-
-        public void setNeighbours(Map<Node<T>, Double> neighbours) {
-            this.neighbours = neighbours;
-        }
-
-        public Node<T> getParent() {
-            return parent;
-        }
-
-        public void setParent(Node<T> parent) {
-            this.parent = parent;
         }
 
         /**
@@ -107,14 +77,6 @@ public class WeightedGraph<T> extends HashSet<WeightedGraph.Node<T>> {
         @Override
         public int hashCode() {
             return label.hashCode();
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "name=" + label +
-                    ", weight=" + weight +
-                    '}';
         }
     }
 
