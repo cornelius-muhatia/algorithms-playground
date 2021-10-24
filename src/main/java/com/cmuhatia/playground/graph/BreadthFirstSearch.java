@@ -32,19 +32,21 @@ public class BreadthFirstSearch {
      */
     public static <T> void traverseGraph(Graph<T> graph, Vertex<T> root){
         Set<Vertex<T>> visited = new LinkedHashSet<>();
+
         Queue<Vertex<T>> frontier = new LinkedList<>();
         frontier.add(root);
+
         while(!frontier.isEmpty()){
             if(!visited.contains(frontier.peek())){
                 visited.add(frontier.peek());
-                System.out.println(frontier.peek().getLabel());
+
                 if(graph.getGraph().containsKey(frontier.peek())) {
                     frontier.addAll(graph.getGraph().get(frontier.peek()));
                 }
             }
+
             frontier.poll();
         }
-
     }
 
     public static void main(String[] args){
