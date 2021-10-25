@@ -15,7 +15,6 @@
  */
 package com.cmuhatia.playground.knapsack;
 
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -29,24 +28,23 @@ public class Knapsack {
     /**
      * Gets the maximum profit for 0/1 Knapsack
      *
-     * @param items items with weight as the key and profit as the value
+     * @param items    items with weight as the key and profit as the value
      * @param capacity capacity of the knapsack
      * @return maximum profit the knapsack can hold
      */
-    public static int getMaxWeight01(List<Map.Entry<Integer, Integer>> items, int capacity){
+    public static int getMaxWeight01(List<Map.Entry<Integer, Integer>> items, int capacity) {
         int[][] table = new int[items.size()][capacity + 1];
-        for(int k = 1; k <= capacity; k++){
-            for(int i = 0; i < items.size(); i++){
-                if (i == 0){
+        for (int k = 1; k <= capacity; k++) {
+            for (int i = 0; i < items.size(); i++) {
+                if (i == 0) {
                     table[i][k] = items.get(i).getKey() > k ? 0 : items.get(i).getValue();
-                }
-                else{
+                } else {
                     int prevJ = k - items.get(i).getKey();
-                    if(prevJ >= 0) {
+                    if (prevJ >= 0) {
                         int currentWeight = table[i - 1][prevJ] + items.get(i).getValue();
                         table[i][k] = Math.max(table[i - 1][k], currentWeight);
                     } else {
-                        table[i][k] = table[i-1][k];
+                        table[i][k] = table[i - 1][k];
                     }
                 }
             }
@@ -54,53 +52,63 @@ public class Knapsack {
         return table[items.size() - 1][capacity];
     }
 
-    public static List<Map.Entry<Integer, Integer>> getMaxWeightItems01(List<Map.Entry<Integer, Integer>> items, int capacity){
-        List<Map.Entry<Integer, Integer>> selectedItems = new LinkedList<>();
+    public static List<Map.Entry<Integer, Integer>> getMaxWeightItems01(List<Map.Entry<Integer, Integer>> items, int capacity) {
+
         int[][] table = new int[items.size()][capacity + 1];
-        for(int k = 1; k <= capacity; k++){
-            for(int i = 0; i < items.size(); i++){
-                if (i == 0){
-                    table[i][k] = items.get(i).getKey() > k ? 0 : items.get(i).getValue();
-                }
-                else{
+
+        for (int k = 1; k <= capacity; k++) {
+            for (int i = 0; i < items.size(); i++) {
+                if (i == 0) {
+                    table[i][k] = (items.get(i).getKey() > k) ? 0 : items.get(i).getValue();
+                } else {
                     int prevJ = k - items.get(i).getKey();
-                    if(prevJ >= 0) {
+
+                    if (prevJ >= 0) {
                         int currentWeight = table[i - 1][prevJ] + items.get(i).getValue();
+
                         table[i][k] = Math.max(table[i - 1][k], currentWeight);
                     } else {
-                        table[i][k] = table[i-1][k];
+                        table[i][k] = table[i - 1][k];
                     }
                 }
             }
         }
-        int remainder = table[items.size()-1][capacity];
-        while(remainder > 0){
-            for(int i = items.size() - 1; i >= 0; i--){
-                for(int j = capacity; j >= 0; j--){
-                    if(j > 0 && table[i][j - 1] != remainder){
-                        if(i > 0 && table[i - 1][j] != remainder){
-                            remainder = remainder - items.get(i).getValue();
-                            selectedItems.add(items.get(i));
-                        }
-                        break;
-                    }
-                }
-                if(remainder <= 0){
+
+        return getSelectedItems(items, capacity, table);
+    }
+
+    private static List<Map.Entry<Integer, Integer>> getSelectedItems(List<Map.Entry<Integer, Integer>> items, int capacity, int[][] table) {
+        List<Map.Entry<Integer, Integer>> selectedItems = new LinkedList<>();
+
+        int remainder = table[items.size() - 1][capacity];
+
+        for (int i = items.size() - 1; i >= 0; i--) {
+            for (int j = capacity; j >= 0; j--) {
+                if ((i > 0) && (remainder == table[i][j]) && (table[i - 1][j] < remainder)) {
+                    remainder = remainder - items.get(i).getValue();
+
+                    selectedItems.add(items.get(i));
+
+                    break;
+                } else if ((i == 0) && (remainder == table[i][j])) {
+                    selectedItems.add(items.get(i));
+
                     break;
                 }
             }
         }
+
         return selectedItems;
     }
 
     /**
      * Gets maximum profit for factional Knapsack problem
      *
-     * @param items  items with weight as the key and profit as the value
+     * @param items    items with weight as the key and profit as the value
      * @param capacity capacity of the knapsack
      * @return maximum profit the knapsack can hold
      */
-    public static double getMaxWeightFractional(List<Map.Entry<Integer, Integer>> items, int capacity){
+    public static double getMaxWeightFractional(List<Map.Entry<Integer, Integer>> items, int capacity) {
         items.sort((o1, o2) -> {
             int item1Ratio = o1.getValue() / o1.getKey();
             int item2Ratio = o2.getValue() / o2.getKey();
@@ -108,17 +116,17 @@ public class Knapsack {
         });
         double filled = 0;
         double maxWeight = 0.0;
-        for(int i = items.size() - 1; i > -1; i--){
-            if((filled + items.get(i).getKey()) <= capacity){
+        for (int i = items.size() - 1; i > -1; i--) {
+            if ((filled + items.get(i).getKey()) <= capacity) {
                 maxWeight += items.get(i).getValue();
                 filled += items.get(i).getKey();
-            } else if((capacity - filled) > 0){
+            } else if ((capacity - filled) > 0) {
                 double rem = capacity - filled;
                 maxWeight += (Double.valueOf(items.get(i).getValue()) / Double.valueOf(items.get(i).getKey())) * rem;
-            } else{
+            } else {
                 break;
             }
         }
-       return maxWeight;
+        return maxWeight;
     }
 }

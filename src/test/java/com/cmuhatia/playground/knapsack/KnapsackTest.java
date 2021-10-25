@@ -12,7 +12,6 @@ import static org.junit.Assert.*;
  */
 public class KnapsackTest {
 
-
     @Test
     public void getMaxWeight01Test(){
         List<Map.Entry<Integer, Integer>> items = List.of(Map.entry(10, 60), Map.entry(20, 100), Map.entry(30, 120));
@@ -35,7 +34,6 @@ public class KnapsackTest {
         int capacity = 50;
         assertEquals(240.0, Knapsack.getMaxWeightFractional(items, capacity), DELTA);
 
-        capacity = 50;
         items = new ArrayList<>(List.of(Map.entry(10, 60), Map.entry(20, 100), Map.entry(30, 120)));
         assertEquals(240, Knapsack.getMaxWeightFractional(items, capacity), DELTA);
         capacity = 15;
@@ -48,7 +46,9 @@ public class KnapsackTest {
     public void getMaxWeightItems01() {
         List<Map.Entry<Integer, Integer>> selectedItems = Knapsack.getMaxWeightItems01(
                 List.of(Map.entry(3, 2), Map.entry(4, 3), Map.entry(6, 1), Map.entry(5, 4)), 8);
+
         assertEquals(2, selectedItems.size());
+
         assertTrue(selectedItems.contains(Map.entry(3, 2)));
         assertTrue(selectedItems.contains(Map.entry(5, 4)));
     }
