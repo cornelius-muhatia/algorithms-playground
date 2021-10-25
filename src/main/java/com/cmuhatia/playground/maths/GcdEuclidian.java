@@ -24,7 +24,7 @@ package com.cmuhatia.playground.maths;
 public class GcdEuclidian {
 
     /**
-     * Get greatest common divisor of 2 integers. For example the gcd of 77 and 22 is 11
+     * Get the greatest common divisor of 2 integers. For example the gcd of 77 and 22 is 11
      *
      * @param large largest integer
      * @param small smallest integer
@@ -32,8 +32,10 @@ public class GcdEuclidian {
      */
     public static int getGcd(int large, int small){
         int remainder;
+
         while(true){
             remainder = large % small;
+
             if(remainder == 0){
                 return small;
             } else{
@@ -53,7 +55,9 @@ public class GcdEuclidian {
      */
     static void simplifyFraction(int numerator, int denominator, int [] result){
         int gcd = numerator > denominator ? getGcd(numerator, denominator) : getGcd(denominator, numerator);
+
         result[0] = numerator / gcd;
+
         result[1] = denominator / gcd;
     }
 
@@ -66,9 +70,11 @@ public class GcdEuclidian {
      */
     public static int getGcd(int firstNumber, int... others){
         int gcd = firstNumber;
-        for(int next: others){
+
+        for(int next : others){
             gcd = getGcd(gcd, next);
         }
+
         return gcd;
     }
 }
