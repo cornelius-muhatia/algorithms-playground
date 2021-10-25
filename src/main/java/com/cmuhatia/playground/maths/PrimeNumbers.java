@@ -29,19 +29,25 @@ public class PrimeNumbers {
      */
     public static int countPrimeNumbers(int n){
         int count = 0;
+
         while(n > 1){
             boolean isPrime = true;
+
             for(int i = 2; i <= Math.sqrt(n); i++){
                 if(n % i == 0){
                     isPrime = false;
+
                     break;
                 }
             }
+
             if(isPrime){
                 count++;
             }
+
             n--;
         }
+
         return count;
     }
 }
