@@ -39,8 +39,10 @@ public class KnuthMorrisPrattAlgorithm<T> {
      */
     public static <T> int[] computeSuffixPrefix(T[] pattern) {
         int[] temp = new int[pattern.length];
+
         int i = 0;
         int j = 1;
+
         while (j < pattern.length) {
             if (pattern[i].equals(pattern[j])) {
                 temp[j] = i + 1;
@@ -53,6 +55,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
                 j++;
             }
         }
+
         return temp;
     }
 
@@ -67,7 +70,9 @@ public class KnuthMorrisPrattAlgorithm<T> {
     public static <T> boolean contains(T[] sequence, T[] pattern) {
         int s = 0;
         int p = 0;
+
         int[] prefixSuffix = computeSuffixPrefix(pattern);
+
         while (s < sequence.length) {
             if (sequence[s].equals(pattern[p])) {
                 s++;
@@ -93,8 +98,10 @@ public class KnuthMorrisPrattAlgorithm<T> {
      */
     public static int[] computeSuffixPrefix(String pattern) {
         int[] temp = new int[pattern.length()];
+
         int i = 0;
         int j = 1;
+
         while (j < pattern.length()) {
             if (Character.toLowerCase(pattern.charAt(i)) == Character.toLowerCase(pattern.charAt(j))) {
                 temp[j] = i + 1;
@@ -107,6 +114,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
                 j++;
             }
         }
+
         return temp;
     }
 
@@ -119,9 +127,12 @@ public class KnuthMorrisPrattAlgorithm<T> {
      */
     public static int countStringOccurrence(String text, String pattern) {
         int[] prefixSuffix = computeSuffixPrefix(pattern);
+
         int count = 0;
-        int i = 0;//text index
-        int j = 0;//pattern index
+
+        int i = 0; // text index
+        int j = 0; // pattern index
+
         while (i < text.length()) {
             if (Character.toLowerCase(text.charAt(i)) == Character.toLowerCase(pattern.charAt(j))) {
                 i++;
@@ -131,12 +142,14 @@ public class KnuthMorrisPrattAlgorithm<T> {
             } else {
                 i++;
             }
+
             if (j == pattern.length()) {
                 count++;
                 i = i - (pattern.length() - 1);
                 j = 0;
             }
         }
+
         return count;
     }
 
@@ -181,7 +194,7 @@ public class KnuthMorrisPrattAlgorithm<T> {
                 break;
             }
         }
-        System.out.println(strings.toString());
+        System.out.println(strings);
         return strings;
     }
 }

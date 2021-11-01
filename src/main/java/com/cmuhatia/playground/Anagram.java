@@ -4,6 +4,7 @@ public class Anagram {
 
     /**
      * Returns a number denoting the number of characters you must delete to make the two strings anagrams of each other.
+     *
      * @param a first string
      * @param b second string
      * @return number of characters
@@ -32,25 +33,31 @@ public class Anagram {
 
     /**
      * Checks if 2 strings are anagrams
+     *
      * @param a first string
      * @param b second string
      * @return true if they are anagrams. False otherwise
      */
-    public static boolean isAnagram(String a, String b){
-        if(a.length() != b.length()){
+    public static boolean isAnagram(String a, String b) {
+        if (a.length() != b.length()) {
             return false;
         }
-        int ASCII_CAPACITY = 255;
-        int[] count = new int[ASCII_CAPACITY];
-        for (int i=0; i < a.length(); i++){
+
+        int asciiCapacity = 255;
+
+        int[] count = new int[asciiCapacity];
+
+        for (int i = 0; i < a.length(); i++) {
             count[a.charAt(i)]++;
             count[b.charAt(i)]--;
         }
-        for(int val : count){
-            if(val != 0){
+
+        for (int val : count) {
+            if (val != 0) {
                 return false;
             }
         }
+
         return true;
     }
 }

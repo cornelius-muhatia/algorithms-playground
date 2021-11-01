@@ -47,6 +47,7 @@ public class KnuthMorrisPrattAlgorithmTest {
     public void countStringOccurrence() {
         String text = "babalabalabalatheend";
         String pattern = "alabala";
+
         assertEquals(2, KnuthMorrisPrattAlgorithm.countStringOccurrence(text, pattern));
     }
 
