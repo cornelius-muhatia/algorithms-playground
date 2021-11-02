@@ -43,13 +43,32 @@ public class KnapsackTest {
     }
 
     @Test
-    public void getMaxWeightItems01() {
-        List<Map.Entry<Integer, Integer>> selectedItems = Knapsack.getMaxWeightItems01(
-                List.of(Map.entry(3, 2), Map.entry(4, 3), Map.entry(6, 1), Map.entry(5, 4)), 8);
+    public void getMaxWeightItems01V2() {
+        Item<Integer> item1 = new Item<>(3, 2);
+        Item<Integer> item2 = new Item<>(5, 4);
+
+        List<Item<Integer>> selectedItems = Knapsack.getMaxWeightItems01(
+                List.of(
+                        new Item<>(4, 3),
+                        item1,
+                        item2,
+                        new Item<>(6, 1)
+                ),
+                8
+        );
 
         assertEquals(2, selectedItems.size());
 
-        assertTrue(selectedItems.contains(Map.entry(3, 2)));
-        assertTrue(selectedItems.contains(Map.entry(5, 4)));
+        assertTrue(selectedItems.contains(item1));
+        assertTrue(selectedItems.contains(item2));
+
+        Item<Integer> apple = new Item<>(2, 4);
+        Item<Integer> orange = new Item<>(3, 5);
+        Item<Integer> banana = new Item<>(1, 3);
+        Item<Integer> melon = new Item<>(4, 7);
+
+        selectedItems = Knapsack.getMaxWeightItems01(List.of(apple, orange, banana, melon), 5);
+
+        assertEquals(List.of(melon, banana), selectedItems);
     }
 }

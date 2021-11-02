@@ -52,46 +52,38 @@ public class Knapsack {
         return table[items.size() - 1][capacity];
     }
 
-    public static List<Map.Entry<Integer, Integer>> getMaxWeightItems01(List<Map.Entry<Integer, Integer>> items, int capacity) {
-
+    public static List<Item<Integer>> getMaxWeightItems01(List<Item<Integer>> items, int capacity) {
         int[][] table = new int[items.size()][capacity + 1];
 
-        for (int k = 1; k <= capacity; k++) {
-            for (int i = 0; i < items.size(); i++) {
-                if (i == 0) {
-                    table[i][k] = (items.get(i).getKey() > k) ? 0 : items.get(i).getValue();
-                } else {
-                    int prevJ = k - items.get(i).getKey();
+        for (int row = 1; row < items.size(); row++) {
 
-                    if (prevJ >= 0) {
-                        int currentWeight = table[i - 1][prevJ] + items.get(i).getValue();
-
-                        table[i][k] = Math.max(table[i - 1][k], currentWeight);
-                    } else {
-                        table[i][k] = table[i - 1][k];
-                    }
+            for (int col = 0; col <= capacity; col++) {
+                if (col < items.get(row).getWeight()) {
+                    table[row][col] = table[row - 1][col];
+                    continue;
                 }
+
+                int totalValue = items.get(row).getValue() + table[row - 1][col - items.get(row).getWeight()];
+
+                table[row][col] = Math.max(totalValue, table[row - 1][col]);
             }
+
         }
 
         return getSelectedItems(items, capacity, table);
     }
 
-    private static List<Map.Entry<Integer, Integer>> getSelectedItems(List<Map.Entry<Integer, Integer>> items, int capacity, int[][] table) {
-        List<Map.Entry<Integer, Integer>> selectedItems = new LinkedList<>();
+    private static List<Item<Integer>> getSelectedItems(List<Item<Integer>> items, int capacity, int[][] table) {
+        List<Item<Integer>> selectedItems = new LinkedList<>();
 
         int remainder = table[items.size() - 1][capacity];
 
-        for (int i = items.size() - 1; i >= 0; i--) {
-            for (int j = capacity; j >= 0; j--) {
-                if ((i > 0) && (remainder == table[i][j]) && (table[i - 1][j] < remainder)) {
-                    remainder = remainder - items.get(i).getValue();
+        for (int row = items.size() - 1; row > 0; row--) {
+            for (int col = capacity; col > 0; col--) {
+                if ((remainder == table[row][col]) && (table[row - 1][col] < remainder)) {
+                    remainder = remainder - items.get(row).getValue();
 
-                    selectedItems.add(items.get(i));
-
-                    break;
-                } else if ((i == 0) && (remainder == table[i][j])) {
-                    selectedItems.add(items.get(i));
+                    selectedItems.add(items.get(row));
 
                     break;
                 }
@@ -100,6 +92,7 @@ public class Knapsack {
 
         return selectedItems;
     }
+
 
     /**
      * Gets maximum profit for factional Knapsack problem
