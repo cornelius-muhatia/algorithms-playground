@@ -1,9 +1,8 @@
 package com.cmuhatia.playground;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
@@ -11,8 +10,7 @@ import java.io.FileWriter;
 import java.io.PrintStream;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Cornelius M.
  * @version 1.0.0, 15/06/2020

@@ -1,11 +1,11 @@
 package com.cmuhatia.playground.knapsack;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Cornelius M.
  * @version 1.0.0, 21/06/2020

@@ -1,20 +1,20 @@
 package com.cmuhatia.playground.search;
 
-import org.junit.Assert;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BinarySearchTest {
 
     @Test
     public void contains() {
         Character[] sortedArray = {'b', 'c', 'd', 'e', 'f'};
-        Assert.assertFalse(BinarySearch.contains(sortedArray, 'a'));
-        Assert.assertTrue(BinarySearch.contains(sortedArray, 'b'));
-        Assert.assertTrue(BinarySearch.contains(sortedArray, 'e'));
-        Assert.assertTrue(BinarySearch.contains(sortedArray, 'f'));
-        Assert.assertFalse(BinarySearch.contains(sortedArray, 'g'));
+        assertFalse(BinarySearch.contains(sortedArray, 'a'));
+        assertTrue(BinarySearch.contains(sortedArray, 'b'));
+        assertTrue(BinarySearch.contains(sortedArray, 'e'));
+        assertTrue(BinarySearch.contains(sortedArray, 'f'));
+        assertFalse(BinarySearch.contains(sortedArray, 'g'));
 
         String[] strings = {"Able", "Boy", "Cook", "Dam", "Eat"};
         assertTrue(BinarySearch.contains(strings, "Eat"));

@@ -15,6 +15,9 @@
  */
 package com.cmuhatia.playground.tree;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Objects;
 
 /**
@@ -26,13 +29,12 @@ public class BinarySearchTree<T extends Comparable<T>> {
     /**
      * Private root node
      */
+    @Setter
     private Node<T> root;
     /**
      * Number of nodes in a graph
      */
     private int size = 0;
-
-    private int height = 0;
 
     /**
      * Default constructor

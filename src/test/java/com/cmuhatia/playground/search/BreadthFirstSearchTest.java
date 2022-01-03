@@ -5,17 +5,9 @@
  */
 package com.cmuhatia.playground.search;
 
-import com.cmuhatia.playground.search.BreadthFirstSearch;
-import com.cmuhatia.playground.search.Tree;
-import java.util.Optional;
-import org.junit.Assert;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  *
  * @author cornelius
@@ -23,22 +15,6 @@ import static org.junit.Assert.*;
 public class BreadthFirstSearchTest {
     
     public BreadthFirstSearchTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
     }
 
     /**
@@ -58,9 +34,9 @@ public class BreadthFirstSearchTest {
         Tree<Character> i = g.addChild('I');
         Tree<Character> h = i.addChild('H');
         
-        Assert.assertTrue("Breadth first search best case", BreadthFirstSearch.search('H', root).isPresent());
-        Assert.assertTrue("Breadth first root search", BreadthFirstSearch.search('F', root).isPresent());
-        Assert.assertTrue("Breadth first search worst case", !BreadthFirstSearch.search('Z', root).isPresent());
+        assertTrue(BreadthFirstSearch.search('H', root).isPresent());
+        assertTrue(BreadthFirstSearch.search('F', root).isPresent());
+        assertTrue(!BreadthFirstSearch.search('Z', root).isPresent());
         
 //        assertTrue(true);
     }
@@ -80,9 +56,9 @@ public class BreadthFirstSearchTest {
         uthiru.connect(ongwaro);
         yaya.connect(ongwaro);
         
-        Assert.assertTrue("Graph search best case 1", BreadthFirstSearch.search('Y', ongwaro).isPresent());
-        Assert.assertTrue("Graph search best case 2", BreadthFirstSearch.search('C', yaya).isPresent());
-        Assert.assertTrue("Graph search worst case 1", !BreadthFirstSearch.search('E', ongwaro).isPresent());
+        assertTrue(BreadthFirstSearch.search('Y', ongwaro).isPresent());
+        assertTrue(BreadthFirstSearch.search('C', yaya).isPresent());
+        assertTrue(!BreadthFirstSearch.search('E', ongwaro).isPresent());
     }
     
 }

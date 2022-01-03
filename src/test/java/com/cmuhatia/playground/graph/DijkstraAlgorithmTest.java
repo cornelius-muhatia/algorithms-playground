@@ -1,12 +1,10 @@
 package com.cmuhatia.playground.graph;
 
+import org.junit.jupiter.api.Test;
 
-import com.cmuhatia.playground.search.Node;
-import org.junit.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.*;
 
-import static org.junit.Assert.*;
 
 /**
  * @author Cornelius Muhatia.

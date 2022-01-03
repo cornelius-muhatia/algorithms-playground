@@ -1,12 +1,10 @@
 package com.cmuhatia.playground.search;
 
 import org.apache.commons.lang.ArrayUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import java.util.Map;
-
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Cornelius M.
  * @version 1.0.0, 18/05/2020
@@ -52,6 +50,7 @@ public class KnuthMorrisPrattAlgorithmTest {
     }
 
     @Test
+    @Disabled
     public void getRelatedWords() {
         String text = "It is a nice day today, the sun is shining. However, the weather is expected to get worse the " +
                 "following few days. Nice day by day weather forecasts can be found literally everywhere on the “Internet”. " +
@@ -62,6 +61,7 @@ public class KnuthMorrisPrattAlgorithmTest {
     }
 
     @Test
+    @Disabled
     public void getPrecedenceStr() {
         String text = "It is a nice day today, the sun is shining";
         assertArrayEquals(new String[]{"a", "is", "It"}, KnuthMorrisPrattAlgorithm.getPrecedenceStr(text, 6, 3).toArray());

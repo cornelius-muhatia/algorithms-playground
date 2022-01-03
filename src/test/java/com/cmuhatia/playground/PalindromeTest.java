@@ -1,12 +1,11 @@
 package com.cmuhatia.playground;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Cornelius M.
  * @version 1.0.0, 23/05/2020
@@ -48,11 +47,11 @@ public class PalindromeTest {
     @Test
     public void testIsPalindrome() {
         String string1 = "teet";
-        assertTrue(string1 + " is palindrome", Palindrome.isPalindrome(string1));
+        assertTrue(Palindrome.isPalindrome(string1));
         string1 = "racecar";
-        assertTrue(string1 + " is palindrome", Palindrome.isPalindrome(string1));
+        assertTrue(Palindrome.isPalindrome(string1));
         string1 = "palindrome";
-        assertFalse(string1 + " is not a palindrome", Palindrome.isPalindrome(string1));
+        assertFalse(Palindrome.isPalindrome(string1));
 
     }
 }

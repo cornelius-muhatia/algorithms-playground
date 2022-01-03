@@ -16,8 +16,9 @@
 
 package com.cmuhatia.playground;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -29,13 +30,13 @@ public class CountingValleyTest {
     @Test
     public void testNormal(){
         String t = "DDUUUUDD";
-        Assert.assertEquals("Best case test", 2, CountingValley.countingValleys(t.length(), t));
+        assertEquals(2, CountingValley.countingValleys(t.length(), t));
     }
     
     @Test
     public void testWorstCase(){
         String t = "UUUUDDDUDUUUUDDDUUUU";
-        Assert.assertEquals("Worst case test", 1, CountingValley.countingValleys(t.length(), t));
+        assertEquals(1, CountingValley.countingValleys(t.length(), t));
     }
 
 }

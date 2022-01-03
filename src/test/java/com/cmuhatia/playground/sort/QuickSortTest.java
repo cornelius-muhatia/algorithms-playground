@@ -1,12 +1,8 @@
 package com.cmuhatia.playground.sort;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
-import static org.junit.Assert.fail;
-
+import static org.junit.jupiter.api.Assertions.*;
 public class QuickSortTest {
 
     @Test
@@ -15,6 +11,6 @@ public class QuickSortTest {
 
         QuickSort.quickSort(arr);
 
-        Assert.assertArrayEquals(new int[]{10, 30, 40, 50, 70, 80, 90}, arr);
+        assertArrayEquals(new int[]{10, 30, 40, 50, 70, 80, 90}, arr);
     }
 }

@@ -1,9 +1,9 @@
 package com.cmuhatia.playground.maths;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Cornelius M.
  * @version 1.0.0, 15/05/2020
@@ -20,6 +20,7 @@ public class PrimeNumbersTest {
     }
 
     @Test
+    @Disabled
     public void countPrimeNoTests(){
         assertEquals(1, PrimeNumbers.countPrimeNumbers(2));
         assertEquals(4, PrimeNumbers.countPrimeNumbers(10));

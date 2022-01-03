@@ -1,9 +1,9 @@
 package com.cmuhatia.playground.maths;
 
-import org.junit.Assert;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Cornelius M.
@@ -13,10 +13,10 @@ public class DivisorsTest {
 
     @Test
     public void sumDivisors() {
-        Assert.assertEquals(15, Divisors.sumDivisors(8));
-        Assert.assertEquals(8, Divisors.sumDivisors(7));
-        Assert.assertEquals(1, Divisors.sumDivisors(1));
-        Assert.assertEquals(60, Divisors.sumDivisors(24));
-        Assert.assertEquals(2340, Divisors.sumDivisors(1000));
+        assertEquals(15, Divisors.sumDivisors(8));
+        assertEquals(8, Divisors.sumDivisors(7));
+        assertEquals(1, Divisors.sumDivisors(1));
+        assertEquals(60, Divisors.sumDivisors(24));
+        assertEquals(2340, Divisors.sumDivisors(1000));
     }
 }

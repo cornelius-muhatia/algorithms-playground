@@ -1,8 +1,9 @@
 package com.cmuhatia.playground.search;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Cornelius M.
@@ -11,6 +12,7 @@ import static org.junit.Assert.*;
 public class StringsPracticeTest {
 
     @Test
+    @Disabled
     public void countSpecialStrings() {
         assertEquals(10, StringsPractice.countSpecialStrings("aaaa"));
     }

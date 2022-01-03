@@ -1,9 +1,9 @@
 package com.cmuhatia.playground.tree;
 
 import com.cmuhatia.playground.tree.BinarySearchTree.Node;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Cornelius M.

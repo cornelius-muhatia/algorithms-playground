@@ -1,13 +1,11 @@
 package com.cmuhatia.playground.graph;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 import java.util.Set;
 
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Cornelius M.
  * @version 1.0.0, 09/06/2020
@@ -80,7 +78,7 @@ public class BellmanFordTest {
         assertEquals(Double.valueOf(3.0), seven.getWeight());
     }
 
-    @Test(expected = StackOverflowError.class)
+    @Test
     public void calculateShortestPath3(){
         WeightedGraph<String> graph = new WeightedGraph<>();
 

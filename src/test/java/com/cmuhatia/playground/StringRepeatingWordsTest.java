@@ -1,11 +1,9 @@
 package com.cmuhatia.playground;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Random;
-
-import static org.junit.Assert.*;
 
 public class StringRepeatingWordsTest {
 
@@ -13,23 +11,23 @@ public class StringRepeatingWordsTest {
     public void testSplitString(){
         //best case
         StringBuilder sentence = new StringBuilder("Word");
-        Assert.assertEquals(1, StringRepeatingWords.splitString(sentence.toString(), " ").size());
-        Assert.assertEquals(0, StringRepeatingWords.splitString("", " ").size());
+        assertEquals(1, StringRepeatingWords.splitString(sentence.toString(), " ").size());
+        assertEquals(0, StringRepeatingWords.splitString("", " ").size());
 
         Random random = new Random();
         for(int i = 0; i < 1000; i++){
             sentence.append(" ").append(random.longs());
         }
-        Assert.assertEquals(1001, StringRepeatingWords.splitString(sentence.toString(), " ").size());
+        assertEquals(1001, StringRepeatingWords.splitString(sentence.toString(), " ").size());
 
     }
 
     @Test
     public void getRepeatedWords() {
         //best case
-        Assert.assertTrue(StringRepeatingWords.getRepeatedWords("").isEmpty());
-        Assert.assertTrue(StringRepeatingWords.getRepeatedWords("Word").isEmpty());
-        Assert.assertEquals(1, StringRepeatingWords.getRepeatedWords("Word Word").size());
-        Assert.assertEquals(2, StringRepeatingWords.getRepeatedWords("Word Word of tests and tests").size());
+        assertTrue(StringRepeatingWords.getRepeatedWords("").isEmpty());
+        assertTrue(StringRepeatingWords.getRepeatedWords("Word").isEmpty());
+        assertEquals(1, StringRepeatingWords.getRepeatedWords("Word Word").size());
+        assertEquals(2, StringRepeatingWords.getRepeatedWords("Word Word of tests and tests").size());
     }
 }

@@ -5,12 +5,9 @@
  */
 package com.cmuhatia.playground;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
@@ -19,22 +16,6 @@ import static org.junit.Assert.*;
 public class OddOccurrencesInArrayTest {
     
     public OddOccurrencesInArrayTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
     }
 
     /**
@@ -45,7 +26,7 @@ public class OddOccurrencesInArrayTest {
         System.out.println("solution");
         OddOccurrencesInArray occurrence = new OddOccurrencesInArray();
         int a[] = {2,2,3};
-        assertEquals("Best case", 3, occurrence.solution(a));
+        assertEquals(3, occurrence.solution(a));
     }
     
 }
