@@ -18,6 +18,7 @@ package com.cmuhatia.playground.tree;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Collection;
 import java.util.Objects;
 
 /**
@@ -43,6 +44,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     }
 
+    public BinarySearchTree(Collection<T> values) {
+        values.forEach(this::add);
+    }
+
     /**
      * Gets number nodes in the graph
      *
@@ -54,6 +59,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     public Node<T> getRootNode() {
         return root;
+    }
+
+    public void add(T value) {
+        add(new Node<>(value));
     }
 
     /**
