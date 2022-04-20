@@ -1,7 +1,7 @@
 package com.cmuhatia.playground.sort;
 
 /**
- * Implements merge sort algorithm using integers
+ * Merge sort worst case time complexity: O(n log n)
  */
 public class MergeSort {
 
@@ -32,22 +32,19 @@ public class MergeSort {
     /**
      * Merges the partitions back to the original array
      * @param array original array
-     * @param low start index
-     * @param midPoint midpoint between low and high
-     * @param high end index
      */
-    private static void sort(int[] array, int low, int midPoint, int high) {
-        int[] lArray = new int[midPoint - low + 1];
+    private static void sort(int[] array, int startIndex, int midPoint, int endIndex) {
+        int[] lArray = new int[midPoint - startIndex + 1];
 
-        int[] rArray = new int[high - midPoint];
+        int[] rArray = new int[endIndex - midPoint];
 
         //Copy elements into an array
-        System.arraycopy(array, low, lArray, 0, lArray.length);
+        System.arraycopy(array, startIndex, lArray, 0, lArray.length);
         System.arraycopy(array, midPoint + 1, rArray, 0, rArray.length);
 
         int leftIdx = 0;
         int rightIdx = 0;
-        for(int i = low; i < high + 1; i++) {
+        for(int i = startIndex; i < endIndex + 1; i++) {
             if(leftIdx < lArray.length && rightIdx < rArray.length) {
                 if(lArray[leftIdx] < rArray[rightIdx]){
                     array[i] = lArray[leftIdx];
