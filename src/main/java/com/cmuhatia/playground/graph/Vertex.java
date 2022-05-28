@@ -16,6 +16,9 @@
 package com.cmuhatia.playground.graph;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 /**
  * A class used to represent a vertex. Fields include:
  * <ul>
@@ -25,53 +28,9 @@ package com.cmuhatia.playground.graph;
  *
  * @param <T> vertex type string or object
  */
+@Data
+@AllArgsConstructor
 public class Vertex<T> {
-    /**
-     * Vertex label
-     */
+
     private T label;
-
-    /**
-     * Default constructor
-     */
-    public Vertex() {
-    }
-
-    /**
-     *
-     * @param label vertex label
-     */
-    public Vertex(T label){
-        this.label = label;
-    }
-
-    public T getLabel() {
-        return label;
-    }
-
-    public void setLabel(T label) {
-        this.label = label;
-    }
-
-    @Override
-    public int hashCode() {
-        return label.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Vertex<?> vertex = (Vertex<?>) o;
-
-        return label.equals(vertex.label);
-    }
-
-    @Override
-    public String toString() {
-        return "Vertex{" +
-                "label=" + label +
-                '}';
-    }
 }

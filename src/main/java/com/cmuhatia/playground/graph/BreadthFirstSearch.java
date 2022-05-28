@@ -22,16 +22,11 @@ import java.util.*;
  * @version 1.0.0 3/29/20
  */
 public class BreadthFirstSearch {
-
-
     /**
-     * Traverse the graph using breadth search
-     * @param graph {@link Graph}
-     * @param root root vertex
-     * @param <T> generic reference
+     * @return traversal path
      */
-    public static <T> void traverseGraph(Graph<T> graph, Vertex<T> root){
-        Set<Vertex<T>> visited = new LinkedHashSet<>();
+    public static <T> LinkedHashSet<Vertex<T>> traverseGraph(Graph<T> graph, Vertex<T> root){
+        LinkedHashSet<Vertex<T>> visited = new LinkedHashSet<>();
 
         Queue<Vertex<T>> frontier = new LinkedList<>();
         frontier.add(root);
@@ -47,47 +42,7 @@ public class BreadthFirstSearch {
 
             frontier.poll();
         }
-    }
 
-    public static void main(String[] args){
-        Vertex<String> uthiru = new Vertex<>("Uthiru");
-        Graph<String> nairobi = generateGraph(true, uthiru);
-        System.out.println("Nairobi graph: \n" + nairobi);
-        System.out.println("========== Traversing the tree ============");
-        traverseGraph(nairobi, uthiru);
-    }
-
-    /**
-     * Generate a random graph with places names
-     *
-     * @param isDirected is a directed graph
-     * @return {@link Graph}
-     */
-    public static Graph<String> generateGraph(boolean isDirected, Vertex<String> uthiru){
-        Graph<String> nairobi = new Graph<>(6, isDirected);
-        nairobi.addVertex(uthiru);
-
-        Vertex<String> kawagware = new Vertex<>("Kawagware");
-        nairobi.addEdge(uthiru, kawagware);
-
-        Vertex<String> kangemi = new Vertex<>("Kangemi");
-        nairobi.addEdge(uthiru, kangemi);
-
-        Vertex<String> westland = new Vertex<>("Westland");
-        nairobi.addEdge(kangemi, westland);
-
-        nairobi.addEdge(kawagware, kangemi);
-
-        Vertex<String> yaya = new Vertex<>("Yaya");
-        nairobi.addEdge(kawagware, yaya);
-
-        nairobi.addEdge(yaya, westland);
-
-        Vertex<String> cbd = new Vertex<>("CBD");
-        nairobi.addEdge(westland, cbd);
-        nairobi.addEdge(yaya, cbd);
-
-        return nairobi;
-
+        return visited;
     }
 }

@@ -28,20 +28,22 @@ public class Graph<T> {
      */
     public int size = 0;
     /**
-     * HashMap for holding the graph
+     * Adjacency matrix representation
      */
-    private HashMap<Vertex<T>, LinkedList<Vertex<T>>> graph;
-    /**
-     * Checks weather the graph is directed
-     */
-    private boolean isDirected;
+    private final HashMap<Vertex<T>, LinkedList<Vertex<T>>> graph;
 
+    private final boolean isDirected;
 
-    public Graph(int size, boolean isDirected){
-        if(size < 0){
+    public Graph(boolean isDirected) {
+        this(19, isDirected);
+    }
+
+    public Graph(int initialCapacity, boolean isDirected){
+        if(initialCapacity < 0){
             throw new IllegalArgumentException("Number of vertices should be greater than 0");
         }
-        this.graph = new HashMap<>(size);
+
+        this.graph = new HashMap<>(initialCapacity);
         this.isDirected = isDirected;
     }
 
@@ -52,11 +54,11 @@ public class Graph<T> {
      */
     public void addEdge(Vertex<T> vertex, LinkedList<Vertex<T>> edges){
         graph.put(vertex, edges);
+
         if(!isDirected){
-            edges.forEach(edge -> {
-                this._addVertex(edge, vertex);
-            });
+            edges.forEach(edge -> this._addVertex(edge, vertex));
         }
+
         this.size++;
     }
 
@@ -92,35 +94,6 @@ public class Graph<T> {
     }
 
     /**
-     * Add an empty vertex
-     *
-     * @param vertex {@link Vertex}
-     */
-    public void addVertex(Vertex<T> vertex){
-        this.graph.putIfAbsent(vertex, new LinkedList<>());
-    }
-
-    /**
-     * Get graph edges for the specified vertex
-     *
-     * @param vertex {@link Vertex}
-     * @return {@link LinkedList} of {@link Vertex}
-     */
-    public LinkedList<Vertex<T>> getEdges(Vertex<T> vertex){
-        return this.graph.get(vertex);
-    }
-
-    /**
-     * Removes vertex and unlinks associated edges
-     *
-     * @param vertex {@link Vertex}
-     */
-    public void removeVertex(Vertex<T> vertex){
-        graph.forEach((k, v) -> v.remove(vertex));
-        graph.remove(vertex);
-    }
-
-    /**
      * Get the entire graph
      *
      * @return graph
@@ -128,106 +101,4 @@ public class Graph<T> {
     public HashMap<Vertex<T>, LinkedList<Vertex<T>>> getGraph() {
         return graph;
     }
-
-    /**
-     * String representation of the graph
-     *
-     * @return {@link String}
-     */
-    @Override
-    public String toString() {
-        StringBuilder graphStr = new StringBuilder();
-        for(Vertex<T> vertex: graph.keySet()){
-            graphStr.append(vertex.getLabel()).append(" => ");
-            for(Vertex<T> edge : graph.get(vertex)){
-                graphStr.append(edge.getLabel()).append(", ");
-            }
-            graphStr.append("\n");
-        }
-        return graphStr.toString();
-    }
-
-    /**
-     * A class used to represent a vertex. Fields include:
-     * <ul>
-     *     <li>label</li>
-     * </ul>
-     * Remember to override equals and hashcode of your generic classes they are used as default
-     *
-     * @param <T> vertex type string or object
-     */
-//    public static class Vertex<T, W extends Comparable<W>>{
-//        /**
-//         * Vertex label
-//         */
-//        T label;
-//        /**
-//         * Shortest path traversed from the root node
-//         */
-//        private List<Vertex<T, W>> shortestPath;
-//        /**
-//         * Path distance
-//         */
-//        private W weight;
-//        /**
-//         * Adjacent vertex to current vertex
-//         */
-//        private Map<Vertex<T, W>, W> adjacentVertex;
-//        /**
-//         * Default constructor
-//         *
-//         * @param label vertex label
-//         */
-//        public Vertex(T label){
-//            this.label = label;
-//            this.adjacentVertex = new HashMap<>();
-//            this.shortestPath = new LinkedList<>();
-//            this.weight = null;
-//        }
-//
-//        public T getLabel() {
-//            return label;
-//        }
-//
-//        public void setLabel(T label) {
-//            this.label = label;
-//        }
-//
-//        public List<Vertex<T, W>> getShortestPath() {
-//            return shortestPath;
-//        }
-//
-//        public void setShortestPath(List<Vertex<T, W>> shortestPath) {
-//            this.shortestPath = shortestPath;
-//        }
-//
-//        public W getWeight() {
-//            return weight;
-//        }
-//
-//        public void setWeight(W weight) {
-//            this.weight = weight;
-//        }
-//
-//        public Map<Vertex<T, W>, W> getAdjacentVertex() {
-//            return adjacentVertex;
-//        }
-//
-//        @Override
-//        public int hashCode() {
-//            return label.hashCode();
-//        }
-//
-//        @Override
-//        public boolean equals(Object obj) {
-//            return label.equals(obj);
-//        }
-//
-//        @Override
-//        public String toString() {
-//            return "Vertex{" +
-//                    "label=" + label +
-//                    '}';
-//        }
-//    }
 }
