@@ -15,6 +15,8 @@
  */
 package com.cmuhatia.playground.graph;
 
+import lombok.NonNull;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -93,12 +95,7 @@ public class Graph<T> {
         }
     }
 
-    /**
-     * Get the entire graph
-     *
-     * @return graph
-     */
-    public HashMap<Vertex<T>, LinkedList<Vertex<T>>> getGraph() {
-        return graph;
+    public LinkedList<Vertex<T>> getAdjacentVertices(@NonNull Vertex<T> vertex) {
+        return graph.getOrDefault(vertex, new LinkedList<>());
     }
 }

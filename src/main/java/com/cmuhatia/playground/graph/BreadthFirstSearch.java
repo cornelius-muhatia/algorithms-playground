@@ -35,8 +35,8 @@ public class BreadthFirstSearch {
             if(!visited.contains(frontier.peek())){
                 visited.add(frontier.peek());
 
-                if(graph.getGraph().containsKey(frontier.peek())) {
-                    frontier.addAll(graph.getGraph().get(frontier.peek()));
+                if(frontier.peek() != null) {
+                    frontier.addAll(graph.getAdjacentVertices(frontier.peek()));
                 }
             }
 
