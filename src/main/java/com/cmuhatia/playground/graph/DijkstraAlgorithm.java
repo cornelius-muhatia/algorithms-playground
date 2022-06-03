@@ -15,9 +15,7 @@
  */
 package com.cmuhatia.playground.graph;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Cornelius Muhatia.
@@ -31,7 +29,7 @@ public class DijkstraAlgorithm {
      * @param root Start node
      */
     public static <T> void calculateShortestPath(WeightedGraph.Node<T> root) {
-        List<WeightedGraph.Node<T>> frontier = new LinkedList<>();
+        Set<WeightedGraph.Node<T>> frontier = new HashSet<>();
         frontier.add(root);
 
         root.setWeight(0.0);
@@ -41,14 +39,18 @@ public class DijkstraAlgorithm {
 
             frontier.remove(smallNode);
 
-            smallNode.getNeighbours().forEach((key, val) -> {
-                if (key.getWeight() == null) {
-                    key.setWeight(smallNode.getWeight() + val);
+            smallNode.neighbours.forEach((key, val) -> {
+                if (key.weight == null) {
+                    key.setWeight(smallNode.weight + val);
                     key.setParent(smallNode);
 
                     frontier.add(key);
-                } else if (key.getWeight() > (smallNode.getWeight() + val)) {
-                    key.setWeight(smallNode.getWeight() + val);
+
+                    return;
+                }
+
+                if (key.weight > (smallNode.weight + val)) {
+                    key.setWeight(smallNode.weight + val);
                     key.setParent(smallNode);
                 }
             });
@@ -61,11 +63,11 @@ public class DijkstraAlgorithm {
      * @param nodes a {@link List} of {@link com.cmuhatia.playground.graph.WeightedGraph.Node}
      * @return Smallest node
      */
-    public static <T> WeightedGraph.Node<T> getSmallest(List<WeightedGraph.Node<T>> nodes) {
+    public static <T> WeightedGraph.Node<T> getSmallest(Collection<WeightedGraph.Node<T>> nodes) {
         WeightedGraph.Node<T> smallestNode = null;
 
         for (WeightedGraph.Node<T> node : nodes) {
-            if (smallestNode == null || smallestNode.getWeight() > node.getWeight()) {
+            if (smallestNode == null || smallestNode.weight > node.weight) {
                 smallestNode = node;
             }
         }
