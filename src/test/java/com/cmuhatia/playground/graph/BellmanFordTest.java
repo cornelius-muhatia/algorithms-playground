@@ -12,11 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BellmanFordTest {
 
-
-
     @Test
     public void calculateShortestPath() {
-        //Test first graph
         WeightedGraph<String> graph = new WeightedGraph<>();
 
         WeightedGraph.Node<String> a = new WeightedGraph.Node<>("A");
@@ -94,8 +91,6 @@ public class BellmanFordTest {
         three.setNeighbours(Map.of(two, -10.0));
         four.setNeighbours(Map.of(three, 3.0));
 
-        BellmanFord.calculateShortestPath(graph, one);
-
-
+        assertThrows(StackOverflowError.class, () -> BellmanFord.calculateShortestPath(graph, one));
     }
 }

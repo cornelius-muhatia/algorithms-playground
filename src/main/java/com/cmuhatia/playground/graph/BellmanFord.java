@@ -15,7 +15,6 @@
  */
 package com.cmuhatia.playground.graph;
 
-import java.util.LinkedList;
 import java.util.Map;
 
 /**
@@ -28,28 +27,40 @@ public class BellmanFord {
      * Relaxes nodes of a graph
      *
      * @param graph {@link WeightedGraph}
-     * @param <T>  Node generic reference
+     * @param <T>   Node generic reference
      * @return true if one or more nodes were relaxed and false otherwise
      */
-    private static <T> boolean relaxGraph(WeightedGraph<T> graph){
+    private static <T> boolean relaxGraph(WeightedGraph<T> graph) {
         boolean relaxed = false;
+
         for (WeightedGraph.Node<T> node : graph) {
-            if(node.getWeight() != null){
-                for (Map.Entry<WeightedGraph.Node<T>, Double> entry : node.getNeighbours().entrySet()) {
+
+            if (node.weight != null) {
+
+                for (Map.Entry<WeightedGraph.Node<T>, Double> entry : node.neighbours.entrySet()) {
                     WeightedGraph.Node<T> key = entry.getKey();
                     Double value = entry.getValue();
-                    if(key.getWeight() == null){
-                        key.setWeight(node.getWeight() + value);
+
+                    if (key.weight == null) {
+                        key.setWeight(node.weight + value);
                         key.setParent(node);
+
                         relaxed = true;
-                    } else if(key.getWeight() > (node.getWeight() + value)){
-                        key.setWeight(node.getWeight() + value);
+
+                        continue;
+                    }
+
+                    if (key.weight > (node.weight + value)) {
+                        key.setWeight(node.weight + value);
                         key.setParent(node);
+
                         relaxed = true;
                     }
                 }
+
             }
         }
+
         return relaxed;
     }
 
@@ -62,20 +73,24 @@ public class BellmanFord {
      * @param <T>   Node label generic reference
      * @throws StackOverflowError if the graph has a negative circular nodes meaning it can't be solved
      */
-    public static <T> void calculateShortestPath(WeightedGraph<T> graph, WeightedGraph.Node<T> root)
-            throws StackOverflowError {
-        if(root.getWeight() == null){
+    public static <T> void calculateShortestPath(
+            WeightedGraph<T> graph,
+            WeightedGraph.Node<T> root
+    ) throws StackOverflowError {
+
+        if (root.weight == null) {
             root.setWeight(0.0);
         }
+
         for (int i = 1; i < graph.size(); i++) {
-            if(!relaxGraph(graph)){ // break early if the graph can no longer be relaxed
+            if (!relaxGraph(graph)) { // break early if the graph can no longer be relaxed
                 return;
             }
         }
+
         if (relaxGraph(graph)) {
             throw new StackOverflowError("Graph has a negative circular nodes");
         }
-
     }
 
 

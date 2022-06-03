@@ -16,8 +16,12 @@
 package com.cmuhatia.playground.graph;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Map;
 
 /**
  * @author Cornelius M.
@@ -26,41 +30,33 @@ import java.util.*;
 public class WeightedGraph<T> extends HashSet<WeightedGraph.Node<T>> {
 
     @Data
-    public static class Node<T>{
-        /**
-         * Node label/name
-         */
-        private T label;
-        /**
-         * Node weight
-         */
-        private Double weight;
-        /**
-         * Neighbour nodes with their weights
-         */
-        private Map<Node<T>, Double> neighbours = new HashMap<>();
-        /**
-         * Parent with the shortest path
-         */
-        private Node<T> parent;
+    @RequiredArgsConstructor
+    public static class Node<T> {
 
-        public Node(T label) {
-            this.label = label;
-        }
+        final T label;
+
+        Map<Node<T>, Double> neighbours = new HashMap<>();
+
+        Double weight;
+
+        Node<T> parent;
 
         /**
-         * Returns shortest path in a reversed order starting with the current node
+         * Returns the shortest path in a reversed order starting with the current node
          *
          * @return shortest path nodes
          */
-        public LinkedList<Node<T>> getShortestPath(){
+        public LinkedList<Node<T>> getShortestPath() {
             LinkedList<Node<T>> shortestPath = new LinkedList<>();
             shortestPath.add(this);
+
             Node<T> currentParent = parent;
-            while(currentParent != null){
+
+            while (currentParent != null) {
                 shortestPath.add(currentParent);
                 currentParent = currentParent.getParent();
             }
+
             return shortestPath;
         }
 
