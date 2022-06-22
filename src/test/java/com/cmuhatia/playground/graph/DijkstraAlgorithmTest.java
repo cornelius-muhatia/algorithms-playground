@@ -16,15 +16,15 @@ public class DijkstraAlgorithmTest {
     public void testCalculateShortestPath() {
         //graph one
         WeightedGraph<String> graph = new WeightedGraph<>();
-        WeightedGraph.Node<String> a = new WeightedGraph.Node<>("A");
-        WeightedGraph.Node<String> b = new WeightedGraph.Node<>("B");
-        WeightedGraph.Node<String> c = new WeightedGraph.Node<>("C");
-        WeightedGraph.Node<String> d = new WeightedGraph.Node<>("D");
+        WeightedNode<String> a = new WeightedNode<>("A");
+        WeightedNode<String> b = new WeightedNode<>("B");
+        WeightedNode<String> c = new WeightedNode<>("C");
+        WeightedNode<String> d = new WeightedNode<>("D");
 
         graph.addAll(Set.of(a, b, c, d));
         assertEquals(4, graph.size());
 
-        Map<WeightedGraph.Node<String>, Double> aNeighbours = new HashMap<>();
+        Map<WeightedNode<String>, Double> aNeighbours = new HashMap<>();
         aNeighbours.put(b, 20.0);
         aNeighbours.put(c, 30.0);
         a.setNeighbours(aNeighbours);
@@ -39,12 +39,12 @@ public class DijkstraAlgorithmTest {
 
         //graph two
         WeightedGraph<String> graph2 = new WeightedGraph<>();
-        a = new WeightedGraph.Node<>("A");
-        b = new WeightedGraph.Node<>("B");
-        c = new WeightedGraph.Node<>("C");
-        d = new WeightedGraph.Node<>("D");
-        WeightedGraph.Node<String> e = new WeightedGraph.Node<>("E");
-        WeightedGraph.Node<String> f = new WeightedGraph.Node<>("f");
+        a = new WeightedNode<>("A");
+        b = new WeightedNode<>("B");
+        c = new WeightedNode<>("C");
+        d = new WeightedNode<>("D");
+        WeightedNode<String> e = new WeightedNode<>("E");
+        WeightedNode<String> f = new WeightedNode<>("f");
 
         graph2.addAll(Set.of(a, b, c, d, e, f));
         assertEquals(6, graph2.size());

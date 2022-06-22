@@ -15,66 +15,13 @@
  */
 package com.cmuhatia.playground.graph;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
 
 /**
  * @author Cornelius M.
  * @version 1.0.0, 23/05/2020
  */
-public class WeightedGraph<T> extends HashSet<WeightedGraph.Node<T>> {
-
-    @Data
-    @RequiredArgsConstructor
-    public static class Node<T> {
-
-        final T label;
-
-        Map<Node<T>, Double> neighbours = new HashMap<>();
-
-        Double weight;
-
-        Node<T> parent;
-
-        /**
-         * Returns the shortest path in a reversed order starting with the current node
-         *
-         * @return shortest path nodes
-         */
-        public LinkedList<Node<T>> getShortestPath() {
-            LinkedList<Node<T>> shortestPath = new LinkedList<>();
-            shortestPath.add(this);
-
-            Node<T> currentParent = parent;
-
-            while (currentParent != null) {
-                shortestPath.add(currentParent);
-                currentParent = currentParent.getParent();
-            }
-
-            return shortestPath;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            Node<?> node = (Node<?>) o;
-
-            return getLabel().equals(node.getLabel());
-        }
-
-        @Override
-        public int hashCode() {
-            return label.hashCode();
-        }
-    }
+public class WeightedGraph<T> extends HashSet<WeightedNode<T>> implements Cloneable {
 
 }
 

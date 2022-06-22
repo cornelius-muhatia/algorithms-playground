@@ -36,12 +36,12 @@ public class BellmanFord {
     private static <T> boolean relaxGraph(WeightedGraph<T> graph) {
         boolean relaxed = false;
 
-        for (WeightedGraph.Node<T> node : graph) {
+        for (WeightedNode<T> node : graph) {
 
             if (node.weight != null) {
 
-                for (Map.Entry<WeightedGraph.Node<T>, Double> entry : node.neighbours.entrySet()) {
-                    WeightedGraph.Node<T> key = entry.getKey();
+                for (Map.Entry<WeightedNode<T>, Double> entry : node.neighbours.entrySet()) {
+                    WeightedNode<T> key = entry.getKey();
                     Double value = entry.getValue();
 
                     if (key.weight == null) {
@@ -78,7 +78,7 @@ public class BellmanFord {
      */
     public static <T> void calculateShortestPath(
             WeightedGraph<T> graph,
-            WeightedGraph.Node<T> root
+            WeightedNode<T> root
     ) throws StackOverflowError {
 
         if (root.weight == null) {
