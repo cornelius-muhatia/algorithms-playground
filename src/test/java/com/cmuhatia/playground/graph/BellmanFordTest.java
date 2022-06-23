@@ -16,11 +16,11 @@ public class BellmanFordTest {
     public void calculateShortestPath() {
         WeightedGraph<String> graph = new WeightedGraph<>();
 
-        WeightedGraph.Node<String> a = new WeightedGraph.Node<>("A");
-        WeightedGraph.Node<String> b = new WeightedGraph.Node<>("B");
-        WeightedGraph.Node<String> c = new WeightedGraph.Node<>("C");
-        WeightedGraph.Node<String> d = new WeightedGraph.Node<>("D");
-        WeightedGraph.Node<String> e = new WeightedGraph.Node<>("E");
+        WeightedNode<String> a = new WeightedNode<>("A");
+        WeightedNode<String> b = new WeightedNode<>("B");
+        WeightedNode<String> c = new WeightedNode<>("C");
+        WeightedNode<String> d = new WeightedNode<>("D");
+        WeightedNode<String> e = new WeightedNode<>("E");
 
         graph.addAll(Set.of(a, b, c, d, e));
         assertEquals(5, graph.size());
@@ -46,13 +46,13 @@ public class BellmanFordTest {
     public void calculateShortestPath2(){
         WeightedGraph<String> graph = new WeightedGraph<>();
 
-        WeightedGraph.Node<String> one = new WeightedGraph.Node<>("1");
-        WeightedGraph.Node<String> two = new WeightedGraph.Node<>("2");
-        WeightedGraph.Node<String> three = new WeightedGraph.Node<>("3");
-        WeightedGraph.Node<String> four = new WeightedGraph.Node<>("4");
-        WeightedGraph.Node<String> five = new WeightedGraph.Node<>("5");
-        WeightedGraph.Node<String> six = new WeightedGraph.Node<>("6");
-        WeightedGraph.Node<String> seven = new WeightedGraph.Node<>("7");
+        WeightedNode<String> one = new WeightedNode<>("1");
+        WeightedNode<String> two = new WeightedNode<>("2");
+        WeightedNode<String> three = new WeightedNode<>("3");
+        WeightedNode<String> four = new WeightedNode<>("4");
+        WeightedNode<String> five = new WeightedNode<>("5");
+        WeightedNode<String> six = new WeightedNode<>("6");
+        WeightedNode<String> seven = new WeightedNode<>("7");
 
         graph.addAll(Set.of(one, two, three, four, five, six, seven));
         assertEquals(7, graph.size());
@@ -79,10 +79,10 @@ public class BellmanFordTest {
     public void calculateShortestPath3(){
         WeightedGraph<String> graph = new WeightedGraph<>();
 
-        WeightedGraph.Node<String> one = new WeightedGraph.Node<>("1");
-        WeightedGraph.Node<String> two = new WeightedGraph.Node<>("2");
-        WeightedGraph.Node<String> three = new WeightedGraph.Node<>("3");
-        WeightedGraph.Node<String> four = new WeightedGraph.Node<>("4");
+        WeightedNode<String> one = new WeightedNode<>("1");
+        WeightedNode<String> two = new WeightedNode<>("2");
+        WeightedNode<String> three = new WeightedNode<>("3");
+        WeightedNode<String> four = new WeightedNode<>("4");
 
         graph.addAll(Set.of(one, two, three, four));
 

@@ -18,6 +18,9 @@ package com.cmuhatia.playground.graph;
 import java.util.Map;
 
 /**
+ * Bellman Ford Algorithm (Java Implementation)
+ * Time Complexity: O(|V||E|)
+ *
  * @author Cornelius M.
  * @version 1.0.0, 09/06/2020
  */
@@ -33,30 +36,31 @@ public class BellmanFord {
     private static <T> boolean relaxGraph(WeightedGraph<T> graph) {
         boolean relaxed = false;
 
-        for (WeightedGraph.Node<T> node : graph) {
+        for (WeightedNode<T> node : graph) {
 
             if (node.weight != null) {
 
-                for (Map.Entry<WeightedGraph.Node<T>, Double> entry : node.neighbours.entrySet()) {
-                    WeightedGraph.Node<T> neighbour = entry.getKey();
-                    Double neighbourWeight = entry.getValue();
+                for (Map.Entry<WeightedNode<T>, Double> entry : node.neighbours.entrySet()) {
+                    WeightedNode<T> key = entry.getKey();
+                    Double value = entry.getValue();
 
-                    if (neighbour.weight == null) {
-                        neighbour.setWeight(node.weight + neighbourWeight);
-                        neighbour.setParent(node);
+                    if (key.weight == null) {
+                        key.setWeight(node.weight + value);
+                        key.setParent(node);
 
                         relaxed = true;
 
                         continue;
                     }
 
-                    if (neighbour.weight > (node.weight + neighbourWeight)) {
-                        neighbour.setWeight(node.weight + neighbourWeight);
-                        neighbour.setParent(node);
+                    if (key.weight > (node.weight + value)) {
+                        key.setWeight(node.weight + value);
+                        key.setParent(node);
 
                         relaxed = true;
                     }
                 }
+
             }
         }
 
@@ -74,7 +78,7 @@ public class BellmanFord {
      */
     public static <T> void calculateShortestPath(
             WeightedGraph<T> graph,
-            WeightedGraph.Node<T> root
+            WeightedNode<T> root
     ) throws StackOverflowError {
 
         if (root.weight == null) {

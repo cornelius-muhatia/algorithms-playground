@@ -28,14 +28,14 @@ public class DijkstraAlgorithm {
      *
      * @param root Start node
      */
-    public static <T> void calculateShortestPath(WeightedGraph.Node<T> root) {
-        Set<WeightedGraph.Node<T>> frontier = new HashSet<>();
+    public static <T> void calculateShortestPath(WeightedNode<T> root) {
+        Set<WeightedNode<T>> frontier = new HashSet<>();
         frontier.add(root);
 
         root.setWeight(0.0);
 
         while (!frontier.isEmpty()) {
-            WeightedGraph.Node<T> smallNode = getSmallest(frontier);
+            WeightedNode<T> smallNode = getSmallest(frontier);
 
             frontier.remove(smallNode);
 
@@ -60,13 +60,13 @@ public class DijkstraAlgorithm {
     /**
      * Gets node with smallest weight
      *
-     * @param nodes a {@link List} of {@link com.cmuhatia.playground.graph.WeightedGraph.Node}
+     * @param nodes a {@link List} of {@link WeightedNode}
      * @return Smallest node
      */
-    public static <T> WeightedGraph.Node<T> getSmallest(Collection<WeightedGraph.Node<T>> nodes) {
-        WeightedGraph.Node<T> smallestNode = null;
+    public static <T> WeightedNode<T> getSmallest(Collection<WeightedNode<T>> nodes) {
+        WeightedNode<T> smallestNode = null;
 
-        for (WeightedGraph.Node<T> node : nodes) {
+        for (WeightedNode<T> node : nodes) {
             if (smallestNode == null || smallestNode.weight > node.weight) {
                 smallestNode = node;
             }
