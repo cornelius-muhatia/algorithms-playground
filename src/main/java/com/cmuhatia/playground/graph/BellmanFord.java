@@ -38,26 +38,25 @@ public class BellmanFord {
             if (node.weight != null) {
 
                 for (Map.Entry<WeightedGraph.Node<T>, Double> entry : node.neighbours.entrySet()) {
-                    WeightedGraph.Node<T> key = entry.getKey();
-                    Double value = entry.getValue();
+                    WeightedGraph.Node<T> neighbour = entry.getKey();
+                    Double neighbourWeight = entry.getValue();
 
-                    if (key.weight == null) {
-                        key.setWeight(node.weight + value);
-                        key.setParent(node);
+                    if (neighbour.weight == null) {
+                        neighbour.setWeight(node.weight + neighbourWeight);
+                        neighbour.setParent(node);
 
                         relaxed = true;
 
                         continue;
                     }
 
-                    if (key.weight > (node.weight + value)) {
-                        key.setWeight(node.weight + value);
-                        key.setParent(node);
+                    if (neighbour.weight > (node.weight + neighbourWeight)) {
+                        neighbour.setWeight(node.weight + neighbourWeight);
+                        neighbour.setParent(node);
 
                         relaxed = true;
                     }
                 }
-
             }
         }
 
