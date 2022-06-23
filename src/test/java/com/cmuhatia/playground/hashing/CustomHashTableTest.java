@@ -1,5 +1,6 @@
 package com.cmuhatia.playground.hashing;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -11,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CustomHashTableTest {
 
+    @Disabled("Pending universal hash function implementation")
+    @Test
     public void add() {
         CustomHashTable<String> hashTable = new CustomHashTable<>();
         hashTable.add(0, "String 0");
