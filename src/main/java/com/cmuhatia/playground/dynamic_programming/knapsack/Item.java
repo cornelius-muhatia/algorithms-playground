@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cmuhatia.playground.knapsack;
+package com.cmuhatia.playground.dynamic_programming.knapsack;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

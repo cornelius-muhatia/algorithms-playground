@@ -1,6 +1,8 @@
-package com.cmuhatia.playground.knapsack;
+package com.cmuhatia.playground.dynamic_programming.knapsack;
 
 
+import com.cmuhatia.playground.dynamic_programming.knapsack.Item;
+import com.cmuhatia.playground.dynamic_programming.knapsack.Knapsack;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
