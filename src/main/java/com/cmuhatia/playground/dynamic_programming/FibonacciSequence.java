@@ -47,13 +47,17 @@ public class FibonacciSequence {
         if (n == 1 || n == 2) {
             return 1;
         }
-        int[] seq = new int[n];
-        seq[0] = 1;
-        seq[1] = 1;
+
+        int priorPrev = 1;
+        int previous = 1;
+
         for (int i = 2; i < n; i++) {
-            seq[i] = seq[i - 1] + seq[i - 2];
+            int temp = priorPrev + previous;
+            priorPrev = previous;
+            previous = temp;
         }
-        return seq[n - 1];
+
+        return previous;
     }
 
     /**
