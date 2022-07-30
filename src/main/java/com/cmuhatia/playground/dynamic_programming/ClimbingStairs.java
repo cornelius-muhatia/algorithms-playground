@@ -23,13 +23,17 @@ package com.cmuhatia.playground.dynamic_programming;
  */
 public class ClimbingStairs {
 
-    public static int getAscendingMethods(int stairsCount) {
+    public static int getTopDownAscendingMethods(int stairsCount) {
         Integer[][] temp = new Integer[2][stairsCount];
 
-        return getAscendingMethods(stairsCount, 0, temp);
+        if (stairsCount < 1) {
+            return 0;
+        }
+
+        return getTopDownAscendingMethods(stairsCount, 0, temp);
     }
 
-    private static int getAscendingMethods(int stairsCount, int count, Integer[][] temp ) {
+    private static int getTopDownAscendingMethods(int stairsCount, int count, Integer[][] temp ) {
         if (stairsCount == 0) {
             return ++count;
         }
@@ -39,13 +43,38 @@ public class ClimbingStairs {
         }
 
         if (temp[0][stairsCount - 1] == null) {
-            temp[0][stairsCount - 1] = getAscendingMethods(stairsCount - 1, count, temp);
+            temp[0][stairsCount - 1] = getTopDownAscendingMethods(stairsCount - 1, count, temp);
         }
 
         if (temp[1][stairsCount - 1] == null) {
-            temp[1][stairsCount - 1] = getAscendingMethods(stairsCount - 2, count, temp);
+            temp[1][stairsCount - 1] = getTopDownAscendingMethods(stairsCount - 2, count, temp);
         }
 
         return temp[0][stairsCount - 1] + temp[1][stairsCount - 1];
+    }
+
+    public static int getBottomUpAscendingMethods(int stairsCount) {
+        if (stairsCount < 1) {
+            return 0;
+        }
+
+        if (stairsCount == 1) {
+            return 1;
+        }
+
+        if (stairsCount == 2) {
+            return 2;
+        }
+
+        int j = 1;
+        int k = 2;
+
+        for (int i = 3; i <= stairsCount; i++) {
+            int temp = k + j;
+            j = k;
+            k = temp;
+        }
+
+        return k;
     }
 }
