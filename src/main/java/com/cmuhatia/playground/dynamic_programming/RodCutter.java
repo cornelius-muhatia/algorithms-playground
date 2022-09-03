@@ -14,6 +14,11 @@
  */
 package com.cmuhatia.playground.dynamic_programming;
 
+import org.apache.commons.lang3.tuple.Pair;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Rod cutting implementation from Introduction to Algorithms Fourth #dition by Thomas H. Cormen <br />
  * Chapter 14.1
@@ -69,6 +74,38 @@ public class RodCutter {
         }
 
         return cache[length];
+    }
+
+    public static Pair<Integer, int[]> cutBottomUpExtended(int[] prices, int length) {
+        int[] cache = new int[length + 1];
+        int[] pieces = new int[length + 1];
+
+        for (int j = 1; j <= length; j++) {
+            int revenue = 0;
+            for (int i = 1; i <= j; i++) {
+                int temp = prices[i] + cache[j - i];
+                if (revenue < temp) {
+                    revenue = temp;
+                    pieces[j] = i;
+                }
+            }
+
+            cache[j] = revenue;
+        }
+
+        return Pair.of(cache[length], pieces);
+    }
+
+    public static List<Integer> getCutLocations(int[] prices, int length) {
+        Pair<Integer, int[]> totalPricePair = cutBottomUpExtended(prices, length);
+        List<Integer> cutLocations = new ArrayList<>();
+
+        while (length > 0) {
+            cutLocations.add(totalPricePair.getRight()[length]);
+            length = length - totalPricePair.getRight()[length];
+        }
+
+        return cutLocations;
     }
 
 }

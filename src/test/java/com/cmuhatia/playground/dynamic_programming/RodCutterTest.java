@@ -2,6 +2,8 @@ package com.cmuhatia.playground.dynamic_programming;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -9,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class RodCutterTest {
 
-    int[] priceList = new int[]{0, 1, 5, 8, 8, 10, 17, 20, 24, 30};
+    int[] priceList = new int[]{0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30};
 
     @Test
     public void testCutTopDown() {
@@ -24,5 +26,18 @@ class RodCutterTest {
     @Test
     public void testCutBottomUp() {
         assertEquals(10, RodCutter.cutBottomUp(priceList, 4));
+    }
+
+    @Test
+    public void cutBottomUpExtended() {
+        assertArrayEquals(
+                new int[]{0, 1, 2, 3, 2, 2, 6, 1, 2, 3, 10},
+                RodCutter.cutBottomUpExtended(priceList, 10).getRight()
+        );
+
+        assertIterableEquals(
+                List.of(3, 6),
+                RodCutter.getCutLocations(priceList, 9)
+        );
     }
 }
