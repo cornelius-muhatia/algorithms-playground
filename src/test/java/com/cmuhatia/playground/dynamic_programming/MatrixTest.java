@@ -48,4 +48,18 @@ class MatrixTest {
         };
         assertArrayEquals(expectation, output);
     }
+
+    @Test
+    void getMatrixChainMultiplicationSeq() {
+        int[] dimensions = {5, 4, 6, 2, 7};
+
+        int[][] s = {
+                {0, 0, 0, 0, 0},
+                {0, 0, 1, 1, 3},
+                {0, 0, 0, 2, 3},
+                {0, 0, 0, 0, 3},
+                {0, 0, 0, 0, 0}
+        };
+        assertArrayEquals(s, Matrix.getMatrixChainMultiplicationSeq(dimensions));
+    }
 }

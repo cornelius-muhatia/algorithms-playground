@@ -15,7 +15,6 @@
  */
 package com.cmuhatia.playground.tree;
 
-import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Collection;
@@ -107,33 +106,34 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param item {@link Node} item to be searched
      * @return true if it exists and false otherwise
      */
-    public boolean contains(Node<T> item){
+    public boolean contains(Node<T> item) {
         return contains(root, item);
     }
 
     /**
      * Recursive method for searching an item. Time complexity is O(h) where h is the height of the tree
+     *
      * @param root root of the sub-tree
      * @param item item to be searched
      * @return true if the item exists false otherwise
      */
-    private boolean contains(Node<T> root, Node<T> item){
-        if(Objects.equals(root, item)){
+    private boolean contains(Node<T> root, Node<T> item) {
+        if (Objects.equals(root, item)) {
             return true;
         }
 
-        if(Objects.isNull(root)){
+        if (Objects.isNull(root)) {
             return false;
         }
 
-        if(item.value.compareTo(root.value) < 0){
+        if (item.value.compareTo(root.value) < 0) {
             return contains(root.leftChild, item);
-        } else{
+        } else {
             return contains(root.rightChild, item);
         }
     }
 
-    public void delete(Node<T> item){
+    public void delete(Node<T> item) {
         delete(root, item);
     }
 
@@ -147,7 +147,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 return null;
             }
 
-            if(Objects.isNull(item.leftChild)) {
+            if (Objects.isNull(item.leftChild)) {
                 return item.rightChild;
             }
 
