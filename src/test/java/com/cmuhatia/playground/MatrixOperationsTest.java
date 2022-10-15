@@ -1,18 +1,19 @@
 package com.cmuhatia.playground;
 
 
+import com.cmuhatia.playground.maths.MatrixOperations;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MatrixOperationsTest {
+class MatrixOperationsTest {
 
 
     @Test
-    public void diagonalDifference(){
-        int[][] arr = {{1,2,3},{4, 5, 6},{9, 8,9}};
+    void diagonalDifference() {
+        int[][] arr = {{1, 2, 3}, {4, 5, 6}, {9, 8, 9}};
         List<List<Integer>> list = List.of(List.of(1, 2, 3), List.of(4, 5, 6), List.of(9, 8, 9));
         //Happy path
         assertEquals(2, MatrixOperations.diagonalDifference(arr));
@@ -24,8 +25,8 @@ public class MatrixOperationsTest {
     }
 
     @Test
-    public void rotate90DegClw() {
-        int[][] array = {{1,2,3},{4, 5, 6},{7, 8,9}};
+    void rotate90DegClw() {
+        int[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int[][] tempArray = {{7, 4, 1}, {8, 5, 2}, {9, 6, 3}};
         assertEquals(tempArray, MatrixOperations.rotate90DegClw(array));
     }

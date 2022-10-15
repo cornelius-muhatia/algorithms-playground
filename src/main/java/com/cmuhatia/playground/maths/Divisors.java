@@ -15,10 +15,14 @@
  */
 package com.cmuhatia.playground.maths;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * @author Cornelius M.
  * @version 1.0.0, 09/05/2020
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Divisors {
 
     /**
@@ -28,20 +32,23 @@ public class Divisors {
      * @return total divisors
      */
     public static long sumDivisors(int number) {
-        if(number == 1){
+        if (number == 1) {
             return 1;
         }
-        long sum = 1 + number;
+
+        long sum = 1L + number;
+
         int limit = (int) Math.sqrt(number);
         for (int i = 2; i <= limit; i++) {
-            if((number % i) == 0){
-                if(i * i == number) {
+            if ((number % i) == 0) {
+                if (i * i == number) {
                     sum += i;
-                } else{
+                } else {
                     sum += i + (number / i);
                 }
             }
         }
+
         return sum;
     }
 
@@ -51,16 +58,18 @@ public class Divisors {
      * @param number Number
      * @return total divisors
      */
-    public static long sumDivisors2(int number){
-        if(number == 1){
+    public static long sumDivisors2(int number) {
+        if (number == 1) {
             return 1;
         }
+
         int sum = 0;
-        for(int i = 1; i <= number; i++){
-            if(number % i == 0){
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
                 sum += i;
             }
         }
+
         return sum;
     }
 }

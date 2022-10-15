@@ -15,12 +15,16 @@
  */
 package com.cmuhatia.playground.maths;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * Examples related to greatest common divisor using Eclidian algorithm
  *
  * @author Cornelius M.
  * @version 1.0.0, 06/05/2020
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class GcdEuclidian {
 
     /**
@@ -30,30 +34,30 @@ public class GcdEuclidian {
      * @param small smallest integer
      * @return greatest common divisor
      */
-    public static int getGcd(int large, int small){
+    public static int getGcd(int large, int small) {
         int remainder;
 
-        while(true){
+        while (true) {
             remainder = large % small;
 
-            if(remainder == 0){
+            if (remainder == 0) {
                 return small;
-            } else{
-                large = small;
-                small = remainder;
             }
+
+            large = small;
+            small = remainder;
         }
     }
 
     /**
      * Simplify fraction. For example given 8/24 will result to 1/3
      *
-     * @param numerator numerator of the fraction for example 8 from the example
+     * @param numerator   numerator of the fraction for example 8 from the example
      * @param denominator denominator of the fraction; 24 from the example
-     * @param result simplified fraction the first index being the numerator and the second
-     *               index denominator. Expects an array of atleast size 2 to be initialized
+     * @param result      simplified fraction the first index being the numerator and the second
+     *                    index denominator. Expects an array of atleast size 2 to be initialized
      */
-    static void simplifyFraction(int numerator, int denominator, int [] result){
+    static void simplifyFraction(int numerator, int denominator, int[] result) {
         int gcd = numerator > denominator ? getGcd(numerator, denominator) : getGcd(denominator, numerator);
 
         result[0] = numerator / gcd;
@@ -65,13 +69,13 @@ public class GcdEuclidian {
      * Get gcd of more than 2 numbers
      *
      * @param firstNumber first number
-     * @param others other numbers
+     * @param others      other numbers
      * @return gcd of all the numbers
      */
-    public static int getGcd(int firstNumber, int... others){
+    public static int getGcd(int firstNumber, int... others) {
         int gcd = firstNumber;
 
-        for(int next : others){
+        for (int next : others) {
             gcd = getGcd(gcd, next);
         }
 

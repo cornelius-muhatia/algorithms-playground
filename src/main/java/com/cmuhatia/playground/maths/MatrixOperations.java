@@ -1,11 +1,15 @@
-package com.cmuhatia.playground;
+package com.cmuhatia.playground.maths;
 
-import java.util.Arrays;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
 /**
  * Matrix operations
  */
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class MatrixOperations {
 
     /**
@@ -14,10 +18,10 @@ public class MatrixOperations {
      * @param arr array representing a square matrix
      * @return absolute diagonal difference
      */
-    public static int diagonalDifference(int[][] arr){
+    public static int diagonalDifference(int[][] arr) {
         int c1 = 0;
         int c2 = 0;
-        for(int i = 0; i < arr.length; i++ ){
+        for (int i = 0; i < arr.length; i++) {
             c1 += arr[i][i];
             int j = arr.length - i - 1;
             c2 += arr[i][j];
@@ -31,10 +35,10 @@ public class MatrixOperations {
      * @param arr list storing the matrix
      * @return absolute difference
      */
-    public static int diagonalDifference(List<List<Integer>> arr){
+    public static int diagonalDifference(List<List<Integer>> arr) {
         int c1 = 0;
         int c2 = 0;
-        for(int i = 0; i < arr.size(); i++ ){
+        for (int i = 0; i < arr.size(); i++) {
             c1 += arr.get(i).get(i);
             int j = arr.size() - i - 1;
             c2 += arr.get(i).get(j);
@@ -48,11 +52,11 @@ public class MatrixOperations {
      * @param array target array
      * @return a new rotated array
      */
-    public static int[][] rotate90DegClw(int[][] array){
+    public static int[][] rotate90DegClw(int[][] array) {
         int[][] tempArray = new int[array.length][array.length];
-        for(int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             int lIndex = array.length - 1 - i;
-            for(int j = 0; j < array.length; j++){
+            for (int j = 0; j < array.length; j++) {
                 tempArray[j][lIndex] = array[i][j];
             }
         }
@@ -65,12 +69,12 @@ public class MatrixOperations {
      *
      * @param array target array
      */
-    public static void rotate90DegClwInPlace(int[][] array){
+    public static void rotate90DegClwInPlace(int[][] array) {
         //Array dimension
-        for(int i = 0; i < array.length/2; i++){
+        for (int i = 0; i < array.length / 2; i++) {
             int lastIdx = array.length - 1 - i;
 
-            for(int j = i; j < lastIdx; j++){
+            for (int j = i; j < lastIdx; j++) {
                 int temp = array[i][j];
 
                 //move elements to the right
@@ -87,40 +91,4 @@ public class MatrixOperations {
             }
         }
     }
-
-
-    public static void main(String[] args){
-        int[][] array = {
-                {1,2,3,4,5,6},
-                {7,8,9,10,11,12},
-                {13,14,15,16,17,18},
-                {19,20,21,22,23,24},
-                {25,26,27,28,29,30},
-                {31,32,33,34,35,36}
-        };
-        rotate90DegClwInPlace(array);
-
-        print(array);
-    }
-
-    /**
-     * Print array
-     *
-     * @param array target
-     */
-    public static void print(int[][] array){
-        System.out.print("[");
-        for (int[] ints : array) {
-            System.out.print("[");
-            for (int j = 0; j < array.length; j++) {
-                System.out.print(ints[j]);
-                if (j != array.length - 1) {
-                    System.out.print(", ");
-                }
-            }
-            System.out.println("]");
-        }
-        System.out.println("]");
-    }
-
 }
