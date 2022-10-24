@@ -42,20 +42,18 @@ public class Matrix {
         int[][] s = new int[dimensions.length][dimensions.length]; // For storing index that provided optimal solution
 
         for (int subProblemLength = 1; subProblemLength < m.length - 1; subProblemLength++) {
-            for (int i = 1; i < dimensions.length - subProblemLength; i++) {
+            for (int i = 1; i < m.length - subProblemLength; i++) {
                 int j = i + subProblemLength;
-                int min = Integer.MAX_VALUE;
+                m[i][j] = Integer.MAX_VALUE;
 
                 for (int k = i; k < j; k++) {
                     int solution = m[i][k] + m[k + 1][j] + dimensions[i - 1] * dimensions[k] * dimensions[j];
 
-                    if (solution < min) {
-                        min = solution;
+                    if (solution < m[i][j]) {
+                        m[i][j] = solution;
                         s[i][j] = k;
                     }
                 }
-
-                m[i][j] = min;
             }
         }
 

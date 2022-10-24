@@ -70,21 +70,21 @@ public class MatrixOperations {
      * @param array target array
      */
     public static void rotate90DegClwInPlace(int[][] array) {
-        //Array dimension
         for (int i = 0; i < array.length / 2; i++) {
             int lastIdx = array.length - 1 - i;
 
             for (int j = i; j < lastIdx; j++) {
                 int temp = array[i][j];
+                int nextValIdx = array.length - 1 - j;
 
                 //move elements to the right
-                array[i][j] = array[array.length - 1 - j][i];
+                array[i][j] = array[nextValIdx][i];
 
                 //move elements vertically up from the left
-                array[array.length - 1 - j][i] = array[lastIdx][array.length - 1 - j];
+                array[nextValIdx][i] = array[lastIdx][nextValIdx];
 
                 //move elements to the left from the bottom
-                array[lastIdx][array.length - 1 - j] = array[j][lastIdx];
+                array[lastIdx][nextValIdx] = array[j][lastIdx];
 
                 //move elements vertically down from the right
                 array[j][lastIdx] = temp;
