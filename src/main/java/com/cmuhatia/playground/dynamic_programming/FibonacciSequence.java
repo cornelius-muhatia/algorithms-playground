@@ -1,8 +1,12 @@
 package com.cmuhatia.playground.dynamic_programming;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class FibonacciSequence {
 
     /**
@@ -144,7 +148,7 @@ public class FibonacciSequence {
     /**
      * Get longest common subsequence list between 2 strings. For example:
      * <p>
-     *     Given:
+     * Given:
      *     <ul>
      *         <li>abcdef</li>
      *         <li>acbcf</li>
@@ -163,9 +167,9 @@ public class FibonacciSequence {
         int colLength = str2.length() + 1;
         int[][] temp = new int[rowLength][colLength];
 
-        for(int row = 1; row < rowLength; row++) {
-            for(int col = 1; col < colLength; col++) {
-                if(str1.charAt(row - 1) == str2.charAt(col - 1)) {
+        for (int row = 1; row < rowLength; row++) {
+            for (int col = 1; col < colLength; col++) {
+                if (str1.charAt(row - 1) == str2.charAt(col - 1)) {
                     temp[row][col] = temp[row - 1][col - 1] + 1;
                 } else {
                     temp[row][col] = Math.max(temp[row][col - 1], temp[row - 1][col]);
@@ -175,10 +179,10 @@ public class FibonacciSequence {
 
         int row = rowLength - 1;
         int col = colLength - 1;
-        while(row > 0 && col > 0) {
-            if(temp[row][col] == temp[row][col - 1]) {
+        while (row > 0 && col > 0) {
+            if (temp[row][col] == temp[row][col - 1]) {
                 col--;
-            } else if(temp[row][col] == temp[row - 1][col]) {
+            } else if (temp[row][col] == temp[row - 1][col]) {
                 row--;
             } else {
                 subsequence.insert(0, str1.charAt(row - 1));
@@ -189,10 +193,4 @@ public class FibonacciSequence {
 
         return subsequence.toString();
     }
-
-    public static void main(String[] args) {
-        List<Integer> list = List.of(10, 3, 5, 19, 10, 14, 12, 0, 15);
-        System.out.println("List " + FibonacciSequence.longestIncreasingSequence2(list));
-    }
-
 }

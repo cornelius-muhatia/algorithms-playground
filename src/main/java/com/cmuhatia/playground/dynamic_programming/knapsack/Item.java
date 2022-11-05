@@ -24,7 +24,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class Item<T> {
-    private T weight;
-    private T value;
+public class Item {
+    private int weight;
+    private int value;
 }

@@ -15,7 +15,10 @@
  */
 package com.cmuhatia.playground.dynamic_programming.knapsack;
 
-import java.util.LinkedList;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -23,6 +26,7 @@ import java.util.Map;
  * @author Cornelius M.
  * @version 1.0.0, 21/06/2020
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Knapsack {
 
     /**
@@ -32,60 +36,60 @@ public class Knapsack {
      * @param capacity capacity of the knapsack
      * @return maximum profit the knapsack can hold
      */
-    public static int getMaxWeight01(List<Map.Entry<Integer, Integer>> items, int capacity) {
-        int[][] table = new int[items.size()][capacity + 1];
-        for (int k = 1; k <= capacity; k++) {
-            for (int i = 0; i < items.size(); i++) {
-                if (i == 0) {
-                    table[i][k] = items.get(i).getKey() > k ? 0 : items.get(i).getValue();
-                } else {
-                    int prevJ = k - items.get(i).getKey();
-                    if (prevJ >= 0) {
-                        int currentWeight = table[i - 1][prevJ] + items.get(i).getValue();
-                        table[i][k] = Math.max(table[i - 1][k], currentWeight);
-                    } else {
-                        table[i][k] = table[i - 1][k];
-                    }
-                }
-            }
-        }
-        return table[items.size() - 1][capacity];
+    public static int getMaxWeight01(List<Item> items, int capacity) {
+        int[][] table = computeSubProblemsWeights(items, capacity);
+
+        return table[items.size()][capacity];
     }
 
-    public static List<Item<Integer>> getMaxWeightItems01(List<Item<Integer>> items, int capacity) {
-        int[][] table = new int[items.size()][capacity + 1];
+    private static int[][] computeSubProblemsWeights(List<Item> items, int capacity) {
+        int[][] table = new int[items.size() + 1][capacity + 1];
 
-        for (int row = 1; row < items.size(); row++) {
+        for (int row = 1; row <= items.size(); row++) {
+            int itemIdx = row - 1;
+            int itemWeight = items.get(itemIdx).getWeight();
+            int itemValue = items.get(itemIdx).getValue();
 
             for (int col = 0; col <= capacity; col++) {
-                if (col < items.get(row).getWeight()) {
+                if (col < itemWeight) {
                     table[row][col] = table[row - 1][col];
                     continue;
                 }
 
-                int totalValue = items.get(row).getValue() + table[row - 1][col - items.get(row).getWeight()];
+                int totalValue = itemValue + table[row - 1][col - itemWeight];
 
                 table[row][col] = Math.max(totalValue, table[row - 1][col]);
             }
 
         }
 
+        return table;
+    }
+
+    public static List<Item> getMaxWeightItems01(List<Item> items, int capacity) {
+        int[][] table = computeSubProblemsWeights(items, capacity);
+
         return getSelectedItems(items, capacity, table);
     }
 
-    private static List<Item<Integer>> getSelectedItems(List<Item<Integer>> items, int capacity, int[][] table) {
-        List<Item<Integer>> selectedItems = new LinkedList<>();
+    private static List<Item> getSelectedItems(List<Item> items, int capacity, int[][] table) {
+        List<Item> selectedItems = new ArrayList<>(items.size());
 
-        int remainder = table[items.size() - 1][capacity];
+        int remainder = table[items.size()][capacity];
 
-        for (int row = items.size() - 1; row > 0; row--) {
+        for (int row = table.length - 1; row > 0; row--) {
             for (int col = capacity; col > 0; col--) {
-                if ((remainder == table[row][col]) && (table[row - 1][col] < remainder)) {
-                    remainder = remainder - items.get(row).getValue();
-
-                    selectedItems.add(items.get(row));
-
+                if (remainder == table[row - 1][col]) {
                     break;
+                }
+
+                if (table[row][col] == remainder) {
+                    selectedItems.add(items.get(row - 1));
+                    remainder -= items.get(row - 1).getValue();
+                }
+
+                if (remainder <= 0) {
+                    return selectedItems;
                 }
             }
         }
