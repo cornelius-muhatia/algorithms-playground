@@ -1,15 +1,10 @@
 package com.cmuhatia.playground.sort;
 
-import java.util.Arrays;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class QuickSort {
-
-    public static void main(String[] args) {
-        int[] arr = {3, 7, 8, 10, 5, 2, 1, 9, 5, 4, 10};
-        System.out.println("Array Before " + Arrays.toString(arr));
-        QuickSort.quickSort(arr, 0, arr.length - 1);
-        System.out.println("Final sorted array" + Arrays.toString(arr));
-    }
 
     public static void quickSort(int[] arr) {
         QuickSort.quickSort(arr, 0, arr.length - 1);
@@ -21,7 +16,7 @@ public class QuickSort {
      * <p>
      * Refer to Saraj's tutorial <a href="https://youtu.be/pmEgsd1_nVg">Saraj Bahadur Youtube Video</a>
      *
-     * <p>Their is a possibility this implemention will consume a lot of memory because of the pivot</p>
+     * <p>Their is a possibility this implementation will take O(n^2) with the wrong pivot</p>
      *
      * @param arr  array to be sorted
      * @param low  low index of the partition to be sorted
@@ -29,32 +24,32 @@ public class QuickSort {
      */
     public static void quickSort(int[] arr, int low, int high) {
         int mid = (low + high) / 2;
-        int l = low;
-        int h = high;
+        int i = low;
+        int j = high;
         int pivot = arr[mid];
 
-        while (l <= h) {
-            while (arr[l] < pivot) {
-                l++;
+        while (i <= j) {
+            while (arr[i] < pivot) {
+                i++;
             }
 
-            while (arr[h] > pivot) {
-                h--;
+            while (arr[j] > pivot) {
+                j--;
             }
 
-            if (l <= h) {
-                swapIndexValues(arr, l, h);
-                l++;
-                h--;
+            if (i <= j) {
+                swapIndexValues(arr, i, j);
+                i++;
+                j--;
             }
         }
 
-        if (low < h) {//sorting left side of the pivot
-            QuickSort.quickSort(arr, low, h);
+        if (low < j) {//sorting left side of the pivot
+            QuickSort.quickSort(arr, low, j);
         }
 
-        if (high > l) {//sorting right side of the pivot
-            QuickSort.quickSort(arr, l, high);
+        if (high > i) {//sorting right side of the pivot
+            QuickSort.quickSort(arr, i, high);
         }
     }
 

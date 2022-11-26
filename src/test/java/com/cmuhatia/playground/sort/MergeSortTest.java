@@ -2,23 +2,23 @@ package com.cmuhatia.playground.sort;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  * @author Cornelius M.
  * @version 1.0.0, 17/07/2020
  */
-public class MergeSortTest {
+class MergeSortTest {
 
     @Test
-    public void sort1() {
+    void sort1() {
         int[] arr = {38, 27, 43, 3, 9, 82, 10};
         MergeSort.sort(arr);
-        assertArrayEquals(arr, new int[]{3, 9, 10, 27, 38, 43, 82});
+        assertArrayEquals(new int[]{3, 9, 10, 27, 38, 43, 82}, arr);
     }
 
     @Test
-    public void sort() {
+    void sort() {
         int[] arr = new int[]{3, 7, 8, 10, 5, 2, 1, 9, 5, 4, 10};
         MergeSort.sort(arr);
         assertArrayEquals(new int[]{1, 2, 3, 4, 5, 5, 7, 8, 9, 10, 10}, arr);
@@ -33,7 +33,7 @@ public class MergeSortTest {
     }
 
     @Test
-    public void sort3() {
+    void sort3() {
         int[] arr = new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         MergeSort.sort(arr);
         assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, arr);
