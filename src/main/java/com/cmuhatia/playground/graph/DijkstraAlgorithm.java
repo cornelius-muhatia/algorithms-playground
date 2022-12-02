@@ -15,12 +15,19 @@
  */
 package com.cmuhatia.playground.graph;
 
-import java.util.*;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author Cornelius Muhatia.
  * @version 1.0.0 4/10/20
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DijkstraAlgorithm {
 
     /**
