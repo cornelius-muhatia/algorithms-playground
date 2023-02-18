@@ -23,20 +23,15 @@ public class ClimbingStairs {
             return 1;
         }
 
-        if (n == 2) {
-            return 2;
+        int oneStep = 1;
+        int twoStep = 2;
+
+        for (int i = (n - 2); i > 0; i--) {
+            int ways = twoStep + oneStep;
+            oneStep = twoStep;
+            twoStep = ways;
         }
 
-        int j = 1;
-        int k = 2;
-
-        for (int i = 3; i <= n; i++) {
-            int temp = k + j;
-            j = k;
-            k = temp;
-        }
-
-        return k;
-
+        return twoStep;
     }
 }
