@@ -1,0 +1,3 @@
+module miscellaneous {
+    requires lombok;
+}
