@@ -2,6 +2,11 @@ package com.cmuhatia.playground.leetcode.linked_list;
 
 import lombok.*;
 
+/**
+ * <p>Given the head of a singly linked list, reverse the list, and return the reversed list.</p>
+ *
+ * @see <a href="https://leetcode.com/problems/reverse-linked-list/">LeetCode Reverse LinkedList</a>
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ReverseLinkedList {
 
