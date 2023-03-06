@@ -1,6 +1,8 @@
 package com.cmuhatia.playground.leetcode.linked_list;
 
-import lombok.*;
+import com.cmuhatia.playground.leetcode.dto.ListNode;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>Given the head of a singly linked list, reverse the list, and return the reversed list.</p>
@@ -17,26 +19,14 @@ public class ReverseLinkedList {
 
         ListNode previous = null;
         ListNode current = head;
-        ListNode next = head.next;
+        ListNode next = head.getNext();
         while (next != null) {
-            previous = new ListNode(current.val, previous);
-            current = new ListNode(next.val, previous);
-            next = next.next;
+            previous = new ListNode(current.getVal(), previous);
+            current = new ListNode(next.getVal(), previous);
+            next = next.getNext();
         }
 
         return current;
-    }
-
-    @AllArgsConstructor
-    @Data
-    @EqualsAndHashCode
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val) {
-            this.val = val;
-        }
     }
 
 }
