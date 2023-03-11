@@ -14,6 +14,9 @@
  */
 package com.cmuhatia.playground.dynamic_programming;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * You are given an array prices where prices[i] is the price of a given stock on the ith day. <br />
  * You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. <br />
@@ -22,6 +25,7 @@ package com.cmuhatia.playground.dynamic_programming;
  * @version 1.0.0, 30/07/2022
  * @see <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/572/">LeetCode</a>
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class BuyAndSellStock {
     public static int getMaximumProfitRecursively(int[] prices) {
         if (prices.length < 2) {
@@ -45,6 +49,10 @@ public class BuyAndSellStock {
     }
 
     public static int getMaximumProfitBottomUp(int[] prices) {
+        if (prices == null || prices.length == 0) {
+            return 0;
+        }
+
         int profit = 0;
         int selectedDay = prices[prices.length - 1];
 
