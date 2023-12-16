@@ -20,7 +20,7 @@ class Day1Test {
     }
 
     @Test
-    void part12() {
+    void part1Test2() {
         String[] input = TestUtils.readFileLines("advent_of_code/2023/day1/input1.txt");
 
         assertEquals(54990, Day1.part1(input));
@@ -42,7 +42,7 @@ class Day1Test {
     }
 
     @Test
-    void part21() {
+    void part2Test1() {
         String[] input = TestUtils.readFileLines("advent_of_code/2023/day1/input1.txt");
 
         assertEquals(281, Day1.part2(input));
