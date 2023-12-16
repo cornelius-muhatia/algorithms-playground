@@ -50,4 +50,15 @@ public class PrimeNumbers {
 
         return count;
     }
+
+
+    public static boolean isPrimeNumber(long n) {
+        for (long i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
