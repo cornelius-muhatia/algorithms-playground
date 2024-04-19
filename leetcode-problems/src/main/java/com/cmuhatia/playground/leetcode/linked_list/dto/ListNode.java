@@ -1,4 +1,4 @@
-package com.cmuhatia.playground.leetcode.dto;
+package com.cmuhatia.playground.leetcode.linked_list.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

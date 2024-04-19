@@ -1,6 +1,6 @@
 package com.cmuhatia.playground.leetcode.heap;
 
-import com.cmuhatia.playground.leetcode.dto.ListNode;
+import com.cmuhatia.playground.leetcode.linked_list.dto.ListNode;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

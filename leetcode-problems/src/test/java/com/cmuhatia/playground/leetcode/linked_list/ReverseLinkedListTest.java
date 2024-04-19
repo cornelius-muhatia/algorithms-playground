@@ -1,7 +1,7 @@
 package com.cmuhatia.playground.leetcode.linked_list;
 
 
-import com.cmuhatia.playground.leetcode.dto.ListNode;
+import com.cmuhatia.playground.leetcode.linked_list.dto.ListNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
