@@ -42,6 +42,6 @@ public class PrimeNumbersTest {
 
     @Test
     public void testIsPrimeNo3() {
-        assertTrue(PrimeNumbers.isPrimeNumber(2000000000000000L));
+        assertFalse(PrimeNumbers.isPrimeNumber(2000000000000000L));
     }
 }

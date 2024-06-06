@@ -14,4 +14,4 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
       - name: Tests
-        run: mvn test
+        run: mvn install
