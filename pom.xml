@@ -13,6 +13,7 @@
     <modules>
         <module>leetcode-problems</module>
         <module>miscellaneous</module>
+        <module>algorithmia-conquest</module>
     </modules>
 
     <properties>

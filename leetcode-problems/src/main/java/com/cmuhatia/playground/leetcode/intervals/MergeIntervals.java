@@ -1,4 +1,4 @@
-package com.cmuhatia.playground.leetcode.arrays;
+package com.cmuhatia.playground.leetcode.intervals;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -8,6 +8,13 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * <p>
+ * Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+ * </p>
+ *
+ * @see <a href="https://leetcode.com/problems/merge-intervals/description/">LeetCode - Merge Intervals</a>
+ */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class MergeIntervals {
 

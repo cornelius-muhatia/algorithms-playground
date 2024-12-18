@@ -1,4 +1,4 @@
-package com.cmuhatia.playground.leetcode.arrays;
+package com.cmuhatia.playground.leetcode.intervals;
 
 import org.junit.jupiter.api.Test;
 
